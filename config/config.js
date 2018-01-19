@@ -3,7 +3,9 @@ const fs = require('fs');
 const {
     CommonChunks,
     HtmlDirectory,
-    JsDirectory
+    JsDirectory,
+    alias,
+    tplSuffix
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const appDirectory = fs.realpathSync(process.cwd());
@@ -12,22 +14,23 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 /**
  * 扫描入口文件
  *
- * @param {String} entryDir 入口html文件
+ * @param {String} htmlDir 入口html文件
  * @param {String} jsDir    入口js文件
  * @returns {Object} Webpack Entry
  */
-function Scan(entryDir, jsDir, CommonChunks) {
-    const dirs = fs.readdirSync(resolvePath(entryDir));
+function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
+    const dirs = fs.readdirSync(resolvePath(htmlDir));
     const entrys = Object.assign({}, CommonChunks);
     const webpackPlugins = [];
     dirs.forEach(file => {
-        const entry = file.replace(/\.(js|ts|tsx|jsx|html)$/, '');
+        // 去除模板后缀
+        const entry = file.replace(/\.(tpl|html)$/, '');
         entrys[entry] = resolvePath(`${jsDir}${entry}.js`);
         const newPlugins = new HtmlWebpackPlugin({
             chunks: ['mainfest', ...Object.keys(CommonChunks), entry],
-            template: resolvePath(`${entryDir}${entry}.html`),
-            filename: `${entry}.html`,
-            favicon: resolvePath('assets/favicon.png'),
+            template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
+            filename: `${entry}.${tplSuffix}`,
+            favicon: resolvePath('src/assets/favicon.png'),
             inject: "body",
         });
 
@@ -42,11 +45,12 @@ function Scan(entryDir, jsDir, CommonChunks) {
 const {
     entrys,
     webpackPlugins
-} = Scan(HtmlDirectory, JsDirectory, CommonChunks);
+} = Scan(HtmlDirectory, JsDirectory, CommonChunks, tplSuffix);
 
 module.exports = {
     resolvePath,
     entrys,
     webpackPlugins,
+    alias,
     CommonChunkNames: Object.keys(CommonChunks),
 };
