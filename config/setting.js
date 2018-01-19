@@ -9,9 +9,9 @@ module.exports = {
         "vendor": ['jquery', 'moment'],
     },
     // 模板后缀
-    tplSuffix: 'html',
+    tplSuffix: 'ejs',
     // html 入口目录
-    HtmlDirectory: 'src/tpl/',
+    HtmlDirectory: 'src/view/',
     // html js 入口目录
     JsDirectory: 'src/entry/',
     // alias

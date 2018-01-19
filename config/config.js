@@ -24,12 +24,12 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
     const webpackPlugins = [];
     dirs.forEach(file => {
         // 去除模板后缀
-        const entry = file.replace(/\.(tpl|html)$/, '');
+        const entry = file.replace(/\.(tpl|html|ejs)$/, '');
         entrys[entry] = resolvePath(`${jsDir}${entry}.js`);
         const newPlugins = new HtmlWebpackPlugin({
             chunks: ['mainfest', ...Object.keys(CommonChunks), entry],
             template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
-            filename: `${entry}.${tplSuffix}`,
+            filename: `${entry}.html`,
             favicon: resolvePath('src/assets/favicon.png'),
             inject: "body",
             // minify 现在没有默认值了，需要指定
