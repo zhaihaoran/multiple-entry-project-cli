@@ -9,7 +9,7 @@ module.exports = {
         "vendor": ['jquery', 'moment'],
     },
     // 模板后缀
-    tplSuffix: 'tpl',
+    tplSuffix: 'html',
     // html 入口目录
     HtmlDirectory: 'src/tpl/',
     // html js 入口目录

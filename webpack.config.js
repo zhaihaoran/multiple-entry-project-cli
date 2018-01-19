@@ -92,7 +92,7 @@ module.exports = function(env) {
             // webpack bundle analyzer
             new BundleAnalyzerPlugin({
                 analyzerMode: 'server',
-                analyzerPort: 8888,
+                analyzerPort: 1234,
                 openAnalyzer: true
             }),
             new webpack.optimize.UglifyJsPlugin(),
