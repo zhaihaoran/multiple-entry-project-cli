@@ -32,6 +32,13 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
             filename: `${entry}.${tplSuffix}`,
             favicon: resolvePath('src/assets/favicon.png'),
             inject: "body",
+            // minify 现在没有默认值了，需要指定
+            minify: {
+                // removeAttributeQuotes: true,  // 移除属性引号
+                collapseWhitespace: true, // 是否去除空格
+                removeComments: true // 是否去掉注释
+
+            },
         });
 
         webpackPlugins.push(newPlugins);

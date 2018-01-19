@@ -103,7 +103,8 @@ module.exports = function(env) {
                 allChunks: true,
             }),
             ...webpackPlugins,
-            new CleanWebpackPlugin(),
+            // build之前需要清除的目录
+            new CleanWebpackPlugin(["build"]),
             // 定义标识符，当遇到指定标识符的时候，自动加载模块。
             new webpack.ProvidePlugin({
                 $: 'jquery',
