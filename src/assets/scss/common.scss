@@ -1,2 +1,18 @@
-@import 'materialize.scss';
 @import '_variables.scss';
+.hoverable.card-hover:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-out;
+    .card-content {
+        background: $primary-color;
+        .card-title.grey-text.text-darken-3 {
+            color: white !important;
+        }
+        .grey-text.text-darken-6 {
+            color: white !important;
+        }
+    }
+}
+
+.card-space {
+    padding: 0 5px !important;
+}

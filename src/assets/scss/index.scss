@@ -87,10 +87,31 @@
         }
     }
     .vd-context {
+        margin-bottom: 40px;
         .vd-title {
-            margin: 20px 0;
+            margin: 15px 0;
             font-size: 24px;
             color: #666;
+        }
+        .card-content {
+            padding: 10px;
+            .card-title {
+                font-size: 18px;
+                line-height: 18px;
+                margin-bottom: 5px;
+            }
+        }
+        .card-image {
+            img {
+                height: 200px;
+            }
+        }
+        .vd-extra {
+            display: flex;
+            justify-content: space-between;
+            span {
+                font-size: 14px;
+            }
         }
     }
 }

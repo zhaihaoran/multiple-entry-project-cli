@@ -1,9 +1,11 @@
-import '@scss/index.scss';
 import $ from 'jquery';
 import '@lib/animateNumber'
+// materialize
 import 'materialize-css'
-
-console.log(moment().format());
+import 'materialize-css/sass/materialize.scss'
+import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
+import '@scss/index.scss';
 
 $('#mmm').prop('number', 0).animateNumber({
     number: 9567,
@@ -13,4 +15,10 @@ $('#mmm').prop('number', 0).animateNumber({
 $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true
+});
+
+videojs('video', {
+    controls: true,
+    autoplay: false,
+    preload: 'auto'
 });

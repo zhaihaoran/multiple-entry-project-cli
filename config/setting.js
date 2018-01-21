@@ -6,7 +6,7 @@ const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 module.exports = {
     // 公共js模块抽取
     CommonChunks: {
-        "vendor": ['jquery', 'moment'],
+        "vendor": ['jquery', 'materialize-css'],
     },
     // 模板后缀
     tplSuffix: 'ejs',
@@ -21,4 +21,6 @@ module.exports = {
         "@json": resolvePath('src/assets/json'),
         "@lib": resolvePath('src/lib'),
     },
+    // ddl config
+
 }
