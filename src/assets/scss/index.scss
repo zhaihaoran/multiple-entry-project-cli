@@ -1,14 +1,38 @@
 @import 'common.scss';
 //
-
 .tum-header {
     height: $header;
     display: flex;
+    background: $primary-color;
+    .nav-wrapper {
+        display: flex;
+        > div,
+        a,
+        ul {
+            flex: 1;
+        }
+    }
     .logo {
     }
 }
+
 .tum-footer {
-    height: $footer;
+    background: $footer_bg;
+    .footer-wrapper {
+        display: flex;
+        .footer-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .ft-top {
+            }
+            .ft-bottom {
+            }
+        }
+    }
+    .footer-copyright {
+        background: $copyright_bg;
+    }
 }
 
 .wrapper {
@@ -29,6 +53,44 @@
             .data-content {
                 font-size: 12px;
             }
+        }
+    }
+    .cooperate-module {
+        display: flex;
+        flex-direction: column;
+        .cooperate-item {
+            height: 210px;
+            .co-title {
+                font-size: 24px;
+                color: $primary-color;
+                margin: 25px 0;
+            }
+            .co-logos {
+                margin: 10px 0;
+                display: flex;
+                justify-content: center;
+                img {
+                    height: 60px;
+                }
+            }
+        }
+    }
+    .sign-module {
+        padding: 60px 0;
+        display: flex;
+        a {
+            flex: 1;
+            .tumeng-sign {
+                width: 100%;
+                height: 355px;
+            }
+        }
+    }
+    .vd-context {
+        .vd-title {
+            margin: 20px 0;
+            font-size: 24px;
+            color: #666;
         }
     }
 }
