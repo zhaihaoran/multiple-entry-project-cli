@@ -28,55 +28,85 @@
             </div>
         </div>
     </nav>
+    <div class="carousel-wrapper">
+        <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/bg1.jpg')  %>"></a>
+            <a class="carousel-item" href="#two!"><img src="<%= require('../assets/image/bg2.jpg')  %>"></a>
+            <a class="carousel-item" href="#three!"><img src="<%= require('../assets/image/bg3.jpg')  %>"></a>
+        </div>
+    </div>
+    <!-- 数据分布 -->
+    <section class="wrapper mainColor">
+        <div class="container record-wrapper center">
+            <div class="record-item border-right">
+                <h2><b class="animateNumber">1000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+            <div class="record-item border-right">
+                <h2><b class="animateNumber">1000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+            <div class="record-item border-right">
+                <h2><b class="animateNumber">1000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+            <div class="record-item">
+                <h2><b class="animateNumber">1000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+        </div>
+    </section>
+    <!-- 热门视频 -->
     <section class="wrapper">
-        <div class="carousel-wrapper">
-            <div class="carousel carousel-slider">
-                <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/bg1.jpg')  %>"></a>
-                <a class="carousel-item" href="#two!"><img src="<%= require('../assets/image/bg2.jpg')  %>"></a>
-                <a class="carousel-item" href="#three!"><img src="<%= require('../assets/image/bg3.jpg')  %>"></a>
+        <div class="container ">
+            <h2 class="video-title">
+                热门视频
+            </h2>
+            <div class="video-wrapper">
+                <div class="index-video">
+                    <div class="video-mask index-mask">
+                        <h2>知识改变命运</h2>
+                        <p>演讲者：Fransico</p>
+                    </div>
+                    <div class="index-video-image">
+                        <img src="<%= require('../assets/image/office.jpg')  %>" class="responsive-img" alt="">
+                    </div>
+                    <video class="video-js video-player" id="video">
+                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                    </video>
+                </div>
+                <div class="extra-video">
+                    <div class="video-item">
+                        <img src="<%= require('../assets/image/office.jpg')  %>" class="responsive-img" alt="">
+                        <div class="video-mask extra-mask">
+                            <h4>知识改变命运</h4>
+                            <p>演讲者：Fransico</p>
+                        </div>
+                    </div>
+                    <div class="video-item mt-10">
+                        <img src="<%= require('../assets/image/office.jpg')  %>" class="responsive-img" alt="">
+                        <div class="video-mask extra-mask">
+                            <h4>知识改变命运</h4>
+                            <p>演讲者：Fransico</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="data-wrapper">
-            <div class="data-item">
-                <h2 class="data-number"></h2>
-                <h4 class="data-title"></h4>
-                <p class="data-content"></p>
-            </div>
-            <div class="data-item">
-                <h2 class="data-number"></h2>
-                <h4 class="data-title"></h4>
-                <p class="data-content"></p>
-            </div>
-            <div class="data-item">
-                <h2 class="data-number"></h2>
-                <h4 class="data-title"></h4>
-                <p class="data-content"></p>
-            </div>
-            <div class="data-item">
-                <h2 class="data-number"></h2>
-                <h4 class="data-title"></h4>
-                <p class="data-content"></p>
-            </div>
+
+
+        <div class="videos">
+            <a href="#" class="video-item"></a>
+            <a href="#" class="video-item"></a>
         </div>
-    </section>
-    <section>
-        <div class="video-wrapper">
-            <div class="video-title">
-                <video class="video-js" id="video" >
-                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                </video>
-            </div>
-            <div class="videos">
-                <a href="#" class="video-item card hoverable"></a>
-                <a href="#" class="video-item card hoverable"></a>
-                <a href="#" class="video-item card hoverable"></a>
-                <a href="#" class="video-item card hoverable"></a>
-            </div>
         </div>
     </section>
-    <p>MMM <span id="mmm" style="font-size: 20px">0</span></p>
-    <p>{$aaa}</p>
+
     <section class="hot-vds">
         <div class="container">
             <div class="vd-player"></div>

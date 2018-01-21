@@ -1,7 +1,7 @@
 @import '_variables.scss';
 .hoverable.card-hover:hover {
     transform: scale(1.05);
-    transition: all 0.3s ease-out;
+    transition: transform 0.3s ease-out;
     .card-content {
         background: $primary-color;
         .card-title.grey-text.text-darken-3 {
@@ -15,4 +15,48 @@
 
 .card-space {
     padding: 0 5px !important;
+}
+
+.mainColor {
+    background: $primary-color;
+}
+
+// header
+.tum-header {
+    height: $header;
+    display: flex;
+    background: $primary-color;
+    .nav-wrapper {
+        display: flex;
+        > div,
+        a,
+        ul {
+            flex: 1;
+        }
+    }
+    .logo {
+    }
+}
+
+// footer
+.page-footer {
+    background: $primary-color;
+    .tum-footer {
+        background: $footer_bg;
+        .footer-wrapper {
+            display: flex;
+            .footer-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                .ft-top {
+                }
+                .ft-bottom {
+                }
+            }
+        }
+        .footer-copyright {
+            background: $copyright_bg;
+        }
+    }
 }

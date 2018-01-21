@@ -7,7 +7,7 @@ import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import '@scss/index.scss';
 
-$('#mmm').prop('number', 0).animateNumber({
+$('.animateNumber').prop('number', 0).animateNumber({
     number: 9567,
     easing: 'easeOut'
 }, 4000)

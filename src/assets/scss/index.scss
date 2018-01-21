@@ -15,45 +15,30 @@
     .logo {
     }
 }
-
-.tum-footer {
-    background: $footer_bg;
-    .footer-wrapper {
-        display: flex;
-        .footer-item {
-            flex: 1;
+.page-footer {
+    background: $primary-color;
+    .tum-footer {
+        background: $footer_bg;
+        .footer-wrapper {
             display: flex;
-            flex-direction: column;
-            .ft-top {
-            }
-            .ft-bottom {
+            .footer-item {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                .ft-top {
+                }
+                .ft-bottom {
+                }
             }
         }
-    }
-    .footer-copyright {
-        background: $copyright_bg;
+        .footer-copyright {
+            background: $copyright_bg;
+        }
     }
 }
 
 .wrapper {
     .carousel-wrapper {
-    }
-    .data-wrapper {
-        display: flex;
-        .data-item {
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-            .data-number {
-                font-size: 20px;
-            }
-            .data-title {
-                font-size: 16px;
-            }
-            .data-content {
-                font-size: 12px;
-            }
-        }
     }
     .cooperate-module {
         display: flex;
@@ -86,6 +71,75 @@
             }
         }
     }
+    .video-title {
+        font-size: 30px;
+        color: $primary-color;
+    }
+    .video-wrapper {
+        display: flex;
+        .index-video {
+            position: relative;
+            flex: 2;
+            .video-player {
+                display: none;
+                width: 100%;
+                height: 540px;
+            }
+            .index-video-image {
+                height: 540px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        .extra-video {
+            padding-left: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            .video-item {
+                position: relative;
+                height: 265px;
+                flex: 1;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .mt-10 {
+                margin-top: 10px;
+            }
+        }
+        .extra-mask {
+            padding: 0 20px;
+            height: 65px;
+            h4 {
+                margin: 5px 0;
+                font-size: 24px;
+            }
+        }
+        .index-mask {
+            padding: 15px 40px;
+            height: 100px;
+        }
+        .video-mask {
+            width: 100%;
+            color: white;
+            z-index: 5;
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            h2 {
+                font-size: 30px;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+            p {
+                margin: 8px 0;
+            }
+        }
+    }
     .vd-context {
         margin-bottom: 40px;
         .vd-title {
@@ -112,6 +166,34 @@
             span {
                 font-size: 14px;
             }
+        }
+    }
+
+    // 数据分布
+    .record-wrapper {
+        display: flex;
+        height: 245px;
+        padding: 20px 0;
+        .record-item {
+            box-sizing: border-box;
+            flex: 1;
+            padding: 0 15px;
+            color: white;
+            h2 {
+                margin: 5px 0;
+                font-size: 54px;
+            }
+            h3 {
+                margin: 15px 0;
+                font-size: 30px;
+            }
+            p {
+                padding: 0 50px;
+                margin-top: 20px;
+            }
+        }
+        .border-right {
+            border-right: 3px solid white;
         }
     }
 }
