@@ -5,9 +5,9 @@
     "main": "index.js",
     "scripts": {
         "start":
-            "cross-env NODE_ENV=development webpack --watch --config --hide-modules ./config/webpack.dev.config.js",
+            "cross-env NODE_ENV=development webpack --watch --hide-modules --config  ./config/webpack.dev.config.js",
         "build":
-            "cross-env NODE_ENV=production webpack --progress --hide-modules --config ./config/webpack.pro.config.js",
+            "cross-env NODE_ENV=production webpack --watch --progress --hide-modules --config ./webpack.pro.config.js",
         "build:dll": "webpack --config  ./config/webpack.dll.config.js",
         "watch": "webpack --watch",
         "test": "echo \"Error: no test specified\" && exit 1"

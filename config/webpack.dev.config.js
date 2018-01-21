@@ -126,7 +126,6 @@ module.exports = function(env) {
             }),
 
             new webpack.optimize.CommonsChunkPlugin({
-                // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],
             }),
             // webpack bundle analyzer
@@ -135,11 +134,10 @@ module.exports = function(env) {
                 analyzerPort: 1234,
                 openAnalyzer: true
             }),
-            new webpack.optimize.UglifyJsPlugin(),
             // css code-split
             new ExtractTextPlugin({
                 filename: 'css/[name].css',
-                disable: false,
+                disable: true,
                 allChunks: true,
             }),
             ...webpackPlugins,

@@ -4,7 +4,7 @@ const {
     webpackPlugins,
     alias,
     CommonChunkNames
-} = require('./config')
+} = require('./config/config')
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -125,7 +125,7 @@ module.exports = function(env) {
         },
         plugins: [
             // build之前需要清除的目录
-            new CleanWebpackPlugin(["build"]),
+            new CleanWebpackPlugin([resolvePath("build")]),
             new webpack.optimize.CommonsChunkPlugin({
                 // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],

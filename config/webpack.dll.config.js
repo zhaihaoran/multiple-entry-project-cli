@@ -7,8 +7,8 @@ const {
 module.exports = {
     output: {
         path: resolvePath('build'),
-        filename: 'js/[name].[chunkhash:5].js',
-        library: '[name]_[chunkhash:5]',
+        filename: 'js/[name].js',
+        library: '[name]',
     },
     entry: {
         vendor: CommonChunks.vendor,
@@ -16,7 +16,7 @@ module.exports = {
     plugins: [
         new webpack.DllPlugin({
             path: resolvePath('build/manifest.json'),
-            name: '[name]_[chunkhash:5]',
+            name: '[name]',
             context: resolvePath('build'),
         }),
     ],
