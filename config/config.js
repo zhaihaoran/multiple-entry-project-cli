@@ -1,6 +1,6 @@
-const path = require('path');
 const fs = require('fs');
 const {
+    resolvePath,
     CommonChunks,
     HtmlDirectory,
     JsDirectory,
@@ -8,8 +8,7 @@ const {
     tplSuffix
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const appDirectory = fs.realpathSync(process.cwd());
-const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
+
 
 /**
  * 扫描入口文件

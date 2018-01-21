@@ -4,7 +4,7 @@ const {
     webpackPlugins,
     alias,
     CommonChunkNames
-} = require('./config/config')
+} = require('./config')
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -15,8 +15,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        // 开发环境下 cheap-module-eval-source-map
-        // 生产环节 cheap-module-source-map
         devtool: 'cheap-module-source-map',
         entry: entrys,
         output: {
@@ -126,40 +124,20 @@ module.exports = function(env) {
             }]
         },
         plugins: [
-            // dll ???
-            new webpack.DllPlugin({
-                // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与参数output.library保持一致
-                name: '[name]',
-                // 本Dll文件中各模块的索引，供DllReferencePlugin读取使用
-                path: 'manifest.json',
-                // 指定一个路径作为上下文环境，需要与DllReferencePlugin的context参数保持一致，建议统一设置为项目根目录
-                context: resolvePath('build'),
-            }),
-            // DllReferencePlugin
-            new webpack.DllReferencePlugin({
-                context: resolvePath('build'),
-                manifest: require('./manifest.json')
-            }),
+            // build之前需要清除的目录
+            new CleanWebpackPlugin(["build"]),
             new webpack.optimize.CommonsChunkPlugin({
                 // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],
             }),
-            // webpack bundle analyzer
-            new BundleAnalyzerPlugin({
-                analyzerMode: 'server',
-                analyzerPort: 1234,
-                openAnalyzer: true
-            }),
             new webpack.optimize.UglifyJsPlugin(),
             // css code-split
             new ExtractTextPlugin({
-                filename: 'css/[name].css',
+                filename: 'css/[name]_[chunkhash:5].css',
                 disable: false,
                 allChunks: true,
             }),
             ...webpackPlugins,
-            // build之前需要清除的目录
-            new CleanWebpackPlugin(["build"]),
             // 定义标识符，当遇到指定标识符的时候，自动加载模块。
             new webpack.ProvidePlugin({
                 $: 'jquery',

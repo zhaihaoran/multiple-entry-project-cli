@@ -4,6 +4,7 @@ const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
+    resolvePath,
     // 公共js模块抽取
     CommonChunks: {
         "vendor": ['jquery', 'materialize-css'],

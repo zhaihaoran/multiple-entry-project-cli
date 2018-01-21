@@ -4,9 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "webpack-dev-server",
+        "start":
+            "cross-env NODE_ENV=development webpack --watch --config --hide-modules ./config/webpack.dev.config.js",
         "build":
-            "cross-env NODE_ENV=production webpack --progress --hide-modules",
+            "cross-env NODE_ENV=production webpack --progress --hide-modules --config ./config/webpack.pro.config.js",
+        "build:dll": "webpack --config  ./config/webpack.dll.config.js",
         "watch": "webpack --watch",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
