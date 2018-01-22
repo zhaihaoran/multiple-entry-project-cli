@@ -57,7 +57,8 @@
     line-height: 70px; }
 
 .page-footer {
-  background: #bb2133; }
+  background: #bb2133;
+  padding-top: 15px; }
   .page-footer .tum-footer {
     background: #2a2827; }
     .page-footer .tum-footer .footer-wrapper {
@@ -79,6 +80,8 @@
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        .page-footer .tum-footer .footer-wrapper .footer-item .ft-logo {
+          margin: 54px 0 30px; }
         .page-footer .tum-footer .footer-wrapper .footer-item .ft-top {
           margin: 40px 0; }
           .page-footer .tum-footer .footer-wrapper .footer-item .ft-top .white-text {
@@ -102,3 +105,8 @@
 
 .hove_undeline:hover {
   text-decoration: underline; }
+
+.card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin: 0; }
