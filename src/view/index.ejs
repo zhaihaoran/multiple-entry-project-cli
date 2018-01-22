@@ -5,20 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>涂梦 | 首页</title>
+    <title> 首页 - 涂梦教育 </title>
 </head>
 
 <body>
     <!-- 头部 -->
     <nav class="tum-header scrollspy">
         <div class="container">
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">logo</a>
-                <div class="logo-intro"></div>
+            <div class="tum-navbar">
+                <a href="#" class="tum-item tum-logo"></a>
+                <div class="tum-item">
+                    <p class="center">关注中学生成长与</p>
+                    <p class="center">发展的非营利项目</p>
+                </div>
                 <ul class="nav-items hide-on-med-and-down">
-                    <li><a href="#">Sass</a></li>
-                    <li><a href="#">Components</a></li>
-                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">精彩演讲</a></li>
+                    <li><a href="#">我要演讲</a></li>
+                    <li><a href="#">关于涂梦</a></li>
+                    <li><a href="#">支持涂梦</a></li>
                 </ul>
                 <div class="search-item">
                     <div class="input-field">
@@ -30,15 +35,16 @@
         </div>
     </nav>
     <!-- 轮播图 -->
-    <div class="carousel-wrapper scrollspy">
+    <div class="carousel-wrapper scrollspy"></div>
         <div class="carousel carousel-slider">
+            <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/banner.png')  %>"></a>
             <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/bg1.jpg')  %>"></a>
             <a class="carousel-item" href="#two!"><img src="<%= require('../assets/image/bg2.jpg')  %>"></a>
             <a class="carousel-item" href="#three!"><img src="<%= require('../assets/image/bg3.jpg')  %>"></a>
         </div>
     </div>
     <!-- 数据分布 -->
-    <section class="wrapper mainColor scrollspy">
+    <section class="wrapper record-map scrollspy">
         <div class="container record-wrapper center">
             <div class="record-item border-right">
                 <h2><b class="animateNumber">1000</b>+</h2>

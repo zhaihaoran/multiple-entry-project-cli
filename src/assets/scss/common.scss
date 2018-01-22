@@ -17,24 +17,36 @@
     padding: 0 5px !important;
 }
 
-.mainColor {
-    background: $primary-color;
-}
-
 // header
 .tum-header {
     height: $header;
     display: flex;
-    background: $primary-color;
-    .nav-wrapper {
+    background: rgba(255, 255, 255, 0.8);
+    .tum-navbar {
         display: flex;
-        > div,
-        a,
-        ul {
-            flex: 1;
+        .tum-item {
+            width: 150px;
+            height: $header;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p {
+                color: #000;
+                line-height: 10px;
+            }
         }
     }
-    .logo {
+    .tum-logo {
+        background: url('/src/assets/image/logo.png') center center no-repeat;
+    }
+    .nav-items {
+        li {
+            a {
+                color: #000;
+                height: $header;
+                line-height: $header;
+            }
+        }
     }
 }
 

@@ -1,45 +1,6 @@
 @import 'common.scss';
-//
-.tum-header {
-    height: $header;
-    display: flex;
-    background: $primary-color;
-    .nav-wrapper {
-        display: flex;
-        > div,
-        a,
-        ul {
-            flex: 1;
-        }
-    }
-    .logo {
-    }
-}
-.page-footer {
-    background: $primary-color;
-    .tum-footer {
-        background: $footer_bg;
-        .footer-wrapper {
-            display: flex;
-            .footer-item {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                .ft-top {
-                }
-                .ft-bottom {
-                }
-            }
-        }
-        .footer-copyright {
-            background: $copyright_bg;
-        }
-    }
-}
 
 .wrapper {
-    .carousel-wrapper {
-    }
     .cooperate-module {
         display: flex;
         flex-direction: column;
@@ -172,7 +133,6 @@
     // 数据分布
     .record-wrapper {
         display: flex;
-        height: 245px;
         padding: 20px 0;
         .record-item {
             box-sizing: border-box;
@@ -196,4 +156,10 @@
             border-right: 3px solid white;
         }
     }
+}
+
+.record-map {
+    // 一定要写绝对路径，要不然会出差
+    background: url('/src/assets/image/map.png') center center;
+    height: 245px;
 }
