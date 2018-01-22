@@ -79,7 +79,26 @@
         -webkit-flex-direction: column;
             -ms-flex-direction: column;
                 flex-direction: column; }
+        .page-footer .tum-footer .footer-wrapper .footer-item .ft-top {
+          margin: 40px 0; }
+          .page-footer .tum-footer .footer-wrapper .footer-item .ft-top .white-text {
+            line-height: 30px;
+            font-size: 18px;
+            margin: 18px 0 30px; }
+          .page-footer .tum-footer .footer-wrapper .footer-item .ft-top li {
+            font-size: 14px;
+            line-height: 30px; }
+        .page-footer .tum-footer .footer-wrapper .footer-item .ft-bottom > img {
+          width: 140px; }
     .page-footer .tum-footer .footer-copyright {
+      font-size: 14px;
       background: #33302d; }
 
-/*# sourceMappingURL=course_75667.css.map*/
+.bg-grey {
+  background: #e5e5e5; }
+
+.bg-grey-light {
+  background: whitesmoke; }
+
+.hove_undeline:hover {
+  text-decoration: underline; }

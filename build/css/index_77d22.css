@@ -8456,12 +8456,14 @@ video::-webkit-media-text-track-display {
     -webkit-box-flex: 2;
     -webkit-flex: 2;
         -ms-flex: 2;
-            flex: 2; }
+            flex: 2;
+    height: 540px;
+    overflow: hidden; }
     .wrapper .video-wrapper .index-video .video-player {
-      display: none;
       width: 100%;
       height: 540px; }
     .wrapper .video-wrapper .index-video .index-video-image {
+      cursor: pointer;
       height: 540px; }
       .wrapper .video-wrapper .index-video .index-video-image img {
         width: 100%;
@@ -8572,5 +8574,3 @@ video::-webkit-media-text-track-display {
 .record-map {
   background: url("/src/assets/image/map.png") center center;
   height: 245px; }
-
-/*# sourceMappingURL=index_7d46c.css.map*/

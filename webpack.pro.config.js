@@ -15,7 +15,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        devtool: 'cheap-module-source-map',
+        devtool: 'cheap-module-eval-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].[chunkhash:5].js',
@@ -130,7 +130,7 @@ module.exports = function(env) {
                 // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],
             }),
-            new webpack.optimize.UglifyJsPlugin(),
+            // new webpack.optimize.UglifyJsPlugin(),
             // css code-split
             new ExtractTextPlugin({
                 filename: 'css/[name]_[chunkhash:5].css',

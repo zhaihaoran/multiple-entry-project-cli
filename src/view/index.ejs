@@ -10,7 +10,7 @@
 
 <body>
     <!-- 头部 -->
-    <nav class="tum-header scrollspy">
+    <nav class="tum-header scrollfire">
         <div class="container">
             <div class="tum-navbar">
                 <a href="#" class="tum-item tum-logo"></a>
@@ -35,7 +35,7 @@
         </div>
     </nav>
     <!-- 轮播图 -->
-    <div class="carousel-wrapper scrollspy"></div>
+    <div class="carousel-wrapper scrollfire"></div>
         <div class="carousel carousel-slider">
             <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/banner.png')  %>"></a>
             <a class="carousel-item" href="#one!"><img src="<%= require('../assets/image/bg1.jpg')  %>"></a>
@@ -44,7 +44,7 @@
         </div>
     </div>
     <!-- 数据分布 -->
-    <section class="wrapper record-map scrollspy">
+    <section class="wrapper record-map scrollfire">
         <div class="container record-wrapper center">
             <div class="record-item border-right">
                 <h2><b class="animateNumber">1000</b>+</h2>
@@ -69,7 +69,7 @@
         </div>
     </section>
     <!-- 热门视频 -->
-    <section class="wrapper scrollspy">
+    <section class="wrapper scrollfire">
         <div class="container ">
             <h2 class="video-title">
                 热门视频
@@ -80,7 +80,7 @@
                         <h2>知识改变命运</h2>
                         <p>演讲者：Fransico</p>
                     </div>
-                    <div class="index-video-image">
+                    <div class="index-video-image" id="videoPlay">
                         <img src="<%= require('../assets/image/office.jpg')  %>" class="responsive-img" alt="">
                     </div>
                     <video class="video-js video-player" id="video">
@@ -115,7 +115,7 @@
         </div>
     </section>
     <!-- 视频区域 -->
-    <section class="wrapper scrollspy">
+    <section class="wrapper scrollfire bg-grey-light">
         <div class="vd-context">
             <div class="container">
                 <div class="vd-title">最新演讲</div>
@@ -307,7 +307,7 @@
         </div>
     </section>
     <!-- 合作伙伴 -->
-    <section class="wrapper grey scrollspy">
+    <section class="wrapper bg-grey scrollfire">
         <div class="container cooperate-module">
             <div class="cooperate-item">
                 <h2 class="co-title center">合作伙伴</h2>
@@ -331,7 +331,7 @@
         </div>
     </section>
     <!-- 我要报名 -->
-    <section class="wrapper scrollspy">
+    <section class="wrapper scrollfire">
         <div class="container sign-module">
             <a href="#">
                 <img class="responsive-img tumeng-sign" src="<%= require('../assets/image/student.jpg')  %>" alt="">
@@ -342,48 +342,48 @@
         </div>
     </section>
     <!-- footer -->
-    <footer class="page-footer scrollspy">
+    <footer class="page-footer scrollfire">
         <div class="tum-footer">
             <div class="container footer-wrapper">
                 <div class="footer-item">
-                    <div class="ft-top"></div>
-                    <div class="ft-bottom"></div>
+                    <div class="ft-top">
+                        <img class="reponsive-img" src="<%= require('../assets/image/logo.png')  %>" alt="">
+                    </div>
+                    <div class="ft-bottom">
+                        <img class="reponsive-img" src="<%= require('../assets/image/qrcode.png')  %>" alt="">
+                    </div>
                 </div>
                 <div class="footer-item">
                     <div class="ft-top">
-                        <h5 class="white-text">Links</h5>
+                        <h5 class="white-text"><b>了解涂梦</b> </h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">精彩演讲</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">关于涂梦</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">公式信息</a></li>
                         </ul>
                     </div>
-                    <div class="ft-bottom"></div>
                 </div>
                 <div class="footer-item">
                     <div class="ft-top">
-                        <h5 class="white-text">Links</h5>
+                        <h5 class="white-text"> <b>与涂梦同行</b> </h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">我要演讲</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">学校入住</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">支持涂梦</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">工作机会</a></li>
                         </ul>
                     </div>
-                    <div class="ft-bottom"></div>
                 </div>
                 <div class="footer-item">
                     <div class="ft-top">
-                        <h5 class="white-text">Links</h5>
+                        <h5 class="white-text"> <b>联系我们</b> </h5>
                         <ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
+                            <li><a class="grey-text text-lighten-3 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
                         </ul>
                     </div>
-                    <div class="ft-bottom"></div>
                 </div>
             </div>
             <div class="footer-copyright">
