@@ -21,6 +21,7 @@ module.exports = function(env) {
             filename: 'js/[name].js',
             path: resolvePath('build'),
             library: '[name]',
+            publicPath: 'js/'
         },
         devServer: {
             contentBase: resolvePath('build'),
@@ -120,10 +121,10 @@ module.exports = function(env) {
         },
         plugins: [
             // DllReferencePlugin
-            new webpack.DllReferencePlugin({
-                context: resolvePath('build'),
-                manifest: resolvePath('build/manifest.json'),
-            }),
+            // new webpack.DllReferencePlugin({
+            //     context: resolvePath('build'),
+            //     manifest: resolvePath('build/manifest.json'),
+            // }),
 
             new webpack.optimize.CommonsChunkPlugin({
                 names: [...CommonChunkNames, "mainfest"],

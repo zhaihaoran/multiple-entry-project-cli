@@ -15,12 +15,13 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        devtool: 'cheap-module-eval-source-map',
+        devtool: 'cheap-module-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].[chunkhash:5].js',
             path: resolvePath('build'),
             library: '[name]',
+            publicPath: '/build/' // 处理静态图片需要用  一定是绝对路径 同时可以配置cdn路径
             // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
         },
         //将外部变量或者模块加载进来
@@ -130,7 +131,7 @@ module.exports = function(env) {
                 // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],
             }),
-            // new webpack.optimize.UglifyJsPlugin(),
+            new webpack.optimize.UglifyJsPlugin(),
             // css code-split
             new ExtractTextPlugin({
                 filename: 'css/[name]_[chunkhash:5].css',
