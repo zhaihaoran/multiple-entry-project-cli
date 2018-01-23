@@ -3,8 +3,7 @@ const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
-console.log(process.env.NODE_ENV === "github","github");
-console.log(process.env.NODE_ENV === "github" ? "https://zhaihaoran.github.io/multiple-entry-project-cli/" : "http://localhost:5000/");
+console.log(process.env.NODE_ENV);
 
 module.exports = {
     resolvePath,
@@ -25,9 +24,11 @@ module.exports = {
         "@json": resolvePath('src/assets/json'),
         "@lib": resolvePath('src/lib'),
     },
-    // cdn or web root
-    rootDir: process.env.NODE_ENV === "github" ? "https://zhaihaoran.github.io/multiple-entry-project-cli/" : "http://localhost:5000/",
+    // cdn or not
+    rootDir: "",
     // outputDir
-    outputDir: process.env.NODE_ENV === "github" ? "docs" : "build"
+    outputDir: "docs",
+    // dev
+    dev: process.env.NODE_ENV === "development"
 
 }

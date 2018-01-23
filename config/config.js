@@ -4,10 +4,12 @@ const {
     CommonChunks,
     HtmlDirectory,
     JsDirectory,
-    tplSuffix
+    tplSuffix,
+    dev
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+console.log("dev", dev);
 
 /**
  * 扫描入口文件
@@ -24,8 +26,9 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
         // 去除模板后缀
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
         entrys[entry] = resolvePath(`${jsDir}${entry}.js`);
+
         const newPlugins = new HtmlWebpackPlugin({
-            chunks: ['mainfest', ...Object.keys(CommonChunks), entry],
+            chunks: dev ? [entry] : ['mainfest', ...Object.keys(CommonChunks), entry],
             template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
             filename: `${entry}.html`,
             favicon: resolvePath('src/assets/favicon.png'),
@@ -35,7 +38,6 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
                 // removeAttributeQuotes: true,  // 移除属性引号
                 collapseWhitespace: true, // 是否去除空格
                 removeComments: true // 是否去掉注释
-
             },
         });
 

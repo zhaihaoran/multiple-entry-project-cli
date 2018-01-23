@@ -1,1 +1,0 @@
-var course=webpackJsonp_name_([2],{7:function(o,n,c){"use strict";(function(o){c(8);console.log(555),console.log(o)}).call(n,c(0))},8:function(o,n){}},[7]);

@@ -19,7 +19,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        devtool: 'cheap-module-source-map',
+        // devtool: 'cheap-module-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].[chunkhash:5].js',
@@ -134,20 +134,15 @@ module.exports = function(env) {
             new CleanWebpackPlugin([resolvePath(outputDir)]),
             new webpack.optimize.CommonsChunkPlugin({
                 // 最后多出一个mainfest 是webpack包的js文件合集
-                names: [...CommonChunkNames, "mainfest"],
+                names: [...CommonChunkNames],
+                minChunks: 2
             }),
             new webpack.optimize.UglifyJsPlugin(),
             // css code-split
             new ExtractTextPlugin({
-                filename: 'css/[name]_[chunkhash:5].css',
+                filename: '[name]_[chunkhash:5].css',
                 disable: false,
                 allChunks: true,
-            }),
-            // analyze
-            new BundleAnalyzerPlugin({
-                analyzerMode: 'server',
-                analyzerPort: 1234,
-                openAnalyzer: true
             }),
             ...webpackPlugins,
             // 定义标识符，当遇到指定标识符的时候，自动加载模块。

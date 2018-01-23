@@ -2,9 +2,13 @@ const {
     resolvePath,
     entrys,
     webpackPlugins,
-    alias,
     CommonChunkNames
 } = require('./config')
+const {
+    alias,
+    rootDir,
+    outputDir
+} = require('./setting')
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -15,19 +19,18 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        devtool: 'cheap-module-eval-source-map',
+        // devtool: 'cheap-module-eval-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].js',
             path: resolvePath('build'),
             library: '[name]',
-            publicPath: 'js/'
         },
-        devServer: {
-            contentBase: resolvePath('build'),
-            compress: true,
-            port: 9000
-        },
+        // devServer: {
+        //     contentBase: resolvePath('build'),
+        //     compress: true,
+        //     port: 9000
+        // },
         resolve: {
             extensions: ['.js', '.css', '.scss', '.ts', '.ejs', '.html'],
             alias: alias,
@@ -69,23 +72,8 @@ module.exports = function(env) {
                     // 图片压缩
                     loader: 'image-webpack-loader',
                     options: {
-                        gifsicle: {
-                            interlaced: false,
-                        },
                         optipng: {
                             optimizationLevel: 7,
-                        },
-                        pngquant: {
-                            quality: '65-90',
-                            speed: 4
-                        },
-                        mozjpeg: {
-                            progressive: true,
-                            quality: 65
-                        },
-                        // Specifying webp here will create a WEBP version of your JPG/PNG images
-                        webp: {
-                            quality: 75
                         }
                     }
                 }]
@@ -106,7 +94,7 @@ module.exports = function(env) {
                         options: {
                             sourceMap: true,
                             config: {
-                                path: 'postcss.config.js' // 这个得在项目根目录创建此文件
+                                path: 'postcss.config.js'
                             }
                         },
                     }, {
@@ -120,24 +108,21 @@ module.exports = function(env) {
             }]
         },
         plugins: [
-            // DllReferencePlugin
-            // new webpack.DllReferencePlugin({
-            //     context: resolvePath('build'),
-            //     manifest: resolvePath('build/manifest.json'),
-            // }),
-
             new webpack.optimize.CommonsChunkPlugin({
-                names: [...CommonChunkNames, "mainfest"],
+                names: [...CommonChunkNames, "manifest"],
+                // 重复多少次以上进行抽取
+                minChunks: 2
             }),
-            // webpack bundle analyzer
-            new BundleAnalyzerPlugin({
-                analyzerMode: 'server',
-                analyzerPort: 1234,
-                openAnalyzer: true
-            }),
+
+            // // webpack bundle analyzer
+            // new BundleAnalyzerPlugin({
+            //     analyzerMode: 'server',
+            //     analyzerPort: 1234,
+            //     openAnalyzer: true
+            // }),
             // css code-split
             new ExtractTextPlugin({
-                filename: 'css/[name].css',
+                filename: '[name].css',
                 disable: true,
                 allChunks: true,
             }),
@@ -149,7 +134,18 @@ module.exports = function(env) {
                 'window.jQuery': 'jquery',
                 'window.$': 'jquery',
                 moment: 'moment'
-            })
+            }),
+            // analyze
+            new BundleAnalyzerPlugin({
+                analyzerMode: 'server',
+                analyzerPort: 1234,
+                openAnalyzer: true
+            }),
+            // DllReferencePlugin
+            // new webpack.DllReferencePlugin({
+            //     context: __dirname,
+            //     manifest: resolvePath('build/manifest.json'),
+            // })
         ]
     };
 };

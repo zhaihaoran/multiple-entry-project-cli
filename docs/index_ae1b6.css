@@ -8351,7 +8351,9 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  background: rgba(255, 255, 255, 0.8); }
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4); }
   .tum-header .tum-navbar {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8694,6 +8696,4 @@ body {
   padding: 25px 0; }
 
 .record-map {
-  background: url(http://localhost:5000/assets/map.67df1.png) center center; }
-
-/*# sourceMappingURL=index_ae1b6.css.map*/
+  background: url(assets/map.67df1.png) center center; }

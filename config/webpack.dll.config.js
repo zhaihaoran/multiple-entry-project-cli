@@ -6,18 +6,17 @@ const {
 
 module.exports = {
     output: {
-        path: resolvePath('build'),
         filename: 'js/[name].js',
+        path: resolvePath('build'),
         library: '[name]',
     },
-    entry: {
-        vendor: CommonChunks.vendor,
-    },
+    entry: CommonChunks,
     plugins: [
         new webpack.DllPlugin({
             path: resolvePath('build/manifest.json'),
             name: '[name]',
-            context: resolvePath('build'),
+            context: __dirname,
         }),
+        new webpack.ProgressPlugin()
     ],
 };
