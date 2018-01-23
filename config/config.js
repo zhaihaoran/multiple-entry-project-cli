@@ -4,7 +4,6 @@ const {
     CommonChunks,
     HtmlDirectory,
     JsDirectory,
-    alias,
     tplSuffix
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -57,6 +56,5 @@ module.exports = {
     resolvePath,
     entrys,
     webpackPlugins,
-    alias,
     CommonChunkNames: Object.keys(CommonChunks),
 };

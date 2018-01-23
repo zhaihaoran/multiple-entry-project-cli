@@ -3,6 +3,9 @@ const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
+const env = process.NODE_ENV !== "production";
+console.log(env ? "开发环境" : "线上环境");
+
 module.exports = {
     resolvePath,
     // 公共js模块抽取
@@ -22,6 +25,9 @@ module.exports = {
         "@json": resolvePath('src/assets/json'),
         "@lib": resolvePath('src/lib'),
     },
-    // ddl config
+    // cdn or web root
+    rootDir: process.NODE_ENV !== "github" ? "https://zhaihaoran.github.io/multiple-entry-project-cli/" : "http://localhost:5000/",
+    // outputDir
+    outputDir: process.NODE_ENV !== "github" ? "docs" : "build"
 
 }

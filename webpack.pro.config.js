@@ -2,9 +2,13 @@ const {
     resolvePath,
     entrys,
     webpackPlugins,
-    alias,
     CommonChunkNames
 } = require('./config/config')
+const {
+    alias,
+    rootDir,
+    outputDir
+} = require('./config/setting')
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -19,20 +23,21 @@ module.exports = function(env) {
         entry: entrys,
         output: {
             filename: 'js/[name].[chunkhash:5].js',
-            path: resolvePath('build'),
+            path: resolvePath(outputDir),
             library: '[name]',
-            publicPath: '/' // 处理静态图片需要用  一定是绝对路径 同时可以配置cdn路径
+            publicPath: rootDir
+            // 处理静态图片需要用 网站根目录 同时可以配置cdn路径
             // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
         },
         //将外部变量或者模块加载进来
         // externals: {
         //     'jquery': 'window.jQuery'
         // },
-        devServer: {
-            contentBase: resolvePath('build'),
-            compress: true,
-            port: 9000
-        },
+        // devServer: {
+        //     contentBase: resolvePath('build'),
+        //     compress: true,
+        //     port: 9000
+        // },
         resolve: {
             extensions: ['.js', '.css', '.scss', '.ts', '.ejs', '.html'],
             alias: alias,
@@ -68,7 +73,7 @@ module.exports = function(env) {
                     loader: 'url-loader',
                     options: {
                         limit: 4096,
-                        name: "img/[name].[hash:5].[ext]"
+                        name: "assets/[name].[hash:5].[ext]"
                     }
                 }, {
                     // 图片压缩
@@ -126,7 +131,7 @@ module.exports = function(env) {
         },
         plugins: [
             // build之前需要清除的目录
-            new CleanWebpackPlugin([resolvePath("build")]),
+            new CleanWebpackPlugin([resolvePath(outputDir)]),
             new webpack.optimize.CommonsChunkPlugin({
                 // 最后多出一个mainfest 是webpack包的js文件合集
                 names: [...CommonChunkNames, "mainfest"],
