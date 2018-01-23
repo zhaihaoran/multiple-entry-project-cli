@@ -44,6 +44,7 @@ class Index {
             this.$videoPlay.addClass('hide').siblings('.index-mask').addClass('hide');
             that.videoPlayer.play();
         })
+        const box = 3;
     }
 
     pluginsInit() {
