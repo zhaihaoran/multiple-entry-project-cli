@@ -6,7 +6,6 @@ import 'materialize-css/sass/materialize.scss'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import '@scss/index.scss';
-
 //
 import '@lib/jquery.scrollfire'
 
@@ -20,12 +19,23 @@ class Index {
         this.declareVar()
         this.pluginsInit()
         this.videoPlay()
+
+        // var onScroll = (timestamp) => {
+        //     console.log("11");
+        //     var scrollTop = $(document).scrollTop()
+        //     console.log(scrollTop);
+        //     console.log(this);
+        //     window.requestAnimationFrame(onScroll)
+        // }
+
+        // window.requestAnimationFrame(onScroll)
     }
 
     declareVar() {
         this.$animateNumber = $('.animateNumber');
         this.$carousel = $('.carousel.carousel-slider');
         this.$videoPlay = $('#videoPlay');
+        this.$header = $('nav.tum-header');
     }
 
     videoPlay() {
@@ -51,12 +61,6 @@ class Index {
             preload: 'auto'
         });
 
-        $('.scrollfire').scrollfire({
-            parallax: {
-                active: true,
-                parent: $('.scrollfire').parent()
-            }
-        })
     }
 }
 

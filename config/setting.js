@@ -3,8 +3,7 @@ const fs = require('fs');
 const appDirectory = fs.realpathSync(process.cwd());
 const resolvePath = relativePath => path.resolve(appDirectory, relativePath);
 
-const env = process.NODE_ENV !== "production";
-console.log(env ? "开发环境" : "线上环境");
+console.log(process.NODE_ENV);
 
 module.exports = {
     resolvePath,
@@ -26,8 +25,8 @@ module.exports = {
         "@lib": resolvePath('src/lib'),
     },
     // cdn or web root
-    rootDir: process.NODE_ENV !== "github" ? "https://zhaihaoran.github.io/multiple-entry-project-cli/" : "http://localhost:5000/",
+    rootDir: process.NODE_ENV === "github" ? "https://zhaihaoran.github.io/multiple-entry-project-cli/" : "http://localhost:5000/",
     // outputDir
-    outputDir: process.NODE_ENV !== "github" ? "docs" : "build"
+    outputDir: process.NODE_ENV === "github" ? "docs" : "build"
 
 }

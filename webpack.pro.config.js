@@ -143,6 +143,12 @@ module.exports = function(env) {
                 disable: false,
                 allChunks: true,
             }),
+            // analyze
+            new BundleAnalyzerPlugin({
+                analyzerMode: 'server',
+                analyzerPort: 1234,
+                openAnalyzer: true
+            }),
             ...webpackPlugins,
             // 定义标识符，当遇到指定标识符的时候，自动加载模块。
             new webpack.ProvidePlugin({
