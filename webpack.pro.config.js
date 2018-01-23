@@ -21,7 +21,7 @@ module.exports = function(env) {
             filename: 'js/[name].[chunkhash:5].js',
             path: resolvePath('build'),
             library: '[name]',
-            publicPath: '/build/' // 处理静态图片需要用  一定是绝对路径 同时可以配置cdn路径
+            publicPath: '/' // 处理静态图片需要用  一定是绝对路径 同时可以配置cdn路径
             // 当前Dll的所有内容都会存放在这个参数指定变量名的一个全局变量下，注意与DllPlugin的name参数保持一致
         },
         //将外部变量或者模块加载进来
