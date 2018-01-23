@@ -128,7 +128,8 @@
                 height: 200px;
             }
             .vd-times {
-                background: rgb(56, 58, 60);
+                background: rgba(56, 58, 60, 0.9);
+                font-size: 12px;
                 position: absolute;
                 bottom: 10px;
                 right: 10px;
@@ -140,6 +141,10 @@
             justify-content: space-between;
             span {
                 font-size: 12px;
+            }
+            span.grey-66 {
+                font-size: 14px;
+                margin-top: -1px;
             }
         }
     }

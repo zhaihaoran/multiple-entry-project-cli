@@ -47,10 +47,15 @@ class Index {
     }
 
     pluginsInit() {
-        this.$animateNumber.prop('number', 0).animateNumber({
-            number: 9567,
-            easing: 'easeOut'
-        }, 4000)
+
+        this.$animateNumber.each((i,el)=>{
+            const aa = $(el).data('number');
+            $(el).prop('number', 0).animateNumber({
+                number: aa,
+                easing: 'easeOut'
+            }, 3000)
+        })
+
         this.$carousel.carousel({
             fullWidth: true,
             indicators: true
