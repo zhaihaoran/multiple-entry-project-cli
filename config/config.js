@@ -8,6 +8,7 @@ const {
     dev
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 
 console.log("dev", dev);
 
@@ -27,6 +28,13 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
         entrys[entry] = resolvePath(`${jsDir}${entry}.js`);
 
+        // 将 vendor.dll.js 插入HTML里
+        const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
+            assets: ["assets/vendor/jquery.min.js", "assets/vendor/vendor.dll.js"],
+            files: `${entry}.html`,
+            append: false
+        });
+
         const newPlugins = new HtmlWebpackPlugin({
             chunks: dev ? [entry] : ['mainfest', ...Object.keys(CommonChunks), entry],
             template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
@@ -41,8 +49,9 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
             },
         });
 
-        webpackPlugins.push(newPlugins);
+        webpackPlugins.push(newPlugins, vendorPlugins);
     });
+    console.log(entrys);
     return {
         entrys,
         webpackPlugins

@@ -57,10 +57,11 @@ class Index {
             }, 3000)
         })
 
-        this.$carousel.carousel({
+        M.Carousel.init(this.$carousel,{
             fullWidth: true,
-            indicators: true
-        });
+            indicators: true,
+            duration: 300
+        })
         this.videoPlayer = videojs('video', {
             controls: true,
             autoplay: false,

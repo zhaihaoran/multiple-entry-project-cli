@@ -1,22 +1,39 @@
 const webpack = require('webpack');
 const {
     resolvePath,
-    CommonChunks
+    CommonChunks,
+    outputDir
 } = require('./setting');
+
+const {
+    BundleAnalyzerPlugin
+} = require('webpack-bundle-analyzer');
+
+const {
+    ExtractTextPlugin,
+    modulePlugin
+} = require('./module.config')
 
 module.exports = {
     output: {
-        filename: 'js/[name].js',
-        path: resolvePath('build'),
-        library: '[name]',
+        path: resolvePath('src/assets/vendor'),
+        filename: '[name].dll.js',
+        library: "[name]"
     },
     entry: CommonChunks,
+    resolve: require('./resolve.config'),
+    module: modulePlugin,
     plugins: [
         new webpack.DllPlugin({
-            path: resolvePath('build/manifest.json'),
-            name: '[name]',
+            name: "[name]",
+            path: resolvePath('src/assets/vendor/[name]-manifest.json'),
             context: __dirname,
         }),
-        new webpack.ProgressPlugin()
+        // webpack bundle analyzer
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerPort: 1234,
+            openAnalyzer: true
+        }),
     ],
 };

@@ -11,6 +11,8 @@ const {
 } = require('./config/setting')
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// 并行打包
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const {
     BundleAnalyzerPlugin
@@ -19,7 +21,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = function(env) {
     return {
-        // devtool: 'cheap-module-source-map',
+        devtool: 'cheap-module-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].[chunkhash:5].js',
@@ -38,106 +40,20 @@ module.exports = function(env) {
         //     compress: true,
         //     port: 9000
         // },
-        resolve: {
-            extensions: ['.js', '.css', '.scss', '.ts', '.ejs', '.html'],
-            alias: alias,
-            modules: [resolvePath('node_modules'), 'node_modules'],
-        },
-        module: {
-            rules: [{
-                test: /\.html$/,
-                use: {
-                    loader: 'html-loader',
-                },
-                exclude: /node_moudles/
-            }, {
-                test: /\.ts$/,
-                use: {
-                    loader: 'ts-loader',
-                },
-                exclude: /node_moudles/
-            }, {
-                test: /\.js$/,
-                use: {
-                    loader: 'babel-loader',
-                },
-                exclude: /node_moudles/
-            }, {
-                test: /\.(woff|woff2|svg|eot|ttf)\??.*$/,
-                use: {
-                    loader: 'url-loader',
-                },
-            }, {
-                test: /\.(png|jpg|gif)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        limit: 4096,
-                        name: "assets/[name].[hash:5].[ext]"
-                    }
-                }, {
-                    // 图片压缩
-                    loader: 'image-webpack-loader',
-                    options: {
-                        gifsicle: {
-                            interlaced: false,
-                        },
-                        optipng: {
-                            optimizationLevel: 7,
-                        },
-                        pngquant: {
-                            quality: '65-90',
-                            speed: 4
-                        },
-                        mozjpeg: {
-                            progressive: true,
-                            quality: 65
-                        },
-                        // Specifying webp here will create a WEBP version of your JPG/PNG images
-                        webp: {
-                            quality: 75
-                        }
-                    }
-                }]
-            }, {
-                test: /\.(scss|css)$/,
-                use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: 'css-loader',
-                        options: {
-                            // css module
-                            modules: false,
-                            importLoaders: 1,
-                            localIdentName: '[local]_[hash:base64:5]',
-                            sourceMap: true,
-                        },
-                    }, {
-                        loader: 'postcss-loader',
-                        options: {
-                            sourceMap: true,
-                            config: {
-                                path: 'postcss.config.js' // 这个得在项目根目录创建此文件
-                            }
-                        },
-                    }, {
-                        loader: 'sass-loader',
-                        options: {
-                            sourceMap: true,
-                        },
-                    }, ],
-                    fallback: 'style-loader',
-                }),
-            }]
-        },
+        resolve: require('./config/resolve.config'),
+        module: require('./config/module.config'),
         plugins: [
             // build之前需要清除的目录
             new CleanWebpackPlugin([resolvePath(outputDir)]),
             new webpack.optimize.CommonsChunkPlugin({
                 // 最后多出一个mainfest 是webpack包的js文件合集
-                names: [...CommonChunkNames],
+                names: [...CommonChunkNames, 'mainfest'],
                 minChunks: 2
             }),
-            new webpack.optimize.UglifyJsPlugin(),
+            // 并行打包
+            new UglifyJSPlugin({
+                parallel: true
+            }),
             // css code-split
             new ExtractTextPlugin({
                 filename: '[name]_[chunkhash:5].css',

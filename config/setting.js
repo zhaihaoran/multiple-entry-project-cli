@@ -17,13 +17,6 @@ module.exports = {
     HtmlDirectory: 'src/view/',
     // html js 入口目录
     JsDirectory: 'src/entry/',
-    // alias
-    alias: {
-        "@scss": resolvePath('src/assets/scss'),
-        "@image": resolvePath('src/assets/image'),
-        "@json": resolvePath('src/assets/json'),
-        "@lib": resolvePath('src/lib'),
-    },
     // cdn or not
     rootDir: "",
     // outputDir
