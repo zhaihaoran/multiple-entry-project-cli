@@ -198,6 +198,9 @@
 }
 
 @media only screen and (max-width: 660px) {
+    .tum-header {
+        position: relative;
+    }
     .wrapper .video-wrapper .extra-video {
         padding-left: 0.75rem;
     }
@@ -227,15 +230,15 @@
         .video-title {
             margin: 25px 0;
         }
-        .vd-ss {
-            margin-top: 40px;
-        }
         .sign-module {
             padding: 35px 0;
             a {
                 margin-bottom: 10px;
             }
         }
+    }
+    .vd-ss {
+        margin-top: 40px;
     }
 
     .page-footer .tum-footer {

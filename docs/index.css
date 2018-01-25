@@ -8693,6 +8693,8 @@ body {
     background: url(assets/map_phone.36e20.png) center center no-repeat; } }
 
 @media only screen and (max-width: 660px) {
+  .tum-header {
+    position: relative; }
   .wrapper .video-wrapper .extra-video {
     padding-left: 0.75rem; }
   .wrapper .record-wrapper {
@@ -8712,11 +8714,11 @@ body {
     height: 270px; }
   .wrapper .video-title {
     margin: 25px 0; }
-  .wrapper .vd-ss {
-    margin-top: 40px; }
   .wrapper .sign-module {
     padding: 35px 0; }
     .wrapper .sign-module a {
       margin-bottom: 10px; }
+  .vd-ss {
+    margin-top: 40px; }
   .page-footer .tum-footer .footer-wrapper .footer-item {
     text-align: center; } }
