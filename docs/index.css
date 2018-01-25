@@ -8513,6 +8513,10 @@ body {
   .row .col {
     padding: 0 0.25rem; }
 
+.index-carousel.carousel a.carousel-item {
+  min-height: auto;
+  background: center center no-repeat; }
+
 .wrapper {
   overflow: hidden; }
   .wrapper .cooperate-module {

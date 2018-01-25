@@ -1,5 +1,12 @@
 @import 'common.scss';
 
+.index-carousel.carousel {
+    a.carousel-item {
+        min-height: auto;
+        background: center center no-repeat;
+    }
+}
+
 .wrapper {
     overflow: hidden;
     .cooperate-module {

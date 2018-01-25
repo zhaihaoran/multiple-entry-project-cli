@@ -2,7 +2,6 @@ const {
     resolvePath,
     entrys,
     webpackPlugins,
-    CommonChunkNames
 } = require('./config')
 const {
     alias,
@@ -18,6 +17,8 @@ const {
     modulePlugin
 } = require('./module.config')
 
+const manifest = require('../src/assets/vendor/vendor-manifest.json');
+
 const {
     BundleAnalyzerPlugin
 } = require('webpack-bundle-analyzer');
@@ -28,8 +29,7 @@ module.exports = function(env) {
     const Webpack_Plugins = [
         // DllReferencePlugin
         new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: resolvePath('src/assets/vendor/vendor-manifest.json')
+            manifest
         }),
         // copy custom static assets
         new CopyWebpackPlugin([{

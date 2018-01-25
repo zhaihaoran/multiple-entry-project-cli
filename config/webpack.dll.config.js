@@ -6,10 +6,6 @@ const {
 } = require('./setting');
 
 const {
-    BundleAnalyzerPlugin
-} = require('webpack-bundle-analyzer');
-
-const {
     ExtractTextPlugin,
     modulePlugin
 } = require('./module.config')
@@ -22,12 +18,10 @@ module.exports = {
     },
     entry: CommonChunks,
     resolve: require('./resolve.config'),
-    module: modulePlugin,
     plugins: [
         new webpack.DllPlugin({
             name: "[name]",
             path: resolvePath('src/assets/vendor/[name]-manifest.json'),
-            context: __dirname,
         }),
     ],
 };

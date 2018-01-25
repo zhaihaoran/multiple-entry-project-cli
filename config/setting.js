@@ -9,7 +9,7 @@ module.exports = {
     resolvePath,
     // 公共js模块抽取
     CommonChunks: {
-        "vendor": ['materialize-css'],
+        "vendor": ['materialize-css', 'lodash'],
     },
     // 模板后缀
     tplSuffix: 'ejs',
