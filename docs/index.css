@@ -8324,7 +8324,6 @@ body {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   z-index: 100;
-  width: 104%;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
@@ -8707,7 +8706,7 @@ body {
   background: #bb2133; }
 
 .record-map {
-  background: url(assets/map_cube.61fbc.png) center center no-repeat; }
+  background: url(assets/map.67df1.png) center center no-repeat; }
 
 @media only screen and (max-width: 1370px) {
   .wrapper .record-wrapper .border-right {
@@ -8717,7 +8716,7 @@ body {
   .wrapper .video-wrapper .extra-video {
     padding-left: 0.75rem; }
   .record-map {
-    background: url(assets/map_cube.61fbc.png) center center no-repeat; } }
+    background: url(assets/map_phone.7e2c7.png) center center no-repeat; } }
 
 @media only screen and (max-width: 660px) {
   .tum-header {

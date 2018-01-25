@@ -9,7 +9,6 @@ body {
 .hoverable.card-hover:hover {
     transform: scale(1.05);
     z-index: 100;
-    width: 104%;
     transition: transform 0.3s ease-out;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
     .card-content {
