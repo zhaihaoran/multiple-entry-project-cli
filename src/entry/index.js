@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import '@lib/animateNumber'
 // materialize
 import M from 'materialize-css'
@@ -20,15 +19,9 @@ class Index {
         this.pluginsInit()
         this.videoPlay()
 
-        // var onScroll = (timestamp) => {
-        //     console.log("11");
-        //     var scrollTop = $(document).scrollTop()
-        //     console.log(scrollTop);
-        //     console.log(this);
-        //     window.requestAnimationFrame(onScroll)
-        // }
-
-        // window.requestAnimationFrame(onScroll)
+        var elem1 = document.querySelector('.fixed-action-btn');
+        $('.tooltip').tooltip();
+        M.FloatingActionButton.init(elem1);
     }
 
     declareVar() {
@@ -50,7 +43,7 @@ class Index {
 
     pluginsInit() {
 
-        this.$animateNumber.each((i,el)=>{
+        this.$animateNumber.each((i, el) => {
             const aa = $(el).data('number');
             $(el).prop('number', 0).animateNumber({
                 number: aa,
@@ -58,7 +51,7 @@ class Index {
             }, 3000)
         })
 
-        M.Carousel.init(this.$carousel,{
+        M.Carousel.init(this.$carousel, {
             fullWidth: true,
             indicators: true,
             duration: 300

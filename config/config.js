@@ -27,7 +27,7 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
 
         // 将 vendor.dll.js 插入HTML里
         const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
-            assets: ["assets/vendor/vendor.dll.js"],
+            assets: ["assets/vendor/jquery.min.js","assets/vendor/vendor.dll.js"],
             files: `${entry}.html`,
             append: false
         });

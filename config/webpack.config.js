@@ -49,14 +49,7 @@ module.exports = function(env) {
             analyzerPort: 1234,
             openAnalyzer: true
         }),
-        ...webpackPlugins,
-        new webpack.ProvidePlugin({
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery',
-            'window.$': 'jquery',
-            moment: 'moment'
-        })
+        ...webpackPlugins
     ];
     if (!dev) {
         let proPlugins = [
@@ -70,6 +63,9 @@ module.exports = function(env) {
     return {
         devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
         entry: entrys,
+        externals: {
+            jquery: 'window.$'
+        },
         output: {
             filename: 'js/[name].js',
             path: resolvePath(outputDir),
