@@ -8594,6 +8594,7 @@ body {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
+        overflow: hidden;
         position: relative;
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
@@ -8609,7 +8610,8 @@ body {
             -ms-flex: 1;
                 flex: 1; }
         .wrapper .video-wrapper .extra-video .video-item img {
-          width: 100%; }
+          width: 100%;
+          height: 100%; }
       .wrapper .video-wrapper .extra-video .mt-col {
         margin-top: 0.5rem; }
     .wrapper .video-wrapper .video-mask.extra-mask {
