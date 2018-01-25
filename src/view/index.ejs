@@ -15,10 +15,10 @@
         <div class="container">
             <div class="tum-navbar">
                 <div class="tum-left">
-                    <a href="#" class="tum-item border-right tum-logo">
-                        <div style="border-right:1px solid #333;width:100%;height:100%;"></div>
+                    <a href="#" class="tum-item tum-logo">
+                        <div class="border-right hide-on-small-only"></div>
                     </a>
-                    <div class="tum-item">
+                    <div class="tum-item hide-on-small-only">
                         <p class="center grey-333">关注中学生成长与</p>
                         <p class="center grey-333">发展的非营利项目</p>
                     </div>
@@ -45,36 +45,36 @@
         </div>
     </nav>
     <!-- 轮播图 -->
-    <div class="carousel-wrapper scrollfire"></div>
     <div class="carousel carousel-slider">
         <a class="carousel-item" href="#one!"><img src="assets/image/banner.png"></a>
         <a class="carousel-item" href="#one!"><img src="assets/image/bg1.jpg"></a>
         <a class="carousel-item" href="#two!"><img src="assets/image/bg2.jpg"></a>
         <a class="carousel-item" href="#three!"><img src="assets/image/bg3.jpg"></a>
     </div>
-    </div>
     <!-- 数据分布 -->
     <section class="wrapper record-map scrollfire">
-        <div class="container record-wrapper center">
-            <div class="record-item border-right">
-                <h2><b class="animateNumber" data-number="10000">10000</b>+</h2>
-                <h3>受益学生</h3>
-                <p>海量学生从涂梦的分享中获得知识</p>
-            </div>
-            <div class="record-item border-right">
-                <h2><b class="animateNumber" data-number="100">100</b>+</h2>
-                <h3>演讲</h3>
-                <p>目前为止涂梦已举行大量的线上直播分享</p>
-            </div>
-            <div class="record-item border-right">
-                <h2><b class="animateNumber" data-number="13">13</b>+</h2>
-                <h3>地区</h3>
-                <p>涂梦的分享横跨中国各省，覆盖多个地区</p>
-            </div>
-            <div class="record-item">
-                <h2><b class="animateNumber" data-number="40">40</b>+</h2>
-                <h3>学校</h3>
-                <p>专注初中高中学生，已与大量学校连线分享</p>
+        <div class="container center">
+            <div class="row record-wrapper center">
+                <div class="record-item border-right col s6 l3">
+                    <h2><b class="animateNumber" data-number="10000">10000</b>+</h2>
+                    <h3>受益学生</h3>
+                    <p>海量学生从涂梦的分享中获得知识</p>
+                </div>
+                <div class="record-item border-right col s6 l3">
+                    <h2><b class="animateNumber" data-number="100">100</b>+</h2>
+                    <h3>演讲</h3>
+                    <p>目前为止涂梦已举行大量的线上直播分享</p>
+                </div>
+                <div class="record-item border-right col s6 l3">
+                    <h2><b class="animateNumber" data-number="13">13</b>+</h2>
+                    <h3>地区</h3>
+                    <p>涂梦的分享横跨中国各省，覆盖多个地区</p>
+                </div>
+                <div class="record-item col s6 l3">
+                    <h2><b class="animateNumber" data-number="40">40</b>+</h2>
+                    <h3>学校</h3>
+                    <p>专注初中高中学生，已与大量学校连线分享</p>
+                </div>
             </div>
         </div>
     </section>
@@ -84,29 +84,29 @@
             <h2 class="video-title">
                 热门视频
             </h2>
-            <div class="video-wrapper">
-                <div class="index-video card">
-                    <div class="video-mask index-mask">
-                        <h2>知识改变命运</h2>
-                        <p>演讲者：Fransico</p>
+            <div class="video-wrapper row">
+                <div class="index-video col s12 m9">
+                    <div class="index-video-image">
+                        <div class="video-mask index-mask in-mask">
+                            <h2>知识改变命运</h2>
+                            <p>演讲者：Fransico</p>
+                        </div>
+                        <img src="assets/image/office.jpg" class="responsive-img in-mask" alt="">
+                        <video class="video-js video-player responsive-video" id="video">
+                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                            <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                        </video>
                     </div>
-                    <div class="index-video-image" id="videoPlay">
-                        <img src="assets/image/office.jpg" class="responsive-img" alt="">
-                    </div>
-                    <video class="video-js video-player" id="video">
-                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                    </video>
                 </div>
-                <div class="extra-video">
-                    <div class="video-item card">
+                <div class="extra-video col s12 m3 hide-on-med-and-down">
+                    <div class="video-item">
                         <img src="assets/image/office.jpg" class="responsive-img" alt="">
                         <div class="video-mask extra-mask">
                             <h4>知识改变命运</h4>
                             <p>演讲者：Fransico</p>
                         </div>
                     </div>
-                    <div class="video-item mt-10 card">
+                    <div class="video-item mt-10">
                         <img src="assets/image/office.jpg" class="responsive-img" alt="">
                         <div class="video-mask extra-mask">
                             <h4>知识改变命运</h4>
@@ -128,7 +128,7 @@
             <div class="container">
                 <div class="vd-title">最新演讲</div>
                 <div class="row">
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -143,7 +143,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -158,7 +158,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -173,74 +173,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
-                        <div class="card hoverable card-hover">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/image/office.jpg">
-                                <span class="vd-times badge">12:58</span>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title grey-333">成为更好的自己</span>
-                                <div class="vd-extra">
-                                    <span class="grey-666">演讲者：周程程</span>
-                                    <span class="grey-999">9999次播放</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="vd-context">
-            <div class="container">
-                <div class="vd-title">最新演讲</div>
-                <div class="row">
-                    <div class="col s3 card-space">
-                        <div class="card hoverable card-hover">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/image/office.jpg">
-                                <span class="vd-times badge">12:58</span>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title grey-333">成为更好的自己</span>
-                                <div class="vd-extra">
-                                    <span class="grey-666">演讲者：周程程</span>
-                                    <span class="grey-999">9999次播放</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3 card-space">
-                        <div class="card hoverable card-hover">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/image/office.jpg">
-                                <span class="vd-times badge">12:58</span>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title grey-333">成为更好的自己</span>
-                                <div class="vd-extra">
-                                    <span class="grey-666">演讲者：周程程</span>
-                                    <span class="grey-999">9999次播放</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3 card-space">
-                        <div class="card hoverable card-hover">
-                            <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="assets/image/office.jpg">
-                                <span class="vd-times badge">12:58</span>
-                            </div>
-                            <div class="card-content">
-                                <span class="card-title grey-333">成为更好的自己</span>
-                                <div class="vd-extra">
-                                    <span class="grey-666">演讲者：周程程</span>
-                                    <span class="grey-999">9999次播放</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -262,7 +195,7 @@
             <div class="container">
                 <div class="vd-title">最新演讲</div>
                 <div class="row">
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -277,7 +210,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -292,7 +225,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -307,7 +240,74 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col s3 card-space">
+                    <div class="col s12 m6 l3 card-space">
+                        <div class="card hoverable card-hover">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/image/office.jpg">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-333">成为更好的自己</span>
+                                <div class="vd-extra">
+                                    <span class="grey-666">演讲者：周程程</span>
+                                    <span class="grey-999">9999次播放</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vd-context">
+            <div class="container">
+                <div class="vd-title">最新演讲</div>
+                <div class="row">
+                    <div class="col s12 m6 l3 card-space">
+                        <div class="card hoverable card-hover">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/image/office.jpg">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-333">成为更好的自己</span>
+                                <div class="vd-extra">
+                                    <span class="grey-666">演讲者：周程程</span>
+                                    <span class="grey-999">9999次播放</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-space">
+                        <div class="card hoverable card-hover">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/image/office.jpg">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-333">成为更好的自己</span>
+                                <div class="vd-extra">
+                                    <span class="grey-666">演讲者：周程程</span>
+                                    <span class="grey-999">9999次播放</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-space">
+                        <div class="card hoverable card-hover">
+                            <div class="card-image waves-effect waves-block waves-light">
+                                <img class="activator" src="assets/image/office.jpg">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title grey-333">成为更好的自己</span>
+                                <div class="vd-extra">
+                                    <span class="grey-666">演讲者：周程程</span>
+                                    <span class="grey-999">9999次播放</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l3 card-space">
                         <div class="card hoverable card-hover">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="assets/image/office.jpg">
@@ -327,7 +327,7 @@
         </div>
     </section>
     <!-- 合作伙伴 -->
-    <section class="wrapper co-ss bg-grey scrollfire">
+    <section class="wrapper co-ss bg-grey scrollfire hide-on-med-and-down">
         <div class="container cooperate-module">
             <div class="cooperate-item">
                 <h2 class="co-title center">合作伙伴</h2>
@@ -353,57 +353,61 @@
     <!-- 我要报名 -->
     <section class="wrapper scrollfire">
         <div class="container sign-module">
-            <a href="#">
-                <img class="responsive-img tumeng-sign" src="assets/image/coor1.png" alt="">
-            </a>
-            <a href="#">
-                <img class="responsive-img tumeng-sign" src="assets/image/coor2.png" alt="">
-            </a>
+            <div class="row">
+                <a class="col s12 m6" href="#">
+                    <img class="responsive-img tumeng-sign" src="assets/image/coor1.png" alt="">
+                </a>
+                <a class="col s12 m6" href="#">
+                    <img class="responsive-img tumeng-sign" src="assets/image/coor2.png" alt="">
+                </a>
+            </div>
         </div>
     </section>
     <!-- footer -->
     <footer class="page-footer scrollfire">
         <div class="tum-footer">
             <div class="container footer-wrapper">
-                <div class="footer-item">
-                    <div class="ft-logo">
-                        <img class="reponsive-img" src="assets/image/logo.png" alt="">
+                <div class="row">
+                    <div class="col s12 m3 footer-item">
+                        <div class="ft-logo">
+                            <img class="reponsive-img" src="assets/image/logo.png" alt="">
+                        </div>
+                        <div class="ft-bottom">
+                            <img class="reponsive-img" src="assets/image/qrcode.png" alt="">
+                        </div>
+                        <p class="ft-ps white-text text-lighten-6">微信扫码关注</p>
                     </div>
-                    <div class="ft-bottom">
-                        <img class="reponsive-img" src="assets/image/qrcode.png" alt="">
+                    <div class="col s12 m3 footer-item hide-on-med-and-down">
+                        <div class="ft-top">
+                            <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
+                            <ul>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">精彩演讲</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">关于涂梦</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">公式信息</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <p class="ft-ps white-text text-lighten-6">微信扫码关注</p>
-                </div>
-                <div class="footer-item">
-                    <div class="ft-top">
-                        <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
-                        <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">精彩演讲</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">关于涂梦</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">公式信息</a></li>
-                        </ul>
+                    <div class="col s12 m3 footer-item  hide-on-med-and-down">
+                        <div class="ft-top">
+                            <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
+                            <ul>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">我要演讲</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校入住</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">支持涂梦</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">工作机会</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-item">
-                    <div class="ft-top">
-                        <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
-                        <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">我要演讲</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校入住</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">支持涂梦</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">工作机会</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-item">
-                    <div class="ft-top">
-                        <h5 class="ft-title white-text text-lighten-6"> <b>联系我们</b> </h5>
-                        <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
-                        </ul>
+                    <div class="col s12 m3 footer-item">
+                        <div class="ft-top">
+                            <h5 class="ft-title white-text text-lighten-6"> <b>联系我们</b> </h5>
+                            <ul>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
+                                <li><a class="white-text text-lighten-6 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

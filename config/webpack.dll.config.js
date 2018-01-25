@@ -29,11 +29,5 @@ module.exports = {
             path: resolvePath('src/assets/vendor/[name]-manifest.json'),
             context: __dirname,
         }),
-        // webpack bundle analyzer
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: 1234,
-            openAnalyzer: true
-        }),
     ],
 };

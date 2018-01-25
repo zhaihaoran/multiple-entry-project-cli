@@ -34,7 +34,7 @@ class Index {
     declareVar() {
         this.$animateNumber = $('.animateNumber');
         this.$carousel = $('.carousel.carousel-slider');
-        this.$videoPlay = $('#videoPlay');
+        this.$videoPlay = $('.in-mask');
         this.$header = $('nav.tum-header');
     }
 

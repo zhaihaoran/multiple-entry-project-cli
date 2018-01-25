@@ -24,9 +24,6 @@
     .sign-module {
         padding: 60px 0;
         display: flex;
-        a {
-            flex: 1;
-        }
     }
     .video-title {
         font-size: 30px;
@@ -35,28 +32,28 @@
     }
 
     .video-wrapper {
-        display: flex;
         .index-video {
-            position: relative;
-            flex: 2;
-            height: 540px;
             overflow: hidden;
             .video-player {
+                position: absolute;
+                top: 0;
                 width: 100%;
-                height: 540px;
+                height: 100%;
             }
             .index-video-image {
+                position: relative;
                 cursor: pointer;
                 height: 540px;
                 img {
+                    position: relative;
+                    z-index: 1;
                     width: 100%;
                     height: 100%;
                 }
             }
         }
         .extra-video {
-            padding-left: 10px;
-            flex: 1;
+            padding-left: 0;
             display: flex;
             flex-direction: column;
             .video-item {
@@ -107,7 +104,6 @@
     }
     .vd-context {
         margin: 22px 0;
-        overflow: hidden;
         .vd-title {
             margin: 15px 0;
             font-size: 24px;
@@ -151,12 +147,10 @@
 
     // 数据分布
     .record-wrapper {
-        display: flex;
         padding: 20px 0;
         height: 245px;
         .record-item {
             box-sizing: border-box;
-            flex: 1;
             padding: 0 15px;
             color: white;
             h2 {
@@ -188,5 +182,67 @@
 }
 
 .record-map {
-    background: url('../assets/image/map.png') center center;
+    background: url('../assets/image/map.png') center center no-repeat;
+}
+
+@media only screen and (max-width: 993px) {
+    .wrapper .video-wrapper .extra-video {
+        padding-left: 0.75rem;
+    }
+    .wrapper .video-wrapper .index-video .index-video-image {
+        height: 270px;
+    }
+    .record-map {
+        background: url('../assets/image/map_phone.png') center center no-repeat;
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .wrapper .video-wrapper .extra-video {
+        padding-left: 0.75rem;
+    }
+    .wrapper {
+        .record-wrapper {
+            height: auto;
+            .border-right {
+                border: 0;
+            }
+            .record-item {
+                padding: 0;
+                h2 {
+                    font-size: 40px;
+                }
+                h3 {
+                    font-size: 26px;
+                }
+                p {
+                    padding: 0 12px;
+                    margin-top: 12px;
+                }
+            }
+        }
+        .index-video .index-video-image {
+            height: 270px;
+        }
+        .video-title {
+            margin: 25px 0;
+        }
+        .vd-ss {
+            margin-top: 40px;
+        }
+        .sign-module {
+            padding: 35px 0;
+            a {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .page-footer .tum-footer {
+        .footer-wrapper {
+            .footer-item {
+                text-align: center;
+            }
+        }
+    }
 }

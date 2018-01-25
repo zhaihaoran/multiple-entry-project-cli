@@ -1,5 +1,4 @@
 @import '_variables.scss';
-
 body {
     // 知乎
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
@@ -25,10 +24,6 @@ body {
     }
 }
 
-.card-space {
-    padding: 0 5px !important;
-}
-
 // header
 .tum-header {
     position: fixed;
@@ -39,6 +34,7 @@ body {
     box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
     .tum-navbar {
         display: flex;
+        justify-content: space-between;
         .tum-left {
             display: flex;
             width: 300px;
@@ -46,6 +42,7 @@ body {
         .tum-right {
             display: flex;
             width: 300px;
+            justify-content: flex-end;
             .search-item {
                 position: relative;
                 input {
@@ -88,11 +85,17 @@ body {
         padding: 0 20px;
         margin-left: 12px;
         font-size: 14px;
+        white-space: nowrap;
         color: white;
         background: $primary-color;
     }
     .tum-logo {
         background: url('../assets/image/logo.png') center center no-repeat;
+        .border-right {
+            border-right: 1px solid #333;
+            width: 100%;
+            height: 100%;
+        }
     }
     .nav-items {
         li {
@@ -100,6 +103,8 @@ body {
                 color: #000;
                 height: $header;
                 line-height: $header;
+                white-space: nowrap;
+                font-size: 15px;
             }
         }
     }
@@ -112,9 +117,7 @@ body {
     .tum-footer {
         background: $footer_bg;
         .footer-wrapper {
-            display: flex;
             .footer-item {
-                flex: 1;
                 display: flex;
                 flex-direction: column;
                 .ft-logo {
@@ -153,6 +156,7 @@ body {
 .bg-grey {
     background: $gray_deep_bg;
 }
+
 .bg-grey-light {
     background: $gray_shadow_bg;
 }
@@ -171,9 +175,15 @@ body {
 .grey-999 {
     color: #999;
 }
+
 .grey-666 {
     color: #666;
 }
+
 .grey-333 {
     color: #333;
+}
+
+.row {
+    margin: 0 -0.75rem;
 }
