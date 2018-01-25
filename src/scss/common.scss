@@ -185,5 +185,8 @@ body {
 }
 
 .row {
-    margin: 0 -0.75rem;
+    margin: 0 -0.25rem;
+    .col {
+        padding: 0 0.25rem;
+    }
 }

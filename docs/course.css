@@ -194,4 +194,6 @@ body {
   color: #333; }
 
 .row {
-  margin: 0 -0.75rem; }
+  margin: 0 -0.25rem; }
+  .row .col {
+    padding: 0 0.25rem; }

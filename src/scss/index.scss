@@ -32,46 +32,49 @@
     }
 
     .video-wrapper {
+        display: flex;
         .index-video {
             overflow: hidden;
             .video-player {
-                position: absolute;
+                position: relative;
                 top: 0;
-                width: 100%;
-                height: 100%;
+                #video {
+                    width: 100%;
+                }
             }
             .index-video-image {
+                display: flex;
                 position: relative;
+                flex-direction: column-reverse;
+                overflow: hidden;
                 cursor: pointer;
-                height: 540px;
                 img {
                     position: relative;
                     z-index: 1;
-                    width: 100%;
-                    height: 100%;
                 }
             }
         }
         .extra-video {
-            padding-left: 0;
             display: flex;
             flex-direction: column;
             .video-item {
+                display: flex;
                 position: relative;
-                height: 265px;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
                 flex: 1;
                 img {
                     width: 100%;
-                    height: 100%;
                 }
             }
-            .mt-10 {
-                margin-top: 10px;
+            .mt-col {
+                margin-top: 0.5rem;
             }
         }
         .video-mask.extra-mask {
             padding: 0 20px;
             height: 65px;
+            bottom: 0;
             h4 {
                 margin: 10px 0 5px;
                 font-size: 20px;
@@ -81,7 +84,7 @@
                 margin: 0;
             }
         }
-        .index-mask {
+        .video-mask.index-mask {
             padding: 15px 40px;
             height: 100px;
         }
@@ -90,7 +93,6 @@
             color: white;
             z-index: 5;
             position: absolute;
-            bottom: 0;
             background: rgba(0, 0, 0, 0.6);
             h2 {
                 font-size: 30px;
@@ -120,9 +122,6 @@
         }
         .card-image {
             position: relative;
-            img {
-                height: 200px;
-            }
             .vd-times {
                 background: rgba(56, 58, 60, 0.9);
                 font-size: 12px;
@@ -147,8 +146,8 @@
 
     // 数据分布
     .record-wrapper {
+        overflow: hidden;
         padding: 20px 0;
-        height: 245px;
         .record-item {
             box-sizing: border-box;
             padding: 0 15px;
@@ -181,19 +180,36 @@
     padding: 25px 0;
 }
 
+.record-aass {
+    background: $primary-color;
+}
+
 .record-map {
-    background: url('../assets/image/map.png') center center no-repeat;
+    background: url('../assets/image/map_cube.png') center center no-repeat;
+}
+
+@media only screen and (max-width: 1370px) {
+    // .wrapper .video-wrapper .extra-video {
+    //     padding-left: 0.75rem;
+    // }
+    // .wrapper .video-wrapper .index-video .index-video-image {
+    //     height: 270px;
+    // }
+    .wrapper {
+        .record-wrapper {
+            .border-right {
+                border: 0;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 993px) {
     .wrapper .video-wrapper .extra-video {
         padding-left: 0.75rem;
     }
-    .wrapper .video-wrapper .index-video .index-video-image {
-        height: 270px;
-    }
     .record-map {
-        background: url('../assets/image/map_phone.png') center center no-repeat;
+        background: url('../assets/image/map_cube.png') center center no-repeat;
     }
 }
 
@@ -223,9 +239,6 @@
                     margin-top: 12px;
                 }
             }
-        }
-        .index-video .index-video-image {
-            height: 270px;
         }
         .video-title {
             margin: 25px 0;

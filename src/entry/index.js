@@ -42,6 +42,7 @@ class Index {
         let that = this;
         this.$videoPlay.on('click', e => {
             this.$videoPlay.addClass('hide').siblings('.index-mask').addClass('hide');
+            $('.video-player').removeClass('hide');
             that.videoPlayer.play();
         })
         const box = 3;
