@@ -38,10 +38,10 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
             filename: `${entry}.html`,
             favicon: resolvePath('src/assets/favicon.png'),
             inject: "body",
-            minify: {
-                collapseWhitespace: true, // 是否去除空格
-                removeComments: true // 是否去掉注释
-            },
+            // minify: {
+            //     collapseWhitespace: true, // 是否去除空格
+            //     removeComments: true // 是否去掉注释
+            // },
         });
         webpackPlugins.push(newPlugins, vendorPlugins);
     });

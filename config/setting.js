@@ -12,7 +12,7 @@ module.exports = {
         "vendor": ['materialize-css', 'lodash'],
     },
     // 模板后缀
-    tplSuffix: 'ejs',
+    tplSuffix: 'html',
     // html 入口目录
     HtmlDirectory: 'src/view/',
     // html js 入口目录

@@ -23,6 +23,68 @@ body {
     }
 }
 
+.wrapper {
+    overflow: hidden;
+}
+
+// pagination
+.pagination {
+    li.active {
+        border-radius: 50%;
+        background: $primary-color;
+    }
+    li {
+        a {
+            font-size: 1rem;
+        }
+    }
+    .page-total {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
+
+// video card
+.vd-context {
+    margin: 22px 0;
+    .vd-title {
+        margin: 15px 0;
+        font-size: 24px;
+        color: #666;
+    }
+    .card-content {
+        padding: 10px 5px;
+        height: 70px;
+        .card-title {
+            font-size: 16px;
+            line-height: 16px;
+            margin-bottom: 10px;
+        }
+    }
+    .card-image {
+        position: relative;
+        .vd-times {
+            background: rgba(56, 58, 60, 0.9);
+            font-size: 12px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+        }
+    }
+    .vd-extra {
+        display: flex;
+        justify-content: space-between;
+        span {
+            font-size: 12px;
+        }
+        span.grey-66 {
+            font-size: 14px;
+            margin-top: -1px;
+        }
+    }
+}
+
 // header
 .tum-header {
     position: fixed;

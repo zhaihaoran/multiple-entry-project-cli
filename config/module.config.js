@@ -1,20 +1,13 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
+// {
+//     test: /\.html$/,
+//     use: {
+//         loader: 'html-loader',
+//     }
+// },
 module.exports = {
     modulePlugin: {
         rules: [{
-            test: /\.html$/,
-            use: {
-                loader: 'html-loader',
-            },
-            exclude: /node_moudles/
-        }, {
-            test: /\.ts$/,
-            use: {
-                loader: 'ts-loader',
-            },
-            exclude: /node_moudles/
-        }, {
             test: /\.js$/,
             use: {
                 loader: 'babel-loader',
