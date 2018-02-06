@@ -27,10 +27,7 @@
             }
         }
     }
-    .sign-module {
-        padding: 60px 0;
-        display: flex;
-    }
+
     .video-title {
         font-size: 30px;
         color: $primary-color;
@@ -221,13 +218,5 @@
     }
     .vd-ss {
         margin-top: 40px;
-    }
-
-    .page-footer .tum-footer {
-        .footer-wrapper {
-            .footer-item {
-                text-align: center;
-            }
-        }
     }
 }

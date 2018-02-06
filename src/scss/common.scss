@@ -104,23 +104,6 @@ body {
             display: flex;
             width: 300px;
             justify-content: flex-end;
-            .search-item {
-                position: relative;
-                input {
-                    box-sizing: border-box;
-                    font-size: 14px;
-                    padding-left: 30px;
-                    &:focus {
-                        border-bottom: 1px solid $primary-color;
-                        box-shadow: 0 1px 0 0 $primary-color;
-                    }
-                }
-                .search-icon {
-                    position: absolute;
-                    top: 6px;
-                    color: #333;
-                }
-            }
         }
         .tum-center {
             display: flex;
@@ -167,6 +150,36 @@ body {
                 white-space: nowrap;
                 font-size: 15px;
             }
+        }
+    }
+}
+// search
+.search-item {
+    position: relative;
+    input[type='text'].search-input {
+        box-sizing: border-box;
+        height: 35px;
+        min-width: 200px;
+        border: 1px solid #bebebe;
+        font-size: 14px;
+        padding-left: 10px;
+        margin-bottom: 0;
+        &:focus {
+            border-bottom: 1px solid #bebebe;
+            box-shadow: none;
+        }
+    }
+    span.search-icon {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        margin: auto;
+        height: 35px;
+        bottom: 0;
+        padding: 0 8px;
+        color: #bebebe;
+        i {
+            line-height: 35px;
         }
     }
 }
@@ -249,5 +262,21 @@ body {
     margin: 0 -0.25rem;
     .col {
         padding: 0 0.25rem;
+    }
+}
+
+// sign module
+.sign-module {
+    padding: 60px 0;
+    display: flex;
+}
+
+@media only screen and (max-width: 660px) {
+    .page-footer .tum-footer {
+        .footer-wrapper {
+            .footer-item {
+                text-align: center;
+            }
+        }
     }
 }

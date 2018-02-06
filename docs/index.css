@@ -8426,21 +8426,6 @@ body {
       -webkit-justify-content: flex-end;
           -ms-flex-pack: end;
               justify-content: flex-end; }
-      .tum-header .tum-navbar .tum-right .search-item {
-        position: relative; }
-        .tum-header .tum-navbar .tum-right .search-item input {
-          -webkit-box-sizing: border-box;
-                  box-sizing: border-box;
-          font-size: 14px;
-          padding-left: 30px; }
-          .tum-header .tum-navbar .tum-right .search-item input:focus {
-            border-bottom: 1px solid #bb2133;
-            -webkit-box-shadow: 0 1px 0 0 #bb2133;
-                    box-shadow: 0 1px 0 0 #bb2133; }
-        .tum-header .tum-navbar .tum-right .search-item .search-icon {
-          position: absolute;
-          top: 6px;
-          color: #333; }
     .tum-header .tum-navbar .tum-center {
       display: -webkit-box;
       display: -webkit-flex;
@@ -8498,6 +8483,33 @@ body {
     line-height: 70px;
     white-space: nowrap;
     font-size: 15px; }
+
+.search-item {
+  position: relative; }
+  .search-item input[type='text'].search-input {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 35px;
+    min-width: 200px;
+    border: 1px solid #bebebe;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-bottom: 0; }
+    .search-item input[type='text'].search-input:focus {
+      border-bottom: 1px solid #bebebe;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+  .search-item span.search-icon {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    margin: auto;
+    height: 35px;
+    bottom: 0;
+    padding: 0 8px;
+    color: #bebebe; }
+    .search-item span.search-icon i {
+      line-height: 35px; }
 
 .page-footer {
   background: #bb2133;
@@ -8564,6 +8576,17 @@ body {
   .row .col {
     padding: 0 0.25rem; }
 
+.sign-module {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+@media only screen and (max-width: 660px) {
+  .page-footer .tum-footer .footer-wrapper .footer-item {
+    text-align: center; } }
+
 .index-carousel.carousel a.carousel-item {
   min-height: auto;
   background: center center no-repeat; }
@@ -8594,13 +8617,6 @@ body {
             justify-content: center; }
     .wrapper .cooperate-module .cooperate-item .co-logos img {
       height: 60px; }
-
-.wrapper .sign-module {
-  padding: 60px 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
 
 .wrapper .video-title {
   font-size: 30px;
@@ -8766,6 +8782,4 @@ body {
     .wrapper .sign-module a {
       margin-bottom: 10px; }
   .vd-ss {
-    margin-top: 40px; }
-  .page-footer .tum-footer .footer-wrapper .footer-item {
-    text-align: center; } }
+    margin-top: 40px; } }

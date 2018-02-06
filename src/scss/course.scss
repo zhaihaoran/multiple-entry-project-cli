@@ -1,5 +1,4 @@
 @import 'common.scss';
-
 .index-image-wrapper {
     a {
         display: block;
@@ -8,12 +7,16 @@
         background: center center no-repeat;
     }
 }
+
 .sr-wrapper {
     display: flex;
     margin: 25px auto;
+    .sr-button-wrapper {
+        display: flex;
+    }
     .sr-button {
         color: #333;
-        width: 80px;
+        min-width: 80px;
         height: 35px;
         text-align: center;
         line-height: 35px;
@@ -42,5 +45,28 @@
                 border: 1px solid #c0c0c0;
             }
         }
+    }
+}
+
+.video-mb-20 {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 660px) {
+    .sr-wrapper {
+        display: block;
+        .sr-button {
+            flex: 1;
+        }
+        .sr-search {
+            margin: 0;
+            .sr-select-wrapper {
+                margin: 20px auto 0;
+                flex: 1;
+            }
+        }
+    }
+    .search-item {
+        flex: 1;
     }
 }

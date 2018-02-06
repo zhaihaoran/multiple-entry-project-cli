@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+        <title> 首页 - 涂梦教育 </title>
+</head>
+<body>
+        <%= require('html-loader!../templates/header.html') %>
+        <section class="wrapper container">
+            <div class="row">
+                <div class="col s9">
+                    <div class="vd-wrapper"></div>
+                    <div class="vd-intro"></div>
+                    <div class="vd-author"></div>
+                    <div class="vd-schoolinfo"></div>
+                </div>
+                <div class="col s3">
+                    <div class="extravd-intro"></div>
+                </div>
+            </div>
+        </section>
+        <%= require('html-loader!../templates/signModule.html') %>
+        <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>
