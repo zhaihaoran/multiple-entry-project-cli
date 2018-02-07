@@ -4,6 +4,11 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
         Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC,
         WenQuanYi Micro Hei, sans-serif;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .hoverable.card-hover:hover {
@@ -25,6 +30,10 @@ body {
 
 .wrapper {
     overflow: hidden;
+}
+
+.vd-pad-70 {
+    padding: 70px 0;
 }
 
 // pagination
@@ -262,6 +271,65 @@ body {
     margin: 0 -0.25rem;
     .col {
         padding: 0 0.25rem;
+    }
+}
+
+// video-wrapper
+.video-wrapper {
+    display: flex;
+    .index-video {
+        width: 100%;
+        overflow: hidden;
+        .video-player {
+            position: relative;
+            top: 0;
+            #video {
+                width: 100%;
+            }
+        }
+        .index-video-image {
+            display: flex;
+            position: relative;
+            flex-direction: column-reverse;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                position: relative;
+                z-index: 1;
+            }
+        }
+    }
+    .video-mask.extra-mask {
+        padding: 0 20px;
+        height: 65px;
+        bottom: 0;
+        h4 {
+            margin: 10px 0 5px;
+            font-size: 20px;
+        }
+        p {
+            font-size: 14px;
+            margin: 0;
+        }
+    }
+    .video-mask.index-mask {
+        padding: 15px 40px;
+        height: 100px;
+    }
+    .video-mask {
+        width: 100%;
+        color: white;
+        z-index: 5;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.6);
+        h2 {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        p {
+            margin: 10px 0;
+        }
     }
 }
 

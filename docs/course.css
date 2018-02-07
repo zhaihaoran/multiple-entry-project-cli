@@ -6883,7 +6883,12 @@ input[type=range].focused:focus:not(.active)::-ms-thumb {
 /* px */
 /* font-size */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif; }
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC, WenQuanYi Micro Hei, sans-serif;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0; }
 
 .hoverable.card-hover:hover {
   -webkit-transform: scale(1.05);
@@ -6906,6 +6911,9 @@ body {
 
 .wrapper {
   overflow: hidden; }
+
+.vd-pad-70 {
+  padding: 70px 0; }
 
 .pagination li.active {
   border-radius: 50%;
@@ -7140,6 +7148,61 @@ body {
   margin: 0 -0.25rem; }
   .row .col {
     padding: 0 0.25rem; }
+
+.video-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .video-wrapper .index-video {
+    width: 100%;
+    overflow: hidden; }
+    .video-wrapper .index-video .video-player {
+      position: relative;
+      top: 0; }
+      .video-wrapper .index-video .video-player #video {
+        width: 100%; }
+    .video-wrapper .index-video .index-video-image {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      position: relative;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: column-reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      overflow: hidden;
+      cursor: pointer; }
+      .video-wrapper .index-video .index-video-image img {
+        position: relative;
+        z-index: 1; }
+  .video-wrapper .video-mask.extra-mask {
+    padding: 0 20px;
+    height: 65px;
+    bottom: 0; }
+    .video-wrapper .video-mask.extra-mask h4 {
+      margin: 10px 0 5px;
+      font-size: 20px; }
+    .video-wrapper .video-mask.extra-mask p {
+      font-size: 14px;
+      margin: 0; }
+  .video-wrapper .video-mask.index-mask {
+    padding: 15px 40px;
+    height: 100px; }
+  .video-wrapper .video-mask {
+    width: 100%;
+    color: white;
+    z-index: 5;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6); }
+    .video-wrapper .video-mask h2 {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 5px 0; }
+    .video-wrapper .video-mask p {
+      margin: 10px 0; }
 
 .sign-module {
   padding: 60px 0;

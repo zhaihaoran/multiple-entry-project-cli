@@ -9,8 +9,9 @@
 
         <title> 首页 - 涂梦教育 </title>
 <link rel="shortcut icon" href="favicon.png"><link href="video.css" rel="stylesheet"></head>
+
 <body>
-        <!-- 头部 -->
+    <!-- 头部 -->
 <nav class="tum-header scrollfire">
     <div class="container">
         <div class="tum-navbar">
@@ -45,16 +46,93 @@
     </div>
 </nav>
 
-        <section class="wrapper container">
-            <div class="row">
-                <div class="col s9">
-                    <div class="vd-wrapper"></div>
-                    <div class="vd-intro"></div>
-                    <div class="vd-author"></div>
-                    <div class="vd-schoolinfo"></div>
-                </div>
-                <div class="col s3">
-                    <div class="extravd-intro"></div>
+        <section class="wrapper bg-grey-light vd-pad-70">
+            <div class="container wrapper-top">
+                <div class="row">
+                    <div class="col s8">
+                        <div class="video-wrapper">
+                            <div class="index-video">
+                                <div class="index-video-image">
+                                    <div class="video-mask index-mask in-mask">
+                                        <h2>知识改变命运,梦想成就未来</h2>
+                                        <p>演讲者：Francisco</p>
+                                    </div>
+                                    <img src="assets/image/video_bg.png" class="responsive-img in-mask" alt="">
+                                </div>
+                                <div class="video-player hide">
+                                    <video class="video-js responsive-video" id="video">
+                                                <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                                <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                            </video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vd-intro"></div>
+                        <div class="vd-author"></div>
+                        <div class="vd-schoolinfo"></div>
+                    </div>
+                    <div class="col s4">
+                        <div class="extra-intro">
+                            <ul class="tabs">
+                                <li class="tab ex-tab"><a href="#extra-info">相关推荐</a></li>
+                                <li class="tab ex-tab"><a class="active" href="#extra-opus">作者作品</a></li>
+                            </ul>
+                            <ul class="collection" id="extra-info">
+                                <a href="#!" class="collection-item avatar">Alvin</a>
+                                <a href="#!" class="collection-item avatar active">Alvin</a>
+                                <a href="#!" class="collection-item avatar">Alvin</a>
+                                <a href="#!" class="collection-item avatar">Alvin</a>
+                            </ul>
+                            <ul class="collection" id="extra-opus">
+                                <a href="#!" class="collection-item vd-recommend">
+                                    <div class="vd-image">
+                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                        <span class="vd-times badge">12:58</span>
+                                    </div>
+                                    <div class="vd-commend-info">
+                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                        <p>演讲者：张小衫</p>
+                                        <span class="tip">900 次播放</span>
+                                    </div>
+                                </a>
+                                <a href="#!" class="collection-item vd-recommend">
+                                    <div class="vd-image">
+                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                        <span class="vd-times badge">12:58</span>
+                                    </div>
+                                    <div class="vd-commend-info">
+                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                        <p>演讲者：张小衫</p>
+                                        <span class="tip">900 次播放</span>
+                                    </div>
+                                </a>
+                                <a href="#!" class="collection-item vd-recommend">
+                                    <div class="vd-image">
+                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                        <span class="vd-times badge">12:58</span>
+                                    </div>
+                                    <div class="vd-commend-info">
+                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                        <p>演讲者：张小衫</p>
+                                        <span class="tip">900 次播放</span>
+                                    </div>
+                                </a>
+                                <a href="#!" class="collection-item vd-recommend">
+                                    <div class="vd-image">
+                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                        <span class="vd-times badge">12:58</span>
+                                    </div>
+                                    <div class="vd-commend-info">
+                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                        <p>演讲者：张小衫</p>
+                                        <span class="tip">900 次播放</span>
+                                    </div>
+                                </a>
+
+
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -72,7 +150,7 @@
     </div>
 </section>
 
-        <!-- footer -->
+            <!-- footer -->
 <footer class="page-footer scrollfire">
     <div class="tum-footer">
         <div class="container footer-wrapper">
