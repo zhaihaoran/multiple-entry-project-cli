@@ -1,19 +1,9 @@
 @import 'common.scss';
 
-.vd-wrapper {
-}
-
 .extra-intro {
     min-width: 420px;
     .tabs {
-        display: flex;
-        border-bottom: 1px solid #bebebe;
-        .ex-tab {
-            a {
-                color: #333;
-                font-size: 16px;
-            }
-        }
+        @include common-tabs;
         .indicator {
             background: $primary-color;
             height: 4px;
@@ -62,7 +52,43 @@
     }
 }
 
-.collection {
-    margin: 0;
-    border: 0;
+.vd-intro {
+    .tabs {
+        @include common-tabs;
+        .indicator {
+            background: #333;
+            height: 2px;
+        }
+    }
+}
+
+.ivd-content {
+    padding: 20px;
+    background: white;
+    .ivd-avatar {
+        display: flex;
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    }
+    .ivd-info {
+        padding-left: 10px;
+        h5 {
+            margin: 0;
+        }
+        sub {
+            padding-left: 5px;
+        }
+    }
+    .cube:nth-child(1) {
+        > p {
+            margin: 0;
+            font-size: 14px;
+        }
+        > h5 {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
 }

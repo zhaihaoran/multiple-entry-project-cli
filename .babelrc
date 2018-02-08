@@ -2,5 +2,5 @@
     "compact": "auto",
     "ast": false,
     "highlightCode": true,
-    "presets": ["env"]
+    "presets": ["env", "react"]
 }

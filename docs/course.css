@@ -6915,6 +6915,9 @@ body {
 .vd-pad-70 {
   padding: 70px 0; }
 
+.btn {
+  background: #bb2133; }
+
 .pagination li.active {
   border-radius: 50%;
   background: #bb2133; }
@@ -7211,9 +7214,17 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
+.collection {
+  margin: 0;
+  border: 0; }
+
 @media only screen and (max-width: 660px) {
   .page-footer .tum-footer .footer-wrapper .footer-item {
     text-align: center; } }
+
+@media only screen and (max-width: 993px) {
+  .hide-on-large-and-down {
+    display: none; } }
 
 .index-image-wrapper a {
   display: block;

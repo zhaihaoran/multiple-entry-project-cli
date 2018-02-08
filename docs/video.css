@@ -8350,6 +8350,9 @@ body {
 .vd-pad-70 {
   padding: 70px 0; }
 
+.btn {
+  background: #bb2133; }
+
 .pagination li.active {
   border-radius: 50%;
   background: #bb2133; }
@@ -8646,9 +8649,17 @@ body {
   display: -ms-flexbox;
   display: flex; }
 
+.collection {
+  margin: 0;
+  border: 0; }
+
 @media only screen and (max-width: 660px) {
   .page-footer .tum-footer .footer-wrapper .footer-item {
     text-align: center; } }
+
+@media only screen and (max-width: 993px) {
+  .hide-on-large-and-down {
+    display: none; } }
 
 .extra-intro {
   min-width: 420px; }
@@ -8700,6 +8711,39 @@ body {
         font-size: 12px;
         color: #999; }
 
-.collection {
-  margin: 0;
-  border: 0; }
+.vd-intro .tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #bebebe; }
+  .vd-intro .tabs .ex-tab a {
+    color: #333;
+    font-size: 16px; }
+  .vd-intro .tabs .indicator {
+    background: #333;
+    height: 2px; }
+
+.ivd-content {
+  padding: 20px;
+  background: white; }
+  .ivd-content .ivd-avatar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .ivd-content .ivd-avatar img {
+      width: 150px;
+      height: 150px; }
+  .ivd-content .ivd-info {
+    padding-left: 10px; }
+    .ivd-content .ivd-info h5 {
+      margin: 0; }
+    .ivd-content .ivd-info sub {
+      padding-left: 5px; }
+  .ivd-content .cube:nth-child(1) > p {
+    margin: 0;
+    font-size: 14px; }
+  .ivd-content .cube:nth-child(1) > h5 {
+    font-size: 16px;
+    font-weight: bold; }
