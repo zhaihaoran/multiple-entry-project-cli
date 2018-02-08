@@ -20,7 +20,7 @@ module.exports = {
     resolve: require('./resolve.config'),
     plugins: [
         new webpack.DllPlugin({
-            name: "[name]",
+            name: "vendor",
             path: resolvePath('src/assets/vendor/[name]-manifest.json'),
         }),
     ],

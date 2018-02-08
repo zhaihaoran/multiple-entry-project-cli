@@ -25,6 +25,13 @@ const {
 // 并行打包
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
+
+// 后台webpack
+const {
+    adminWebpackPlugins,
+    adminEntrys
+} = require('./admin.config')
+
 module.exports = function(env) {
     const Webpack_Plugins = [
         // DllReferencePlugin
@@ -49,7 +56,8 @@ module.exports = function(env) {
             analyzerPort: 1234,
             openAnalyzer: true
         }),
-        ...webpackPlugins
+        ...webpackPlugins,
+        ...adminWebpackPlugins
     ];
     if (!dev) {
         let proPlugins = [
@@ -62,7 +70,7 @@ module.exports = function(env) {
     }
     return {
         devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
-        entry: entrys,
+        entry: Object.assign(entrys, adminEntrys),
         externals: {
             jquery: 'window.$'
         },

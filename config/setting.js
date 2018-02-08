@@ -17,6 +17,8 @@ module.exports = {
     HtmlDirectory: 'src/view/',
     // html js 入口目录
     JsDirectory: 'src/entry/',
+    // 后台 html 入口
+    adminHtml: 'src/assets/admin.html',
     // cdn or not
     rootDir: "",
     // outputDir
