@@ -36,7 +36,8 @@ module.exports = function(env) {
     const Webpack_Plugins = [
         // DllReferencePlugin
         new webpack.DllReferencePlugin({
-            manifest
+            name: 'vendor'
+            manifest,
         }),
         // copy custom static assets
         new CopyWebpackPlugin([{

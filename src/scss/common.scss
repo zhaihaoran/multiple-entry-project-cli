@@ -290,9 +290,16 @@ body {
     }
 }
 
+.mt-col {
+    margin-top: 10px;
+}
+
 // video-wrapper
 .video-wrapper {
     display: flex;
+    .video-item {
+        position: relative;
+    }
     .index-video {
         width: 100%;
         overflow: hidden;

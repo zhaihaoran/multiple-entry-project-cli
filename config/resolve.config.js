@@ -10,6 +10,9 @@ module.exports = {
         "@image": resolvePath('src/assets/image'),
         "@json": resolvePath('src/assets/json'),
         "@lib": resolvePath('src/lib'),
+        "@route": resolvePath('src/components/Route'),
+        "@reducer": resolvePath('src/components/Reducer'),
+        "@layout": resolvePath('src/components/Layout'),
     },
     modules: [resolvePath('node_modules'), 'node_modules'],
 }

@@ -2,5 +2,15 @@
     "compact": "auto",
     "ast": false,
     "highlightCode": true,
-    "presets": ["env", "react"]
+    "presets": ["env", "react"],
+    "plugins": [
+        [
+            "import",
+            {
+                "libraryName": "antd",
+                "libraryDirectory": "es",
+                "style": "css"
+            }
+        ]
+    ]
 }

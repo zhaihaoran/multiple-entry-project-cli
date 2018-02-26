@@ -7152,11 +7152,16 @@ body {
   .row .col {
     padding: 0 0.25rem; }
 
+.mt-col {
+  margin-top: 10px; }
+
 .video-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
+  .video-wrapper .video-item {
+    position: relative; }
   .video-wrapper .index-video {
     width: 100%;
     overflow: hidden; }

@@ -1,5 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { combineReducers, createStore } from 'redux';
+import { Provider } from 'react-redux';
 
-const App = () => <div>haha</div>;
+import routes from '@route/index.js';
+import reducers from '@reducer/index.js';
+
+const store = createStore(reducers);
+
+class App extends Component {
+    render() {
+        return (
+            <Provider store={store}>
+                <Router children={routes} />
+            </Provider>
+        );
+    }
+}
 
 export default App;

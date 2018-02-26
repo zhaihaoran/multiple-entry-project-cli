@@ -21,7 +21,7 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
     const entrys = Object.assign({}, CommonChunks);
     const webpackPlugins = [];
     // commonchunks
-    const vendorPluginsAssets = Object.keys(CommonChunks).map(v => `assets/vendor/${v}.vendor.js`)
+    const vendorPluginsAssets = Object.keys(CommonChunks).map(v => `assets/vendor/${v}.dll.js`)
     dirs.forEach(file => {
         // 去除模板后缀
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
