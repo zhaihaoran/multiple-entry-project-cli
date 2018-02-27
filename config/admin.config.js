@@ -4,6 +4,8 @@ const {
     adminHtml
 } = require('./setting')
 
+const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
+
 const adminEntrys = {
     school: resolvePath('src/entry/school.js'),
     speaker: resolvePath('src/entry/speaker.js'),
@@ -14,6 +16,13 @@ const adminWebpackPlugins = []
 
 for (let name in adminEntrys) {
 
+    // 将 vendor_admin.dll.js 插入HTML里
+    const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
+        assets: ["assets/vendor/vendor_admin.dll.js"],
+        files: `${name}.html`,
+        append: false
+    });
+
     const plugins = new HtmlWebpackPlugin({
         chunks: [name],
         template: resolvePath(adminHtml),
@@ -22,7 +31,7 @@ for (let name in adminEntrys) {
         inject: "body",
     })
 
-    adminWebpackPlugins.push(plugins)
+    adminWebpackPlugins.push(plugins, vendorPlugins)
 }
 
 module.exports = {

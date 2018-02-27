@@ -18,10 +18,9 @@ const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plug
  */
 function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
     const dirs = fs.readdirSync(resolvePath(htmlDir));
-    const entrys = Object.assign({}, CommonChunks);
+    const entrys = {};
     const webpackPlugins = [];
     // commonchunks
-    const vendorPluginsAssets = Object.keys(CommonChunks).map(v => `assets/vendor/${v}.dll.js`)
     dirs.forEach(file => {
         // 去除模板后缀
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
@@ -29,7 +28,7 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
 
         // 将 vendor.dll.js 插入HTML里
         const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
-            assets: ["assets/vendor/jquery.min.js", ...vendorPluginsAssets],
+            assets: ["assets/vendor/jquery.min.js", "assets/vendor/vendor.dll.js"],
             files: `${entry}.html`,
             append: false
         });

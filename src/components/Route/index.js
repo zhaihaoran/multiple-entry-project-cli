@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Home from "@view/Home";
-import Form from "@view/Form";
-import Calendar from "@view/Calendar";
+import Home from "@view/Home.jsx";
+import Form from "@view/Form.jsx";
+import Calendar from "@view/Calendar.jsx";
+import Login from "@view/Login.jsx";
+import Register from "@view/Register.jsx";
 
 import Layout from "@comp/Layout.jsx";
-import Login from "@view/Login";
-import Register from "@view/Register";
 
 export const Routes = [
 	{

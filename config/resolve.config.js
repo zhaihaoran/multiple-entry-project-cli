@@ -13,6 +13,7 @@ module.exports = {
         "@route": resolvePath('src/components/Route'),
         "@reducer": resolvePath('src/components/Reducer'),
         "@layout": resolvePath('src/components/Layout'),
+        "@view": resolvePath('src/components/View'),
     },
     modules: [resolvePath('node_modules'), 'node_modules'],
 }

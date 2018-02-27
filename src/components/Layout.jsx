@@ -1,16 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-import Sidebar from '@comps/Layout/Sidebar';
-
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu, Item } = Menu;
+// route
+import { Routes } from '@route/index';
+// comp
+import Sidebar from '@comp/Layout/Sidebar.jsx';
 
 class Wrapper extends React.Component {
     render() {
-        const { children, store } = this.props;
-        console.log(store, 'store');
-        const { collapsed, toggle } = store;
-        console.log(collapsed, toggle);
         return (
             <Layout className="admin-layout">
                 <Sidebar />
@@ -27,7 +28,16 @@ class Wrapper extends React.Component {
                             <Breadcrumb.Item>User</Breadcrumb.Item>
                             <Breadcrumb.Item>Bill</Breadcrumb.Item>
                         </Breadcrumb>
-                        <div id="context">{children}</div>
+                        <div id="context">
+                            {Routes.map((route, index) => (
+                                <Route
+                                    key={'comp-' + index}
+                                    path={route.path}
+                                    exact={route.exact}
+                                    component={route.component}
+                                />
+                            ))}
+                        </div>
                     </Content>
                     <Footer style={{ textAlign: 'center' }}>
                         Ant Design ©2016 Created by Ant UED
@@ -38,4 +48,10 @@ class Wrapper extends React.Component {
     }
 }
 
-export default Wrapper;
+const mapStateToProps = state => {
+    return {
+        sidebar: state.basic.toggle
+    };
+};
+
+export default connect(mapStateToProps)(App);

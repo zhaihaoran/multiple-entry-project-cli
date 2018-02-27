@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const {
     resolvePath,
-    CommonChunks,
     outputDir
 } = require('./setting');
 
@@ -16,12 +15,15 @@ module.exports = {
         filename: '[name].dll.js',
         library: "[name]"
     },
-    entry: CommonChunks,
+    entry: {
+        "vendor": ['materialize-css', 'lodash'],
+        "vendor_admin": ['react', 'react-dom'],
+    },
     resolve: require('./resolve.config'),
     plugins: [
         new webpack.DllPlugin({
-            name: "vendor",
-            path: resolvePath('src/assets/vendor/vendor-manifest.json'),
+            name: "[name]",
+            path: resolvePath('src/assets/vendor/[name]-manifest.json'),
         }),
     ],
 };

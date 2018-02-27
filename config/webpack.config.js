@@ -17,8 +17,6 @@ const {
     modulePlugin
 } = require('./module.config')
 
-const manifest = require('../src/assets/vendor/vendor-manifest.json');
-
 const {
     BundleAnalyzerPlugin
 } = require('webpack-bundle-analyzer');
@@ -34,10 +32,15 @@ const {
 
 module.exports = function(env) {
     const Webpack_Plugins = [
-        // DllReferencePlugin
+        // DllReferencePlugin -- frontend
         new webpack.DllReferencePlugin({
-            name: 'vendor'
-            manifest,
+            name: "vendor",
+            manifest: require('../src/assets/vendor/vendor-manifest.json')
+        }),
+        // backend
+        new webpack.DllReferencePlugin({
+            name: "vendor_admin",
+            manifest: require('../src/assets/vendor/vendor_admin-manifest.json')
         }),
         // copy custom static assets
         new CopyWebpackPlugin([{
