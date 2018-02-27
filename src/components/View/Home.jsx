@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class AccountPage extends Component {
+class AccountPage extends React.Component {
     render() {
         return (
             <div className="not-found">

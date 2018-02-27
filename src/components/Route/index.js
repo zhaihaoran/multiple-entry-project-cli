@@ -1,5 +1,5 @@
-import React from "react";
 import { Route, Switch } from "react-router-dom";
+
 import Home from "@view/Home.jsx";
 import Form from "@view/Form.jsx";
 import Calendar from "@view/Calendar.jsx";
@@ -24,12 +24,10 @@ export const Routes = [
 	}
 ];
 
-const routeAdmin = (
+export const routeAdmin = (
 	<Switch>
 		<Route path="/login" component={Login} />
 		<Route path="/register" component={Register} />
-		<Route path="/" component={Layout} />
+		<Route path="/" component={Login} />
 	</Switch>
 );
-
-export default routeAdmin;

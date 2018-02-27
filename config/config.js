@@ -1,7 +1,6 @@
 const fs = require('fs');
 const {
     resolvePath,
-    CommonChunks,
     HtmlDirectory,
     JsDirectory,
     tplSuffix,
@@ -16,11 +15,10 @@ const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plug
  * @param {String} jsDir    入口js文件
  * @returns {Object} Webpack Entry
  */
-function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
+function Scan(htmlDir, jsDir, tplSuffix) {
     const dirs = fs.readdirSync(resolvePath(htmlDir));
     const entrys = {};
     const webpackPlugins = [];
-    // commonchunks
     dirs.forEach(file => {
         // 去除模板后缀
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
@@ -55,11 +53,10 @@ function Scan(htmlDir, jsDir, CommonChunks, tplSuffix) {
 const {
     entrys,
     webpackPlugins
-} = Scan(HtmlDirectory, JsDirectory, CommonChunks, tplSuffix);
+} = Scan(HtmlDirectory, JsDirectory, tplSuffix);
 
 module.exports = {
     resolvePath,
     entrys,
     webpackPlugins,
-    CommonChunkNames: Object.keys(CommonChunks),
 };

@@ -7,9 +7,10 @@ console.log(process.env.NODE_ENV);
 
 module.exports = {
     resolvePath,
-    // 公共js模块抽取
+    // 公共模块抽取
     CommonChunks: {
         "vendor": ['materialize-css', 'lodash'],
+        "vendor_admin": ['react', 'react-dom', 'react-redux', 'react-router', 'lodash', 'antd'],
     },
     // 模板后缀
     tplSuffix: 'html',

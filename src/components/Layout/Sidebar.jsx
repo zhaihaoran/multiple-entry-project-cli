@@ -1,3 +1,4 @@
+import React from 'react';
 import { Layout, Menu, Breadcrumb, Icon, Badge } from 'antd';
 import PropTypes from 'prop-types';
 
@@ -124,4 +125,4 @@ class Sidebar extends React.Component {
     }
 }
 
-export default withRouter(Sidebar);
+export default Sidebar;

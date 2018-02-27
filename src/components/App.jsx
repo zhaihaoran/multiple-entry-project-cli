@@ -8,7 +8,7 @@ import reducers from '@reducer/index.js';
 
 const store = createStore(reducers);
 
-class App extends Component {
+class App extends React.Component {
     render() {
         return (
             <Provider store={store}>

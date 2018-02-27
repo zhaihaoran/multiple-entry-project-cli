@@ -3919,3 +3919,23 @@ mark {
     opacity: 0;
     -webkit-transform: scale(0) translateX(-50%);
     transform: scale(0) translateX(-50%); } }
+.admin-header {
+  background: #fff;
+  padding: 0; }
+
+.admin-content {
+  margin: 0 16px; }
+
+.admin-breadcrumb {
+  margin: 16px 0; }
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+
+.trigger:hover {
+  color: #1890ff; }

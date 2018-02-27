@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
@@ -10,7 +10,9 @@ import { Routes } from '@route/index';
 // comp
 import Sidebar from '@comp/Layout/Sidebar.jsx';
 
-class Wrapper extends React.Component {
+import '@scss/admin_common.scss';
+
+class App extends React.Component {
     render() {
         return (
             <Layout className="admin-layout">
@@ -48,10 +50,10 @@ class Wrapper extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        sidebar: state.basic.toggle
-    };
-};
+// const mapStateToProps = state => {
+//     return {
+//         sidebar: state.basic.toggle
+//     };
+// };
 
-export default connect(mapStateToProps)(App);
+export default App;
