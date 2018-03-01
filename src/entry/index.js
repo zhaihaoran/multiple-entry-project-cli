@@ -1,10 +1,13 @@
-// materialize
-import M from 'materialize-css'
-import 'materialize-css/sass/materialize.scss'
 import _ from 'lodash'
+
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import '@scss/index.scss';
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 //
 import '@lib/jquery.scrollfire'
 import '@lib/animateNumber'
@@ -22,13 +25,13 @@ class Index {
 
         var elem1 = document.querySelector('.fixed-action-btn');
         $('.tooltip').tooltip();
-        M.FloatingActionButton.init(elem1);
+        // M.FloatingActionButton.init(elem1);
         this.windowListenEvents();
     }
 
     declareVar() {
         this.$animateNumber = $('.animateNumber');
-        this.$carousel = $('.carousel.carousel-slider');
+        this.$carousel = $('.carousel');
         this.$videoPlay = $('.in-mask');
         this.$header = $('nav.tum-header');
     }
@@ -36,8 +39,8 @@ class Index {
     videoPlay() {
         let me = this;
         this.$videoPlay.on('click', e => {
-            this.$videoPlay.addClass('hide').siblings('.index-mask').addClass('hide');
-            $('.video-player').removeClass('hide');
+            this.$videoPlay.addClass('d-none').siblings('.index-mask').addClass('d-none');
+            $('.video-player').removeClass('d-none');
             $('.video-player').find('#video').css('height', $('.index-video').height())
             me.videoPlayer.play();
         })
@@ -101,11 +104,7 @@ class Index {
             }, 3000)
         })
 
-        M.Carousel.init(this.$carousel, {
-            fullWidth: true,
-            indicators: true,
-            duration: 300
-        })
+        this.$carousel.carousel()
         this.videoPlayer = videojs('video', {
             controls: true,
             autoplay: false,

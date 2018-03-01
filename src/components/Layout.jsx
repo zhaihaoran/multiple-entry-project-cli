@@ -1,46 +1,71 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu, Item } = Menu;
-// route
-import { Routes } from '@route/index';
-// comp
+import { Layout, Menu, Icon } from 'antd';
+import { Link } from 'react-router-dom';
+const { Header, Sider, Footer, Content } = Layout;
+
 import Sidebar from '@comp/Layout/Sidebar.jsx';
 
-import '@scss/admin_common.scss';
+class Wrapper extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            collapsed: false
+        };
+    }
 
-class App extends React.Component {
+    toggle() {
+        this.setState({
+            collapsed: !this.state.collapsed
+        });
+    }
     render() {
+        const { children } = this.props;
         return (
             <Layout className="admin-layout">
-                <Sidebar />
+                <Sider
+                    trigger={null}
+                    collapsible
+                    collapsed={this.state.collapsed}
+                >
+                    <div className="logo" />
+                    <Menu
+                        theme="dark"
+                        mode="inline"
+                        defaultSelectedKeys={['1']}
+                    >
+                        <Menu.Item key="1">
+                            <Link to="/">
+                                <Icon type="user" />
+                                <span>nav 1</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="2">
+                            <Link to="/about">
+                                <Icon type="video-camera" />
+                                <span>nav 2</span>
+                            </Link>
+                        </Menu.Item>
+                        <Menu.Item key="3">
+                            <Link to="/topics">
+                                <Icon type="upload" />
+                                <span>nav 3</span>
+                            </Link>
+                        </Menu.Item>
+                    </Menu>
+                </Sider>
                 <Layout>
                     <Header className="admin-header">
                         <Icon
                             className="trigger"
-                            type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                            onClick={toggle}
+                            type={
+                                this.state.collapsed
+                                    ? 'menu-unfold'
+                                    : 'menu-fold'
+                            }
+                            onClick={this.toggle.bind(this)}
                         />
                     </Header>
-                    <Content className="admin-content">
-                        <Breadcrumb className="admin-breadcrumb">
-                            <Breadcrumb.Item>User</Breadcrumb.Item>
-                            <Breadcrumb.Item>Bill</Breadcrumb.Item>
-                        </Breadcrumb>
-                        <div id="context">
-                            {Routes.map((route, index) => (
-                                <Route
-                                    key={'comp-' + index}
-                                    path={route.path}
-                                    exact={route.exact}
-                                    component={route.component}
-                                />
-                            ))}
-                        </div>
-                    </Content>
+                    <Content className="admin-content">{children}</Content>
                     <Footer style={{ textAlign: 'center' }}>
                         Ant Design ©2016 Created by Ant UED
                     </Footer>
@@ -50,10 +75,4 @@ class App extends React.Component {
     }
 }
 
-// const mapStateToProps = state => {
-//     return {
-//         sidebar: state.basic.toggle
-//     };
-// };
-
-export default App;
+export default Wrapper;

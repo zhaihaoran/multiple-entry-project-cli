@@ -1,5 +1,5 @@
-<!-- 头部 -->
-<nav class="tum-header scrollfire">
+<!-- 头部
+<nav class="tum-header navbar ">
     <div class="container">
         <div class="tum-navbar">
             <div class="tum-left">
@@ -19,6 +19,10 @@
                 <li><a class="wave-light" href="#">支持涂梦</a></li>
             </ul>
             <div class="tum-right">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
                 <div class="search-item">
                     <input placeholder="请输入..." type="text" class="search-input">
                     <span class="search-icon">
@@ -29,6 +33,48 @@
                     <a href="#" class="btn tum-sign-button">登录</a>
                 </div>
             </div>
+        </div>
+    </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light tum-header">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="../assets/image/logo.png" class="d-inline-block align-top" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item tum-border-left d-none d-lg-block">
+                    <div></div>
+                </li>
+                <li class="nav-item tum-item d-none d-lg-block">
+                    <p>关注中学生成长与</p>
+                    <p>发展的非营利项目</p>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">精彩演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我要演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">关于涂梦</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">支持涂梦</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="请输入" aria-label="Search">
+                <button class="btn btn-danger header-btn my-2 my-sm-0 " type="submit">登陆</button>
+            </form>
         </div>
     </div>
 </nav>

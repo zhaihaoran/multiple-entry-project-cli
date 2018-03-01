@@ -11,7 +11,7 @@
         <section class="wrapper bg-grey-light vd-pad-70">
             <div class="container wrapper-top">
                 <div class="row">
-                    <div class="col l8">
+                    <div class="col-lg-8">
                         <div class="video-wrapper">
                             <div class="index-video">
                                 <div class="index-video-image">
@@ -21,7 +21,7 @@
                                     </div>
                                     <img src="assets/image/video_bg.png" class="responsive-img in-mask" alt="">
                                 </div>
-                                <div class="video-player hide">
+                                <div class="video-player d-none">
                                     <video class="video-js responsive-video" id="video">
                                         <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
                                         <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
@@ -30,13 +30,19 @@
                             </div>
                         </div>
                         <div class="vd-intro">
-                            <ul class="tabs">
-                                <li class="tab ex-tab"><a href="#vd-info">视频详情</a></li>
-                                <li class="tab ex-tab"><a class="active" href="#vd-author">作者简介</a></li>
-                                <li class="tab ex-tab"><a class="active" href="#vd-school">学校简介</a></li>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item ex-tab">
+                                    <a class="nav-link active" data-toggle="tab" href="#vd-info">视频详情</a>
+                                </li>
+                                <li class="nav-item ex-tab">
+                                    <a class="nav-link" class="active" data-toggle="tab" href="#vd-author">作者简介</a>
+                                </li>
+                                <li class="nav-item ex-tab">
+                                    <a class="nav-link" class="active" data-toggle="tab" href="#vd-school">学校简介</a>
+                                </li>
                             </ul>
-                            <div class="ivd-content" >
-                                <div class="cube" id="vd-info">
+                            <div class="ivd-content tab-content">
+                                <div class="tab-pane active cube" role="tabpanel" id="vd-info">
                                     <p>本次涂梦课堂，我们邀请到建筑设计师————XXX，给广西扶绥中学的高中生们和贵州织金思源的初中学生们，带来了关于建筑师的职业分享</p>
                                     <h5>建筑是什么</h5>
                                     <p>用梁思成先生的话说：“建筑是人类的生成获得”，本次涂梦课堂，我们邀请到建筑设计师————XXX，给广西扶绥中学的高中生们和贵州织金思源的初中学生们，带来了关于建筑师的职业分享</p>
@@ -44,10 +50,10 @@
                                     <p>用梁思成先生的话说：“建筑是人类的生成获得”，本次涂梦课堂，我们邀请到建筑设计师————XXX，给广西扶绥中学的高中生们和贵州织金思源的初中学生们，带来了关于建筑师的职业分享</p>
                                     <p>用梁思成先生的话说：“建筑是人类的生成获得”，本次涂梦课堂，我们邀请到建筑设计师————XXX，给广西扶绥中学的高中生们和贵州织金思源的初中学生们，带来了关于建筑师的职业分享</p>
                                 </div>
-                                <div class="cube" id="vd-author">
+                                <div class="tab-pane cube" role="tabpanel" id="vd-author">
                                     <div class="ivd-avatar">
                                         <img src="../assets/image/office.jpg" class="responsive-img" alt="陈炳旭">
-                                        <div class="ivd-info" >
+                                        <div class="ivd-info">
                                             <h5>陈炳旭<sub>建筑师</sub></h5>
                                             <p>15 <sub>邀约</sub></p>
                                             <p>30 <sub>贡献人数</sub></p>
@@ -57,12 +63,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="ivd-p" >陈炳旭(Chen Bingxu) 早年移居英国伦敦，英国费冰蓝设计事务所董事，英国格林威治大学硕士，清华大学建筑学博士生。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老</p>
+                                    <p class="ivd-p">陈炳旭(Chen Bingxu) 早年移居英国伦敦，英国费冰蓝设计事务所董事，英国格林威治大学硕士，清华大学建筑学博士生。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老</p>
                                 </div>
-                                <div class="cube" id="vd-school">
+                                <div class="tab-pane cube" role="tabpanel" id="vd-school">
                                     <div class="ivd-avatar">
                                         <img src="../assets/image/office.jpg" class="responsive-img" alt="清华大学">
-                                        <div class="ivd-info" >
+                                        <div class="ivd-info">
                                             <h5>清华大学<sub>全国重点大学</sub></h5>
                                             <p>15 <sub>分享获得</sub></p>
                                             <div class="ivd-group">
@@ -71,73 +77,79 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="ivd-p" >陈炳旭(Chen Bingxu) 早年移居英国伦敦，英国费冰蓝设计事务所董事，英国格林威治大学硕士，清华大学建筑学博士生。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老</p>
+                                    <p class="ivd-p">陈炳旭(Chen Bingxu) 早年移居英国伦敦，英国费冰蓝设计事务所董事，英国格林威治大学硕士，清华大学建筑学博士生。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老。他拥有多年建筑设计和城市设计经验，专注养老</p>
                                 </div>
                             </div>
                         </div>
                         <div class="vd-author"></div>
                         <div class="vd-schoolinfo"></div>
                     </div>
-                    <div class="col l4 hide-on-large-and-down">
+                    <div class="col-lg-4 d-none d-lg-block">
                         <div class="extra-intro">
-                            <ul class="tabs">
-                                <li class="tab ex-tab"><a href="#extra-info">相关推荐</a></li>
-                                <li class="tab ex-tab"><a class="active" href="#extra-opus">作者作品</a></li>
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item ex-tab"><a data-toggle="tab" class="nav-link" href="#extra-info">相关推荐</a></li>
+                                <li class="nav-item ex-tab"><a data-toggle="tab" class="nav-link active" href="#extra-opus">作者作品</a></li>
                             </ul>
-                            <ul class="collection" id="extra-info">
-                                <a href="#!" class="collection-item avatar">Alvin</a>
-                                <a href="#!" class="collection-item avatar active">Alvin</a>
-                                <a href="#!" class="collection-item avatar">Alvin</a>
-                                <a href="#!" class="collection-item avatar">Alvin</a>
-                            </ul>
-                            <ul class="collection" id="extra-opus">
-                                <a href="#!" class="collection-item vd-recommend">
-                                    <div class="vd-image">
-                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
-                                        <span class="vd-times badge">12:58</span>
-                                    </div>
-                                    <div class="vd-commend-info">
-                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
-                                        <p>演讲者：张小衫</p>
-                                        <span class="tip">900 次播放</span>
-                                    </div>
-                                </a>
-                                <a href="#!" class="collection-item vd-recommend">
-                                    <div class="vd-image">
-                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
-                                        <span class="vd-times badge">12:58</span>
-                                    </div>
-                                    <div class="vd-commend-info">
-                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
-                                        <p>演讲者：张小衫</p>
-                                        <span class="tip">900 次播放</span>
-                                    </div>
-                                </a>
-                                <a href="#!" class="collection-item vd-recommend">
-                                    <div class="vd-image">
-                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
-                                        <span class="vd-times badge">12:58</span>
-                                    </div>
-                                    <div class="vd-commend-info">
-                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
-                                        <p>演讲者：张小衫</p>
-                                        <span class="tip">900 次播放</span>
-                                    </div>
-                                </a>
-                                <a href="#!" class="collection-item vd-recommend">
-                                    <div class="vd-image">
-                                        <img src="../assets/image/office.jpg" alt="" class="responsive-img">
-                                        <span class="vd-times badge">12:58</span>
-                                    </div>
-                                    <div class="vd-commend-info">
-                                        <h3>如何快速的掌握学习英语的小窍门的..</h3>
-                                        <p>演讲者：张小衫</p>
-                                        <span class="tip">900 次播放</span>
-                                    </div>
-                                </a>
+                            <div class="tab-content">
+                                <div class="tab-pane " id="extra-info">
+                                    <ul class="collection">
+                                        <a href="#!" class="collection-item avatar">Alvin</a>
+                                        <a href="#!" class="collection-item avatar active">Alvin</a>
+                                        <a href="#!" class="collection-item avatar">Alvin</a>
+                                        <a href="#!" class="collection-item avatar">Alvin</a>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane active" id="extra-opus">
+                                    <ul class="collection">
+                                        <a href="#!" class="collection-item vd-recommend">
+                                            <div class="vd-image">
+                                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="vd-commend-info">
+                                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                                <p>演讲者：张小衫</p>
+                                                <span class="tip">900 次播放</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="collection-item vd-recommend">
+                                            <div class="vd-image">
+                                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="vd-commend-info">
+                                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                                <p>演讲者：张小衫</p>
+                                                <span class="tip">900 次播放</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="collection-item vd-recommend">
+                                            <div class="vd-image">
+                                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="vd-commend-info">
+                                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                                <p>演讲者：张小衫</p>
+                                                <span class="tip">900 次播放</span>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="collection-item vd-recommend">
+                                            <div class="vd-image">
+                                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="vd-commend-info">
+                                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                                <p>演讲者：张小衫</p>
+                                                <span class="tip">900 次播放</span>
+                                            </div>
+                                        </a>
+                                    </ul>
+                                </div>
+                            </div>
 
 
-                            </ul>
                         </div>
                     </div>
                 </div>

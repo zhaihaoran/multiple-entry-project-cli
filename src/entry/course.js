@@ -1,7 +1,9 @@
-import M from 'materialize-css'
-import 'materialize-css/sass/materialize.scss'
 import _ from 'lodash'
 import '@scss/course.scss';
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 class Course {
     constructor() {

@@ -5,7 +5,7 @@ class AccountPage extends React.Component {
         return (
             <div className="not-found">
                 <h1>AccountPage</h1>
-                <p>haha</p>
+                <p>22222222</p>
             </div>
         );
     }

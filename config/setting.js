@@ -9,7 +9,7 @@ module.exports = {
     resolvePath,
     // 公共模块抽取
     CommonChunks: {
-        "vendor": ['materialize-css', 'lodash'],
+        "vendor": ['popper.js','bootstrap', 'lodash'],
         "vendor_admin": ['react', 'react-dom', 'react-redux', 'react-router', 'lodash', 'antd'],
     },
     // 模板后缀

@@ -37,11 +37,6 @@ module.exports = function(env) {
             name: "vendor",
             manifest: require('../src/assets/vendor/vendor-manifest.json')
         }),
-        // backend
-        new webpack.DllReferencePlugin({
-            name: "vendor_admin",
-            manifest: require('../src/assets/vendor/vendor_admin-manifest.json')
-        }),
         // copy custom static assets
         new CopyWebpackPlugin([{
             from: resolvePath('src/assets'),

@@ -1,7 +1,10 @@
-import M from 'materialize-css'
-import 'materialize-css/sass/materialize.scss'
 import _ from 'lodash'
 import videojs from 'video.js'
+
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import 'video.js/dist/video-js.css'
 import '@scss/video.scss';
 
@@ -18,21 +21,19 @@ class Video {
 
     declareVar() {
         this.$videoPlay = $('.in-mask');
-        this.$tabs = $('ul.tabs');
     }
 
     videoPlay() {
         let me = this;
         this.$videoPlay.on('click', e => {
-            this.$videoPlay.addClass('hide').siblings('.index-mask').addClass('hide');
-            $('.video-player').removeClass('hide');
+            this.$videoPlay.addClass('d-none').siblings('.index-mask').addClass('d-none');
+            $('.video-player').removeClass('d-none');
             $('.video-player').find('#video').css('height', $('.index-video').height())
             me.videoPlayer.play();
         })
     }
 
     pluginsInit() {
-        this.$tabs.tabs();
         this.videoPlayer = videojs('video', {
             controls: true,
             autoplay: false,

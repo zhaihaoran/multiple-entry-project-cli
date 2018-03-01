@@ -1,33 +1,10 @@
 @import 'common.scss';
 
-.index-carousel.carousel {
-    a.carousel-item {
-        min-height: auto;
-        background: center center no-repeat;
-    }
+.index-carousel {
+    overflow: hidden;
 }
 
 .wrapper {
-    .cooperate-module {
-        display: flex;
-        flex-direction: column;
-        .cooperate-item {
-            .co-title {
-                font-size: 28px;
-                color: $primary-color;
-                margin: 15px 0 35px;
-            }
-            .co-logos {
-                margin: 25px 0;
-                display: flex;
-                justify-content: center;
-                img {
-                    height: 60px;
-                }
-            }
-        }
-    }
-
     .video-title {
         font-size: 30px;
         color: $primary-color;
@@ -57,7 +34,7 @@
                 font-size: 14px;
             }
         }
-        .border-right {
+        .br-right {
             border-right: 3px solid white;
         }
     }
@@ -65,9 +42,6 @@
 .vd-ss {
     padding: 20px 0;
     margin-top: 70px;
-}
-.co-ss {
-    padding: 25px 0;
 }
 
 .record-aass {
@@ -79,15 +53,9 @@
 }
 
 @media only screen and (max-width: 1370px) {
-    // .wrapper .video-wrapper .extra-video {
-    //     padding-left: 0.75rem;
-    // }
-    // .wrapper .video-wrapper .index-video .index-video-image {
-    //     height: 270px;
-    // }
     .wrapper {
         .record-wrapper {
-            .border-right {
+            .br-right {
                 border: 0;
             }
         }
@@ -96,7 +64,7 @@
 
 @media only screen and (max-width: 993px) {
     .wrapper .video-wrapper .extra-video {
-        padding-left: 0.75rem;
+        padding-left: 0.25rem;
     }
     .record-map {
         background: url('../assets/image/map_phone.png') center center no-repeat;
@@ -104,16 +72,10 @@
 }
 
 @media only screen and (max-width: 660px) {
-    .tum-header {
-        position: relative;
-    }
-    .wrapper .video-wrapper .extra-video {
-        padding-left: 0.75rem;
-    }
     .wrapper {
         .record-wrapper {
             height: auto;
-            .border-right {
+            .br-right {
                 border: 0;
             }
             .record-item {

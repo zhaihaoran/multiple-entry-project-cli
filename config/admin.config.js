@@ -17,11 +17,11 @@ const adminWebpackPlugins = []
 for (let name in adminEntrys) {
 
     // 将 vendor_admin.dll.js 插入HTML里
-    const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
-        assets: ["assets/vendor/vendor_admin.dll.js"],
-        files: `${name}.html`,
-        append: false
-    });
+    // const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
+    //     assets: ["assets/vendor/vendor_admin.dll.js"],
+    //     files: `${name}.html`,
+    //     append: false
+    // });
 
     const plugins = new HtmlWebpackPlugin({
         chunks: [name],
@@ -31,7 +31,7 @@ for (let name in adminEntrys) {
         inject: "body",
     })
 
-    adminWebpackPlugins.push(plugins, vendorPlugins)
+    adminWebpackPlugins.push(plugins)
 }
 
 module.exports = {
