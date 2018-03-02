@@ -11,45 +11,7 @@
 <link rel="shortcut icon" href="favicon.png"><link href="course.css" rel="stylesheet"></head>
 
 <body>
-    <!-- 头部
-<nav class="tum-header navbar ">
-    <div class="container">
-        <div class="tum-navbar">
-            <div class="tum-left">
-                <a href="#" class="tum-item tum-logo">
-                    <div class="border-right hide-on-small-only"></div>
-                </a>
-                <div class="tum-item hide-on-small-only">
-                    <p class="center grey-333">关注中学生成长与</p>
-                    <p class="center grey-333">发展的非营利项目</p>
-                </div>
-            </div>
-            <ul class="nav-items hide-on-med-and-down tum-center">
-                <li><a class="wave-light" href="#">首页</a></li>
-                <li><a class="wave-light" href="#">精彩演讲</a></li>
-                <li><a class="wave-light" href="#">我要演讲</a></li>
-                <li><a class="wave-light" href="#">关于涂梦</a></li>
-                <li><a class="wave-light" href="#">支持涂梦</a></li>
-            </ul>
-            <div class="tum-right">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-                <div class="search-item">
-                    <input placeholder="请输入..." type="text" class="search-input">
-                    <span class="search-icon">
-                            <i class="material-icons">search</i>
-                        </span>
-                </div>
-                <div class="sign">
-                    <a href="#" class="btn tum-sign-button">登录</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav> -->
-<nav class="navbar navbar-expand-lg navbar-light tum-header">
+    <nav class="navbar navbar-expand-lg navbar-light tum-header">
     <div class="container">
         <a href="#" class="navbar-brand">
             <img src="data:image/png;base64,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" class="d-inline-block align-top" alt="logo">
@@ -104,21 +66,21 @@
                     <div class="sr-button truncate sr-button-hover"><span>最多播放</span></div>
                 </div>
                 <div class="sr-search">
-                    <div class="sr-select-wrapper hide-on-med-and-down">
+                    <div class="sr-select-wrapper d-none d-md-block">
                         <select name="type" class="sr-select browser-default">
                             <option value="0">全部分类</option>
                             <option value="1">aa</option>
                             <option value="2">bb</option>
                         </select>
                     </div>
-                    <div class="sr-select-wrapper hide-on-med-and-down">
+                    <div class="sr-select-wrapper d-none d-md-block">
                         <select name="type" class="sr-select browser-default">
                             <option value="0">全部时长</option>
                             <option value="1">aa</option>
                             <option value="2">bb</option>
                         </select>
                     </div>
-                    <div class="sr-select-wrapper hide-on-med-and-down">
+                    <div class="sr-select-wrapper d-none d-md-block">
                         <select name="type" class="sr-select browser-default">
                             <option value="0">全部上传时间</option>
                             <option value="1">aa</option>
@@ -347,11 +309,21 @@
     <div class="container sign-module">
         <div class="row">
             <a class="col-sm-12 col-md-6" href="#">
-                    <img class="responsive-img tumeng-sign" src="assets/coor1.4fd45.png" alt="">
-                </a>
+                <img class="responsive-img tumeng-sign" src="assets/coor1.4fd45.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-1">
+                    <h2>我要演讲</h2>
+                    <p>演讲者传播知识</p>
+                </div>
+            </a>
             <a class="col-sm-12 col-md-6" href="#">
-                    <img class="responsive-img tumeng-sign" src="assets/coor2.e53a7.png" alt="">
-                </a>
+                <img class="responsive-img tumeng-sign" src="assets/coor2.e53a7.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-2">
+                    <h2>学校入驻</h2>
+                    <p>获得演讲者分享</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>
@@ -370,7 +342,7 @@
                     </div>
                     <p class="ft-ps white-text text-lighten-6">微信扫码关注</p>
                 </div>
-                <div class="col-sm-12 col-md-3 footer-item hide-on-med-and-down">
+                <div class="col-sm-12 col-md-3 footer-item d-none d-lg-block d-md-block">
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
                         <ul>
@@ -380,7 +352,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3 footer-item  hide-on-med-and-down">
+                <div class="col-sm-12 col-md-3 footer-item  d-none d-lg-block d-md-block">
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
                         <ul>

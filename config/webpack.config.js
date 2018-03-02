@@ -43,6 +43,11 @@ module.exports = function(env) {
             to: resolvePath(`${outputDir}/assets`),
             ignore: ['.*']
         }]),
+        // auto fouce the defined plugins
+        // 当有未赋值的变量时，默认从对应的module里加载
+        new webpack.ProvidePlugin({
+            "_": "lodash",
+        }),
         // css code-split
         new ExtractTextPlugin({
             filename: '[name].css',

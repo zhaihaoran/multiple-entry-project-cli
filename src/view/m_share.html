@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+        <title> 首页 - 涂梦教育 </title>
+</head>
+
+<body>
+    <%= require('html-loader!../templates/header.html') %>
+        <div class="video-wrapper">
+            <video class="video-js responsive-video" id="video">
+                <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="share-wrapper">
+            <div class="title"></div>
+            <div class="share"></div>
+        </div>
+
+        <!-- 涂梦介绍 -->
+        <div class="tumeng-intro">
+            <div class="tg-tab"></div>
+            <div class="tg-ctx"></div>
+        </div>
+        <%= require('html-loader!../templates/signModule.html') %>
+            <!-- tabs -->
+            <ul class="nav tabs videos" role="tablist">
+                <li class="nav-item tab"><a data-toggle="tab" href="#info">推荐</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#opus">作品</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#detail">详情</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#author">作者</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#school">学校</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="info">
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar active">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                    </ul>
+                </div>
+                <div class="tab-pane active" id="opus">
+                    <ul class="collection">
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="detail">
+                    11
+                </div>
+                <div class="tab-pane" id="author">
+                    22
+                </div>
+                <div class="tab-pane" id="school">
+                    33
+                </div>
+            </div>
+            <ul class="nav tabs tm-intro" role="tabltxt">
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#info"><span>涂梦（Tomoroe）</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane tm-area active" id="detail">
+                    <p>一个关注中学生成长与发展的非营利项目</p>
+                    <p>该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+                </div>
+            </div>
+            <%= require('html-loader!../templates/statistics.html') %>
+                <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>

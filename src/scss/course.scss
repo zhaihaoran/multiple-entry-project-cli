@@ -5,6 +5,7 @@
     margin: 25px auto;
     .sr-button-wrapper {
         display: flex;
+        flex: 1px;
     }
     .sr-button {
         color: #333;
@@ -29,7 +30,7 @@
         display: flex;
         margin-left: 46px;
         .sr-select-wrapper {
-            margin: 0 8px;
+            margin: 0 0 0 8px;
             select.sr-select {
                 display: block;
                 height: 35px;
@@ -60,6 +61,8 @@
         }
     }
     .search-item {
-        flex: 1;
+        .search-input {
+            width: 100%;
+        }
     }
 }

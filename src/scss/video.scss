@@ -1,14 +1,9 @@
 @import 'common.scss';
+@import 'lib.scss';
 
 .extra-intro {
     min-width: 420px;
-    .tabs {
-        @include common-tabs;
-        .indicator {
-            background: $primary-color;
-            height: 4px;
-        }
-    }
+    background: #fff;
     .vd-recommend {
         padding: 10px;
         display: flex !important;
@@ -34,15 +29,15 @@
             padding-left: 10px;
             h3 {
                 color: #333;
-                font-size: 18px;
-                line-height: 28px;
+                font-size: 16px;
+                line-height: 24px;
                 margin: 0;
             }
             p {
                 font-size: 14px;
                 color: #666;
                 margin: 0;
-                margin-top: 20px;
+                margin-top: 26px;
             }
             span.tip {
                 font-size: 12px;
@@ -50,36 +45,80 @@
             }
         }
     }
+
+    .tabs {
+        border-bottom: 1px solid #ccc;
+    }
 }
 
 .vd-intro {
     .tabs {
-        @include common-tabs;
-        .indicator {
-            background: #333;
-            height: 2px;
+        border-bottom: 1px solid #ccc;
+        .tab a.active {
+            border-bottom: 4px solid #333;
+        }
+    }
+    .vd-info {
+        position: absolute;
+        right: 0;
+        font-size: 14px;
+        color: #999;
+        span {
+            padding: 0 10px;
         }
     }
 }
 
 .ivd-content {
-    padding: 20px;
+    padding: 30px;
     background: white;
     .ivd-avatar {
         display: flex;
         img {
-            width: 150px;
-            height: 150px;
+            width: 140px;
+            height: 140px;
         }
     }
     .ivd-info {
-        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
         h5 {
+            padding-bottom: 5px;
             margin: 0;
+            font-size: 1.5rem;
+            sub {
+                padding-left: 10px;
+                color: #999;
+                font-size: 14px;
+            }
         }
-        sub {
-            padding-left: 5px;
+        p {
+            flex: 1;
+            font-size: 20px;
+            color: #666;
+            margin: 0;
+
+            sub {
+                padding-left: 5px;
+                color: #999;
+                font-size: 14px;
+                top: 0;
+            }
         }
+        .ivd-group {
+            padding-top: 10px;
+            .btn {
+                color: #fff;
+            }
+            .ivd-left {
+                margin-left: 10px;
+            }
+        }
+    }
+    .ivd-p {
+        margin: 30px auto;
+        color: #666;
     }
     .cube:nth-child(1) {
         > p {
@@ -87,8 +126,26 @@
             font-size: 14px;
         }
         > h5 {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: bold;
+            margin: 20px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .wrapper-top {
+        padding: 0;
+    }
+    .ivd-content {
+        padding: 15px;
+        .ivd-info .ivd-group {
+            .btn {
+                font-size: 14px;
+            }
+            .ivd-left {
+                margin-left: 5px;
+            }
         }
     }
 }

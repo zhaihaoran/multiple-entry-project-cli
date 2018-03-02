@@ -1,0 +1,205 @@
+// common style fixed
+
+// container
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1360px !important;
+    }
+}
+
+// card hover
+.hoverable.card-hover:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 5px 8px 0 rgba(0, 0, 0, 0.19);
+    .card-content {
+        background: $primary-color;
+        height: 70px;
+        padding: 10px;
+        .grey-333,
+        .grey-666,
+        .grey-999 {
+            color: white;
+        }
+    }
+}
+
+// navbar
+.tum-header.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0.5rem 1.1rem !important;
+    text-align: center;
+}
+
+// pagination
+.pagination {
+    li {
+        display: inline-block;
+        border-radius: 2px;
+        text-align: center;
+        vertical-align: top;
+        height: 30px;
+        a {
+            color: #444;
+            display: inline-block;
+            padding: 0 10px;
+            line-height: 30px;
+            font-size: 1rem;
+        }
+        &.active {
+            border-radius: 50%;
+            background: $primary-color;
+            a {
+                color: #fff;
+            }
+        }
+        &.disabled {
+            a {
+                cursor: default;
+                color: #999;
+            }
+        }
+        i {
+            font-size: 2rem;
+        }
+        .pages ul li {
+            display: inline-block;
+            float: none;
+        }
+    }
+    .page-total {
+        font-size: 1rem;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .pagination {
+        width: 100%;
+    }
+    .pagination li.prev,
+    .pagination li.next {
+        width: 10%;
+    }
+    .pagination li.pages {
+        width: 80%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+
+// bages
+.badge {
+    font-weight: normal;
+    border-radius: 0;
+}
+
+// tabs 修改
+@mixin common-tabs {
+    display: flex;
+    border-bottom: 1px solid #bebebe;
+    .ex-tab {
+        a {
+            color: #333;
+            font-size: 16px;
+        }
+    }
+}
+
+// button
+.btn {
+    border-radius: 0;
+}
+
+// row col
+
+.row {
+    margin: 0 -0.25rem !important;
+    .col,
+    .col-1,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8,
+    .col-9,
+    .col-auto,
+    .col-lg,
+    .col-lg-1,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-auto,
+    .col-md,
+    .col-md-1,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-auto,
+    .col-sm,
+    .col-sm-1,
+    .col-sm-10,
+    .col-sm-11,
+    .col-sm-12,
+    .col-sm-2,
+    .col-sm-3,
+    .col-sm-4,
+    .col-sm-5,
+    .col-sm-6,
+    .col-sm-7,
+    .col-sm-8,
+    .col-sm-9,
+    .col-sm-auto,
+    .col-xl,
+    .col-xl-1,
+    .col-xl-10,
+    .col-xl-11,
+    .col-xl-12,
+    .col-xl-2,
+    .col-xl-3,
+    .col-xl-4,
+    .col-xl-5,
+    .col-xl-6,
+    .col-xl-7,
+    .col-xl-8,
+    .col-xl-9,
+    .col-xl-auto {
+        padding: 0 0.25rem;
+    }
+}
+
+// video -- playbutton
+.video-js .vjs-big-play-button {
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    span {
+        font-size: 60px;
+        line-height: 75px;
+    }
+}

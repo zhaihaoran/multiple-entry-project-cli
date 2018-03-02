@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+        <title> 首页 - 涂梦教育 </title>
+</head>
+
+<body>
+    <%= require('html-loader!../templates/header.html') %>
+        <!-- index-image -->
+        <div class="index-image-wrapper share-banner">
+            <div class="responsive-img image-box" data-smpic="url('../assets/image/banners/banner_2.png')" data-bgpic="url('../assets/image/banners/banner_2.png')" style="background-image:url('../assets/image/banners/banner_2.png') center center no-repeat">
+                <div class="share-box">
+                    <h2>来涂梦<span>分享</span></h2>
+                    <h2>来让每个孩子的梦想不因为眼界而受到局限</h2>
+                    <button class="btn">立即加入</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="more-guest-title">
+            <span>更多分享嘉宾</span><span>更多精彩内容</span>
+        </h2>
+        <!-- 照片墙 -->
+        <div class="photowall">
+            <div class="p-index">
+                <img src="../assets/image/guests/guest1.png" alt="" class="img-fluid">
+            </div>
+            <div class="p-wrapper">
+                <div class="p-row">
+                    <div class="p-cube"><img src="../assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                </div>
+                <div class="p-row">
+                    <div class="p-cube"><img src="../assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                </div>
+                <div class="p-row">
+                    <div class="p-cube"><img src="../assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="../assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 嘉宾信息 -->
+        <div class="guest-wrapper">
+            <div class="guest-pic order-1">
+                <img class="reponsive-img" src="../assets/image/guests/guest1.png" alt="">
+            </div>
+            <div class="guest-info bg-grey">
+                <h2>赵爱灵</h2>
+                <h3>影视合伙人、制片人、天津世纪百年影业</h3>
+                <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
+            </div>
+        </div>
+        <!-- 数据 -->
+        <section class="wrapper data-suport">
+            <h2 class="text-center">学生需要您的支持</h2>
+            <p class="text-center">中国高中生接受职业与毕业指导的比例远低于国际水平</p>
+            <p class="text-center">中国青少年研究中心联合日、美、韩发起对四国高中生的毕业去向和职业生涯教育为主题的比较研究，《中美日韩高中生毕业去向和职业生涯教育研究报告》揭示：中国高中生的职业生涯教育已经全面落后于其他三个国家，进而导致中国高中生在毕业去向及职业选择上，出现许多令人担忧的问题。</p>
+            <img src="../assets/image/background/record_1.png" class="img-fluid" alt="">
+        </section>
+        <!-- tumeng misson -->
+        <div class="tm-misson">
+            <h2 class="text-center">涂梦的使命</h2>
+            <p class="text-center">涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。</p>
+            <p class="text-center">该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+        </div>
+        <!-- record -->
+        <%= require('html-loader!../templates/statistics.html') %>
+            <!-- become speecher -->
+            <section class="wrapper speech-2">
+                <div class="speech-box">
+                    <h2>成为演讲者您只需要</h2>
+                    <p>1. 热爱工作，热衷公益，善于表达</p>
+                    <p>2. 电脑和网络</p>
+                    <a href="#" class="btn speech-btn">立即加入</a>
+                </div>
+            </section>
+            <%= require
+    ('html-loader!../templates/partner.html') %>
+                <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>

@@ -87,7 +87,7 @@ class Index {
      */
     loadCarouselImage(carouselHeight, imageAttr) {
         this.$carousel.css("height", carouselHeight)
-        this.$carousel.children('a').each((i, el) => {
+        this.$carousel.find('.carousel-item a').each((i, el) => {
             $(el).css({
                 "background-image": $(el).data(imageAttr)
             })

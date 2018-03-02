@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <title> 首页 - 涂梦教育 </title>
+<link rel="shortcut icon" href="favicon.png"><link href="m_share.css" rel="stylesheet"></head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light tum-header">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="data:image/png;base64,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" class="d-inline-block align-top" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item tum-border-left d-none d-lg-block">
+                    <div></div>
+                </li>
+                <li class="nav-item tum-item d-none d-lg-block">
+                    <p>关注中学生成长与</p>
+                    <p>发展的非营利项目</p>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">精彩演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我要演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">关于涂梦</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">支持涂梦</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="请输入" aria-label="Search">
+                <button class="btn btn-danger header-btn my-2 my-sm-0 " type="submit">登陆</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+        <div class="video-wrapper">
+            <video class="video-js responsive-video" id="video">
+                <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="share-wrapper">
+            <div class="title"></div>
+            <div class="share"></div>
+        </div>
+
+        <!-- 涂梦介绍 -->
+        <div class="tumeng-intro">
+            <div class="tg-tab"></div>
+            <div class="tg-ctx"></div>
+        </div>
+        <!-- 我要报名 -->
+<section class="wrapper scrollfire">
+    <div class="container sign-module">
+        <div class="row">
+            <a class="col-sm-12 col-md-6" href="#">
+                <img class="responsive-img tumeng-sign" src="assets/coor1.4fd45.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-1">
+                    <h2>我要演讲</h2>
+                    <p>演讲者传播知识</p>
+                </div>
+            </a>
+            <a class="col-sm-12 col-md-6" href="#">
+                <img class="responsive-img tumeng-sign" src="assets/coor2.e53a7.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-2">
+                    <h2>学校入驻</h2>
+                    <p>获得演讲者分享</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+            <!-- tabs -->
+            <ul class="nav tabs videos" role="tablist">
+                <li class="nav-item tab"><a data-toggle="tab" href="#info">推荐</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#opus">作品</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#detail">详情</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#author">作者</a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#school">学校</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="info">
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar active">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                    </ul>
+                </div>
+                <div class="tab-pane active" id="opus">
+                    <ul class="collection">
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                        <a href="#!" class="collection-item vd-recommend">
+                            <div class="vd-image">
+                                <img src="../assets/image/office.jpg" alt="" class="responsive-img">
+                                <span class="vd-times badge">12:58</span>
+                            </div>
+                            <div class="vd-commend-info">
+                                <h3>如何快速的掌握学习英语的小窍门的..</h3>
+                                <p>演讲者：张小衫</p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="detail">
+                    11
+                </div>
+                <div class="tab-pane" id="author">
+                    22
+                </div>
+                <div class="tab-pane" id="school">
+                    33
+                </div>
+            </div>
+            <ul class="nav tabs tm-intro" role="tabltxt">
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#info"><span>涂梦（Tomoroe）</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane tm-area active" id="detail">
+                    <p>一个关注中学生成长与发展的非营利项目</p>
+                    <p>该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+                </div>
+            </div>
+            <!-- 数据分布 -->
+<section class="wrapper scrollfire record-aass">
+    <div class="container record-map">
+        <div class="row record-wrapper text-center">
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="10000">10000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="100">100</b>+</h2>
+                <h3>演讲</h3>
+                <p>目前为止涂梦已举行大量的线上直播分享</p>
+            </div>
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="13">13</b>+</h2>
+                <h3>地区</h3>
+                <p>涂梦的分享横跨中国各省，覆盖多个地区</p>
+            </div>
+            <div class="record-item col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="40">40</b>+</h2>
+                <h3>学校</h3>
+                <p>专注初中高中学生，已与大量学校连线分享</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <!-- footer -->
+<footer class="page-footer scrollfire">
+    <div class="tum-footer">
+        <div class="container footer-wrapper">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 footer-item">
+                    <div class="ft-logo">
+                        <img class="reponsive-img" src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div class="ft-bottom">
+                        <img class="reponsive-img" src="assets/qrcode.0e15c.png" alt="">
+                    </div>
+                    <p class="ft-ps white-text text-lighten-6">微信扫码关注</p>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item d-none d-lg-block d-md-block">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">精彩演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">关于涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">公式信息</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item  d-none d-lg-block d-md-block">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">我要演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校入住</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">支持涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">工作机会</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"> <b>联系我们</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container text-center">
+                © 2014 Copyright Text
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="assets/vendor/jquery.min.js"></script><script type="text/javascript" src="assets/vendor/vendor.dll.js"></script><script type="text/javascript" src="js/m_share.js"></script></body>
+
+</html>

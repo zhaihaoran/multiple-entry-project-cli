@@ -1,0 +1,91 @@
+@import 'common.scss';
+@import 'lib.scss';
+
+.vd-recommend {
+    padding: 10px;
+    display: flex !important;
+    .vd-image {
+        min-width: 200px;
+        height: 120px;
+        overflow: hidden;
+        position: relative;
+        img {
+            max-width: 200px;
+        }
+        .vd-times {
+            background: rgba(56, 58, 60, 0.9);
+            font-size: 12px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+        }
+    }
+
+    .vd-commend-info {
+        padding-left: 10px;
+        h3 {
+            color: #333;
+            font-size: 16px;
+            line-height: 24px;
+            margin: 0;
+        }
+        p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+            margin-top: 26px;
+        }
+        span.tip {
+            font-size: 12px;
+            color: #999;
+        }
+    }
+}
+
+.tabs {
+    border-bottom: 1px solid #ccc;
+}
+
+.tm-intro {
+    height: 80px;
+    background: rgb(245, 245, 245);
+    .tab {
+        height: 100%;
+        a.active {
+            line-height: 80px;
+            font-size: 28px;
+            border-bottom: 0;
+            span {
+                padding-bottom: 18px;
+                border-bottom: 3px solid #222;
+            }
+        }
+    }
+}
+
+.videos {
+    height: 60px;
+    width: auto;
+    margin: 0 10px;
+    .tab {
+        height: 100%;
+        a {
+            font-size: 18px;
+            line-height: 60px;
+            font-weight: bold;
+            &.active {
+                border-bottom: 2px solid #bb2133;
+            }
+        }
+    }
+}
+
+.tm-area {
+    padding: 30px;
+    background: rgb(245, 245, 245);
+}
+
+.tm-area {
+    padding: 30px;
+}
