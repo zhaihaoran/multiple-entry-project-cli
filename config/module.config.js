@@ -1,16 +1,17 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// {
-//     test: /\.html$/,
-//     use: {
-//         loader: 'html-loader',
-//     }
-// },
+
 module.exports = {
     modulePlugin: {
         rules: [{
             test: /\.(js|jsx)$/,
             use: {
                 loader: 'babel-loader',
+            },
+            exclude: /node_moudles/
+        }, {
+            test: /\.vue$/,
+            use: {
+                loader: 'vue-loader',
             },
             exclude: /node_moudles/
         }, {
@@ -25,29 +26,6 @@ module.exports = {
                 options: {
                     limit: 4096,
                     name: "assets/[name].[hash:5].[ext]"
-                }
-            }, {
-                // 图片压缩
-                loader: 'image-webpack-loader',
-                options: {
-                    gifsicle: {
-                        interlaced: false,
-                    },
-                    optipng: {
-                        optimizationLevel: 7,
-                    },
-                    pngquant: {
-                        quality: '65-90',
-                        speed: 4
-                    },
-                    mozjpeg: {
-                        progressive: true,
-                        quality: 65
-                    },
-                    // Specifying webp here will create a WEBP version of your JPG/PNG images
-                    webp: {
-                        quality: 75
-                    }
                 }
             }]
         }, {

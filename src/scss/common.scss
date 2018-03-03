@@ -1,6 +1,5 @@
 @import '_variables.scss';
 @import 'base_fixed.scss';
-
 body {
     // 知乎
     font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
@@ -39,7 +38,9 @@ li {
                 justify-content: center;
             }
             .logo-row {
-                padding: 20px 0;
+                img {
+                    padding: 30px 10px;
+                }
             }
         }
     }
@@ -60,6 +61,9 @@ li {
 // video card
 .vd-context {
     margin: 22px 0;
+    .card-space {
+        margin-bottom: 25px;
+    }
     .vd-title {
         margin: 15px 0;
         font-size: 28px;
@@ -252,6 +256,14 @@ nav.navbar.tum-header {
     margin-top: 7px;
 }
 
+@media (min-width: 1100px) {
+    .col-lg-3.col-line-5 {
+        padding: 0 0.25rem;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
 // video-wrapper
 .video-wrapper {
     display: flex;
@@ -267,6 +279,7 @@ nav.navbar.tum-header {
             top: 0;
             #video {
                 width: 100%;
+                height: 540px;
             }
         }
         .index-video-image {
@@ -383,7 +396,9 @@ nav.navbar.tum-header {
 
 // index
 .index-image-wrapper {
+    position: relative;
     margin-top: 70px;
+    overflow: hidden;
     .image-box {
         display: block;
         overflow: hidden;
@@ -410,16 +425,10 @@ nav.navbar.tum-header {
 }
 
 .collection {
-    a:hover {
-        text-decoration: none;
-        background: $primary-color;
-        transition: 0.3s ease all;
-        .vd-commend-info {
-            h3,
-            p,
-            span.tip {
-                color: #fff;
-            }
+    a {
+        color: inherit;
+        &:hover {
+            color: #007bff;
         }
     }
 }
@@ -490,14 +499,62 @@ nav.navbar.tum-header {
         }
         p {
             margin-top: 44px;
-            font-size: 16px;
-            line-height: 28px;
+            font-size: 1rem;
+            line-height: 2rem;
         }
     }
 }
 
+.img-background {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    z-index: -100;
+}
+
+@mixin img-background-content() {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 @media screen {
+    @media (max-width: 1200px) {
+        .img-background {
+            width: 1200px;
+            position: absolute !important;
+            @include center();
+        }
+
+        .index-image-wrapper {
+            .res-image {
+                width: 1200px;
+                max-width: none;
+                @include center();
+            }
+            .banner-box {
+                h3 {
+                    font-size: 30px;
+                }
+                p {
+                    font-size: 20px;
+                    margin-top: 16px;
+                }
+                .jo-btn {
+                    font-size: 20px;
+                    width: 120px;
+                    height: 36px;
+                }
+                h2 {
+                    font-size: 32px;
+                }
+            }
+        }
+    }
     @media (max-width: 993px) {
+        .border-right {
+            margin: 0;
+        }
         .hide-on-large-and-down {
             display: none;
         }
@@ -511,14 +568,13 @@ nav.navbar.tum-header {
             background-position-y: -22px;
         }
     }
-
     @media (max-width: 660px) {
         .vd-pad-70 {
             padding: 0;
         }
         .video-wrapper {
             #video {
-                height: 300px;
+                height: 100%;
             }
             .video-mask.index-mask {
                 padding: 10px 40px;
@@ -569,17 +625,28 @@ nav.navbar.tum-header {
             .sign-module {
                 margin: 0;
                 padding: 0;
+                .row {
+                    margin: 0;
+                    .col {
+                        padding: 0;
+                    }
+                }
                 .sign-box {
-                    width: 100%;
                     text-align: center;
                     right: 0;
                     left: 0;
+                    top: 12px;
                     margin: 0;
                     h2 {
-                        font-size: 30px;
+                        font-size: 18px;
+                        margin: 0;
                     }
                     p {
-                        font-size: 24px;
+                        font-size: 14px;
+                        margin: 0;
+                    }
+                    .pos-1 {
+                        right: -86px;
                     }
                 }
             }
@@ -617,8 +684,8 @@ nav.navbar.tum-header {
                 }
                 p {
                     margin-top: 20px;
-                    font-size: 14px;
-                    line-height: 22px;
+                    font-size: 1rem;
+                    line-height: 2rem;
                 }
             }
             .guest-pic {
@@ -631,7 +698,6 @@ nav.navbar.tum-header {
                 order: 0;
             }
         }
-
         .page-footer .tum-footer {
             .footer-wrapper {
                 .footer-item {

@@ -9,7 +9,7 @@
 <body>
     <%= require('html-loader!../templates/header.html') %>
         <!-- 轮播图 -->
-        <div id="carousels" class="index-carousel carousel slide" data-ride="carousel">
+        <div id="carousels" class="index-image-wrapper carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carousels" data-slide-to="0" class="active"></li>
                 <li data-target="#carousels" data-slide-to="1"></li>
@@ -17,16 +17,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a data-smpic="url('../assets/image/banner.sm.jpg')" data-bgpic="url('../assets/image/banner.bg.png')" style="background-image:url('../assets/image/banner.png') center center no-repeat" href="#one!"></a>
+                    <img src="./assets/image/banner.png" class="img-fluid res-image" alt="banner">
                 </div>
                 <div class="carousel-item">
-                    <a data-smpic="url('../assets/image/banner.sm.jpg')" data-bgpic="url('../assets/image/banner.bg.png')" style="background-image:url('../assets/image/bg1.jpg') center center no-repeat" href="#one!"></a>
+                    <img src="./assets/image/banner.png" class="img-fluid res-image" alt="banner">
                 </div>
                 <div class="carousel-item">
-                    <a data-smpic="url('../assets/image/banner.sm.jpg')" data-bgpic="url('../assets/image/banner.bg.png')" style="background-image:url('../assets/image/bg2.jpg') center center no-repeat" href="#two!"></a>
+                    <img src="./assets/image/banner.png" class="img-fluid res-image" alt="banner">
                 </div>
                 <div class="carousel-item">
-                    <a data-smpic="url('../assets/image/banner.sm.jpg')" data-bgpic="url('../assets/image/banner.bg.png')" style="background-image:url('../assets/image/bg3.jpg') center center no-repeat" href="#three!"></a>
+                    <img src="./assets/image/banner.png" class="img-fluid res-image" alt="banner">
                 </div>
                 <a class="carousel-control-prev" href="#carousels" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

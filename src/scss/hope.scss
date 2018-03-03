@@ -20,7 +20,7 @@
         margin: 0;
     }
     .joinus-button {
-        background: inherit;
+        background: transparent;
         width: 378px;
         height: 85px;
         box-sizing: border-box;
@@ -93,38 +93,41 @@
     }
 }
 
-.image-box {
-    > .banner-box {
+.banner-box {
+    color: white;
+    padding: 20px;
+    position: absolute !important;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    @include center();
+
+    h3 {
+        margin: 1% 0 1%;
+        font-size: 50px;
+    }
+    p {
+        font-size: 30px;
+        margin: 0;
+    }
+    h2 {
+        font-size: 64px;
+        font-weight: bold;
+        margin-top: 14px;
+    }
+    .jo-btn {
+        position: absolute;
+        top: 13%;
+        left: 30%;
+        width: 150px;
+        height: 50px;
+        font-size: 24px;
         color: white;
-        padding: 20px;
-        position: relative;
-        h3 {
-            margin: 35px 0 28px;
-            font-size: 50px;
-        }
-        p {
-            font-size: 30px;
-            margin: 0;
-        }
-        h2 {
-            font-size: 64px;
-            font-weight: bold;
-            margin-top: 14px;
-        }
-        .jo-btn {
-            position: absolute;
-            top: 60px;
-            left: 400px;
-            width: 150px;
-            height: 50px;
-            font-size: 24px;
-            color: white;
-            background: inherit;
-            border-radius: 25px;
-            border: 1px solid #fff;
-            &:hover {
-                text-decoration: underline;
-            }
+        background: inherit;
+        border-radius: 25px;
+        border: 1px solid #fff;
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

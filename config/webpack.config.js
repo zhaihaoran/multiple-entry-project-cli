@@ -32,11 +32,20 @@ const {
 
 module.exports = function(env) {
     const Webpack_Plugins = [
-        // DllReferencePlugin -- frontend
-        new webpack.DllReferencePlugin({
-            name: "vendor",
-            manifest: require('../src/assets/vendor/vendor-manifest.json')
-        }),
+        // split vendor js into its own file
+        // new webpack.optimize.CommonsChunkPlugin({
+        //     name: 'vendor',
+        //     minChunks(module) {
+        //         // any required modules inside node_modules are extracted to vendor
+        //         return (
+        //             module.resource &&
+        //             /\.js$/.test(module.resource) &&
+        //             module.resource.indexOf(
+        //                 resolvePath('node_modules')
+        //             ) === 0
+        //         )
+        //     }
+        // }),
         // copy custom static assets
         new CopyWebpackPlugin([{
             from: resolvePath('src/assets'),
@@ -46,8 +55,13 @@ module.exports = function(env) {
         // auto fouce the defined plugins
         // 当有未赋值的变量时，默认从对应的module里加载
         new webpack.ProvidePlugin({
-            "_": "lodash",
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
         }),
+        // 模块热替换插件
+        new webpack.HotModuleReplacementPlugin(),
+        // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
         // css code-split
         new ExtractTextPlugin({
             filename: '[name].css',
@@ -75,9 +89,6 @@ module.exports = function(env) {
     return {
         devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
         entry: Object.assign(entrys, adminEntrys),
-        externals: {
-            jquery: 'window.$'
-        },
         output: {
             filename: 'js/[name].js',
             path: resolvePath(outputDir),

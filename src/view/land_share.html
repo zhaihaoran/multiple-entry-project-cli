@@ -10,12 +10,11 @@
     <%= require('html-loader!../templates/header.html') %>
         <!-- index-image -->
         <div class="index-image-wrapper share-banner">
-            <div class="responsive-img image-box" data-smpic="url('../assets/image/banners/banner_2.png')" data-bgpic="url('../assets/image/banners/banner_2.png')" style="background-image:url('../assets/image/banners/banner_2.png') center center no-repeat">
-                <div class="share-box">
-                    <h2>来涂梦<span>分享</span></h2>
-                    <h2>来让每个孩子的梦想不因为眼界而受到局限</h2>
-                    <button class="btn">立即加入</button>
-                </div>
+            <img src="./assets/image/banners/banner_2.png" class="img-fluid res-image" alt="banner">
+            <div class="share-box">
+                <h2>来涂梦<span>分享</span></h2>
+                <h2>来让每个孩子的梦想不因为眼界而受到局限</h2>
+                <button class="btn">立即加入</button>
             </div>
         </div>
         <h2 class="more-guest-title">
@@ -64,14 +63,18 @@
         </section>
         <!-- tumeng misson -->
         <div class="tm-misson">
-            <h2 class="text-center">涂梦的使命</h2>
-            <p class="text-center">涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。</p>
-            <p class="text-center">该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+            <img src="../assets/image/background/bg_4.png" alt="" class="img-background">
+            <div class="tm-content">
+                <h2 class="text-center img-title">涂梦的使命</h2>
+                <p class="text-center img-title">涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。</p>
+                <p class="text-center img-title">该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+            </div>
         </div>
         <!-- record -->
         <%= require('html-loader!../templates/statistics.html') %>
             <!-- become speecher -->
             <section class="wrapper speech-2">
+                <img src="../assets/image/background/bg_3.png" alt="" class="img-background">
                 <div class="speech-box">
                     <h2>成为演讲者您只需要</h2>
                     <p>1. 热爱工作，热衷公益，善于表达</p>

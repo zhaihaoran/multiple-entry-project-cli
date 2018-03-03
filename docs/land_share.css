@@ -6491,8 +6491,8 @@ li {
         -webkit-justify-content: center;
             -ms-flex-pack: center;
                 justify-content: center; }
-      .wrapper .cooperate-module .cooperate-item .logo-row {
-        padding: 20px 0; }
+      .wrapper .cooperate-module .cooperate-item .logo-row img {
+        padding: 30px 10px; }
 
 .co-ss {
   padding: 25px 0; }
@@ -6505,6 +6505,8 @@ li {
 
 .vd-context {
   margin: 22px 0; }
+  .vd-context .card-space {
+    margin-bottom: 25px; }
   .vd-context .vd-title {
     margin: 15px 0;
     font-size: 28px;
@@ -6680,6 +6682,15 @@ nav.navbar.tum-header {
 .mt-col {
   margin-top: 7px; }
 
+@media (min-width: 1100px) {
+  .col-lg-3.col-line-5 {
+    padding: 0 0.25rem;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 20%; } }
+
 .video-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6695,7 +6706,8 @@ nav.navbar.tum-header {
       position: relative;
       top: 0; }
       .video-wrapper .index-video .video-player #video {
-        width: 100%; }
+        width: 100%;
+        height: 540px; }
     .video-wrapper .index-video .index-video-image {
       display: -webkit-box;
       display: -webkit-flex;
@@ -6798,7 +6810,9 @@ nav.navbar.tum-header {
   border-style: none; }
 
 .index-image-wrapper {
-  margin-top: 70px; }
+  position: relative;
+  margin-top: 70px;
+  overflow: hidden; }
   .index-image-wrapper .image-box {
     display: block;
     overflow: hidden;
@@ -6825,21 +6839,16 @@ nav.navbar.tum-header {
     font-weight: bold;
     line-height: 92px; }
 
-.collection a:hover {
-  text-decoration: none;
-  background: #bb2133;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all; }
-  .collection a:hover .vd-commend-info h3,
-  .collection a:hover .vd-commend-info p,
-  .collection a:hover .vd-commend-info span.tip {
-    color: #fff; }
+.collection a {
+  color: inherit; }
+  .collection a:hover {
+    color: #007bff; }
 
 .record-aass {
   background: #bb2133; }
 
 .record-map {
-  background: url(assets/map.67df1.png) center center no-repeat; }
+  background: url(assets/map.84535.png) center center no-repeat; }
 
 .record-wrapper {
   overflow: hidden;
@@ -6906,16 +6915,51 @@ nav.navbar.tum-header {
       margin: 0; }
     .guest-wrapper .guest-info p {
       margin-top: 44px;
-      font-size: 16px;
-      line-height: 28px; }
+      font-size: 1rem;
+      line-height: 2rem; }
+
+.img-background {
+  width: 100%;
+  top: 0;
+  position: absolute;
+  z-index: -100; }
+
+@media screen and (max-width: 1200px) {
+  .img-background {
+    width: 1200px;
+    position: absolute !important;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .index-image-wrapper .res-image {
+    width: 1200px;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .index-image-wrapper .banner-box h3 {
+    font-size: 30px; }
+  .index-image-wrapper .banner-box p {
+    font-size: 20px;
+    margin-top: 16px; }
+  .index-image-wrapper .banner-box .jo-btn {
+    font-size: 20px;
+    width: 120px;
+    height: 36px; }
+  .index-image-wrapper .banner-box h2 {
+    font-size: 32px; } }
 
 @media screen and (max-width: 993px) {
+  .border-right {
+    margin: 0; }
   .hide-on-large-and-down {
     display: none; }
   .extra-video {
     margin-top: 15px; }
   .record-map {
-    background: url(assets/map_phone.7e2c7.png) center center no-repeat;
+    background: url(assets/map_phone.6867b.png) center center no-repeat;
     background-size: 125%;
     background-position-y: -22px; } }
 
@@ -6923,7 +6967,7 @@ nav.navbar.tum-header {
   .vd-pad-70 {
     padding: 0; }
   .video-wrapper #video {
-    height: 300px; }
+    height: 100%; }
   .video-wrapper .video-mask.index-mask {
     padding: 10px 40px;
     height: auto; }
@@ -6957,16 +7001,24 @@ nav.navbar.tum-header {
   .wrapper .sign-module {
     margin: 0;
     padding: 0; }
+    .wrapper .sign-module .row {
+      margin: 0; }
+      .wrapper .sign-module .row .col {
+        padding: 0; }
     .wrapper .sign-module .sign-box {
-      width: 100%;
       text-align: center;
       right: 0;
       left: 0;
+      top: 12px;
       margin: 0; }
       .wrapper .sign-module .sign-box h2 {
-        font-size: 30px; }
+        font-size: 18px;
+        margin: 0; }
       .wrapper .sign-module .sign-box p {
-        font-size: 24px; }
+        font-size: 14px;
+        margin: 0; }
+      .wrapper .sign-module .sign-box .pos-1 {
+        right: -86px; }
   .index-image-wrapper {
     margin-top: 0; }
   .more-guest-title span {
@@ -6994,8 +7046,8 @@ nav.navbar.tum-header {
       line-height: 26px; }
     .guest-wrapper .guest-info p {
       margin-top: 20px;
-      font-size: 14px;
-      line-height: 22px; }
+      font-size: 1rem;
+      line-height: 2rem; }
     .guest-wrapper .guest-pic {
       display: block; }
       .guest-wrapper .guest-pic img {
@@ -7044,8 +7096,16 @@ nav.navbar.tum-header {
                 flex: 1; }
 
 .share-box {
+  top: 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute !important;
+  width: 100%;
+  height: 100%;
   max-width: 800px;
-  margin: 60px auto; }
+  padding: 20px 0; }
   .share-box h2 {
     font-size: 40px;
     letter-spacing: 2px;
@@ -7084,14 +7144,19 @@ nav.navbar.tum-header {
           transform: translateX(-50%); }
 
 .tm-misson {
-  height: 700px;
-  background: url(assets/bg_4.6e87f.png) center center no-repeat;
+  position: relative;
   overflow: hidden; }
-  .tm-misson h2 {
+
+.tm-content {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 45px; }
+  .tm-content h2 {
     font-size: 2.2rem;
     font-weight: bold;
-    margin: 100px auto 60px; }
-  .tm-misson p {
+    margin: 4% auto 2%; }
+  .tm-content p {
     font-size: 1.8rem;
     line-height: 4.2rem;
     max-width: 1310px;
@@ -7099,11 +7164,12 @@ nav.navbar.tum-header {
     padding: 0 10px; }
 
 .speech-2 {
-  background: url(assets/bg_3.b99f8.png) center center no-repeat;
-  height: 800px; }
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
   .speech-2 .speech-box {
     max-width: 555px;
-    margin: 235px auto;
+    margin: 10% auto;
     position: relative;
     left: 120px; }
     .speech-2 .speech-box h2 {
@@ -7120,6 +7186,24 @@ nav.navbar.tum-header {
       margin-top: 30px;
       color: #fff; }
 
+@media (max-width: 1200px) {
+  .tm-content {
+    min-height: 430px; }
+    .tm-content h2.img-title {
+      font-size: 1.8rem; }
+    .tm-content p.img-title {
+      font-size: 1.3rem;
+      line-height: 2.5rem; }
+  .share-box h2 {
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 46px; }
+    .share-box h2 span {
+      margin-left: 5px;
+      font-size: 36px; }
+  .share-box .btn {
+    margin-top: 10px; } }
+
 @media only screen and (max-width: 660px) {
   .photowall {
     -webkit-box-orient: vertical;
@@ -7127,15 +7211,14 @@ nav.navbar.tum-header {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column; }
-  .share-box {
-    margin: 40px auto; }
-    .share-box h2 {
-      font-size: 20px;
-      padding: 0 20px;
-      line-height: 46px; }
-      .share-box h2 .span {
-        margin-left: 5px;
-        font-size: 36px; }
+  .tm-content {
+    min-height: 300px;
+    padding: 20px 0; }
+    .tm-content h2.img-title {
+      font-size: 1rem; }
+    .tm-content p.img-title {
+      font-size: 1rem;
+      line-height: 2rem; }
   .speech-2 {
     background-size: 270%;
     height: 310px; }
@@ -7164,13 +7247,13 @@ nav.navbar.tum-header {
       line-height: 2rem; }
     .data-suport img {
       margin: 40px auto; }
-  .tm-misson {
-    padding: 0 15px;
-    background-size: 290%;
-    height: 400px; }
-    .tm-misson h2 {
-      font-size: 1.8rem;
-      margin: 40px auto 20px; }
-    .tm-misson p {
-      font-size: 1rem;
-      line-height: 2rem; } }
+  .share-box h2 {
+    font-size: 18px;
+    line-height: 36px; }
+    .share-box h2 span {
+      margin-left: 5px;
+      font-size: 32px; }
+  .share-box .btn {
+    margin-top: 0;
+    width: 100px;
+    font-size: 16px; } }

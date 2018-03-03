@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import videojs from 'video.js'
 
 // Bootstrap

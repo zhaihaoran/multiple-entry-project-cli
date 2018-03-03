@@ -1,26 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-    BrowserRouter as Router,
-    Route,
-    Link,
-} from 'react-router-dom';
-import Layout from '@comp/Layout.jsx';
+import Vue from 'vue'
+import App from '@comp/App.vue'
+import router from '@route/index'
+import ElementUI from 'element-ui'
 
-import Home from '@view/Home.jsx';
-import Calendar from '@view/Calendar.jsx';
-import Form from '@view/Form.jsx';
+Vue.config.productionTip = false
+Vue.use(ElementUI)
 
-import '@scss/admin_common.scss';
-
-const App = () => (
-    <Router>
-        <Layout>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={Calendar} />
-            <Route path="/topics" component={Form} />
-        </Layout>
-    </Router>
-);
-
-ReactDOM.render(<App />, document.getElementById('root'));
+new Vue({
+    el: '#app',
+    router,
+    render: h => h(App)
+})
