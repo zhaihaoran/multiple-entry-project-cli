@@ -12,7 +12,7 @@ module.exports = {
         "@route": resolvePath('src/components/route'),
         "@layout": resolvePath('src/components/layout'),
         "@view": resolvePath('src/components/view'),
-        "@view": resolvePath('src/components/store'),
+        "@store": resolvePath('src/components/store'),
     },
     modules: [resolvePath('node_modules'), 'node_modules'],
 }
