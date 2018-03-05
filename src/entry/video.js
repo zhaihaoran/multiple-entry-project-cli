@@ -1,11 +1,10 @@
-import videojs from 'video.js'
-
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
-import 'video.js/dist/video-js.css'
 import '@scss/video.scss';
+
+import Tm_Video from '@lib/video'
 
 class Video {
     constructor() {
@@ -14,8 +13,9 @@ class Video {
 
     initEvent() {
         this.declareVar()
-        this.pluginsInit()
-        this.videoPlay()
+        new Tm_Video();
+        // this.pluginsInit()
+        // this.videoPlay()
     }
 
     declareVar() {

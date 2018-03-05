@@ -644,6 +644,7 @@ $slick-opacity-not-active: 0.25 !default;
     -ms-transition: border-color 0.4s, outline 0.4s, background-color 0.4s;
     -o-transition: border-color 0.4s, outline 0.4s, background-color 0.4s;
     transition: border-color 0.4s, outline 0.4s, background-color 0.4s;
+    z-index: 500;
 }
 
 .video-js .vjs-menu-button-popup .vjs-menu {
@@ -673,15 +674,19 @@ $slick-opacity-not-active: 0.25 !default;
     background-color: rgba(0, 0, 0, 0.45);
     font-size: 3.5em;
     border-radius: 50%;
-    height: 2em !important;
-    line-height: 2em !important;
-    margin-top: -1em !important;
+    width: 1.6em;
+    height: 1.6em !important;
+    line-height: 1.6em !important;
+    margin-top: -0.8em !important;
+    transform: 0.3s ease-out all;
 }
 
-.video-js:hover .vjs-big-play-button,
+.video-player:hover .vjs-big-play-button,
 .video-js .vjs-big-play-button:focus,
 .video-js .vjs-big-play-button:active {
-    background-color: rgba(36, 131, 213, 0.9);
+    background-color: #fff;
+    color: #000;
+    transform: scale(1.1);
 }
 
 .video-js .vjs-loading-spinner {
@@ -702,3 +707,42 @@ $slick-opacity-not-active: 0.25 !default;
 .video-js .vjs-volume-level {
     background-color: #2483d5;
 }
+
+// video fixed
+.vjs-has-started .vjs-control-bar {
+    z-index: 1000;
+}
+
+// jiathis share
+
+#share-box {
+    .tm_share {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        a.tm_share_button {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            padding-top: 20px;
+            i,
+            span {
+                text-align: center;
+            }
+            i {
+                font-size: 28px;
+                line-height: normal;
+            }
+            span {
+                font-size: 14px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+// span.jtico {
+//     background: none;
+//     padding-left: 0 !important;
+// }

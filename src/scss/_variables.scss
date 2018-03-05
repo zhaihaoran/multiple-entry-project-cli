@@ -19,3 +19,22 @@ $copyright: 50px;
 $containerWidth: 1300px;
 
 /* font-size */
+
+/* util */
+@mixin center() {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin mask($position) {
+    position: $position;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+@mixin img-background-content() {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}

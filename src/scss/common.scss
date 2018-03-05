@@ -1,22 +1,17 @@
 @import '_variables.scss';
 @import 'base_fixed.scss';
-body {
-    // 知乎
-    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang SC,
-        Microsoft YaHei, Source Han Sans SC, Noto Sans CJK SC,
-        WenQuanYi Micro Hei, sans-serif;
-    position: absolute;
-    height: 100%;
+
+@import '../assets/icon/iconfont.css';
+
+// video 响应式
+.video-js {
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 0 auto;
 }
 
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.video-js .vjs-tech {
+    //这行代码最为关键，这样视频播放器的外层容器都由视频内容本身撑大
+    position: relative;
 }
 
 .wrapper {
@@ -264,6 +259,12 @@ nav.navbar.tum-header {
     }
 }
 
+// share
+.tm_share_icon {
+    font-size: 16px;
+    padding: 10px;
+}
+
 // video-wrapper
 .video-wrapper {
     display: flex;
@@ -271,17 +272,72 @@ nav.navbar.tum-header {
         position: relative;
         overflow: hidden;
     }
+    .video-player {
+        position: relative;
+        top: 0;
+        .tm_video_info {
+            position: absolute;
+            width: 100%;
+            bottom: 3em;
+            padding: 15px 10px 15px 30px;
+            color: white;
+            z-index: 1000;
+            h2 {
+                font-size: 28px;
+            }
+            p {
+                margin-bottom: 5px;
+                font-size: 16px;
+            }
+        }
+
+        .tm_video_share {
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 80px;
+            z-index: 1000;
+            .share_wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                margin-top: 10px;
+                .tm_share_icon {
+                    padding: 10px;
+                    span.jtico {
+                        display: block;
+                        line-height: 20px;
+                    }
+                    i {
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .tm_video_image {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .vd-mask {
+        @include mask(absolute);
+        display: none;
+        z-index: 300;
+    }
+
     .index-video {
         width: 100%;
         overflow: hidden;
-        .video-player {
-            position: relative;
-            top: 0;
-            #video {
-                width: 100%;
-                height: 540px;
-            }
-        }
         .index-video-image {
             display: flex;
             position: relative;
@@ -386,12 +442,6 @@ nav.navbar.tum-header {
     max-width: 100%;
     height: auto;
     border-style: none;
-}
-
-@mixin center() {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 // index
@@ -510,12 +560,6 @@ nav.navbar.tum-header {
     top: 0;
     position: absolute;
     z-index: -100;
-}
-
-@mixin img-background-content() {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
 }
 
 @media screen {
