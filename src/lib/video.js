@@ -27,6 +27,8 @@ class Tm_Video {
 
     init() {
 
+        this.setVideoHeight();
+
         this._video = videojs(this.config.dom, {
             controls: true,
             autoplay: false,
@@ -41,6 +43,13 @@ class Tm_Video {
 
         this.videoTitle();
         this.shareSide();
+    }
+
+    setVideoHeight() {
+        //
+        const imageHeight = this.$video_image.css('height')
+        console.log(imageHeight)
+        this.$video.css('height', imageHeight)
     }
 
     /**
@@ -62,7 +71,7 @@ class Tm_Video {
             me.$video_share.removeClass('d-none');
             me.$mask.addClass('d-block')
         })
-        me.$video_image.on('click',function(){
+        me.$video_image.on('click', function() {
             me._video.trigger('play')
             me._video.play();
         })
@@ -79,7 +88,7 @@ class Tm_Video {
         console.log(box_id);
         const $box = $(box_id);
 
-        this.$shareBtn.on('click',function(){
+        this.$shareBtn.on('click', function() {
             $box.toggleClass('d-none');
         })
     }

@@ -119,18 +119,44 @@
                     </h2>
                     <div class="video-wrapper row">
                         <div class="index-video col-sm-12 col-lg-8">
-                            <div class="index-video-image">
-                                <div class="video-mask index-mask in-mask">
-                                    <h2>知识改变命运,梦想成就未来</h2>
-                                    <p>演讲者：Francisco</p>
+                            <div class="video-player">
+                                <video class="video-js responsive-video" id="tm_video">
+                                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                </video>
+                                <div class="tm_video_image">
+                                    <img src="assets/image/video_bg.png" alt="tm">
                                 </div>
-                                <img src="assets/image/video_bg.png" class="responsive-img in-mask" alt="">
-                            </div>
-                            <div class="video-player d-none">
-                                <video class="video-js responsive-video" id="video">
-                            <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
-                            <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
-                        </video>
+                                <div class="tm_video_info">
+                                    <p>程英旭</p>
+                                    <h2 class="text-truncate">英美籍建筑设计师程炳旭：对于建筑师而言，什么是最重要的？</h2>
+                                </div>
+                                <div class="tm_video_share" id="share-box">
+                                    <div class="tm_share">
+                                        <a href="#" class="tm_share_button">
+                                                    <i class="icon iconfont icon-dianhua"></i>
+                                                    <span>邀约</span>
+                                                </a>
+                                        <a href="javascript:void(0)" class="tm_share_button" data-target="#share_box" id="share">
+                                                    <i class="icon iconfont icon-fenxiang"></i>
+                                                    <span>分享</span>
+                                                </a>
+                                        <div class="share_wrapper d-none" id="share_box">
+                                            <a class="jiathis_button_weixin tm_share_icon">
+                                                        <i class="icon iconfont icon-weixin"></i>
+                                                    </a>
+                                            <a class="jiathis_button_tsina tm_share_icon">
+                                                        <i class="icon iconfont icon-weibo"></i>
+                                                    </a>
+                                            <a class="jiathis_button_tqq tm_share_icon">
+                                                        <i class="icon iconfont icon-qq"></i>
+                                                    </a>
+                                        </div>
+                                    </div>
+                                    <!-- JiaThis Button BEGIN -->
+                                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                                    <!-- JiaThis Button END -->
+                                </div>
                             </div>
                         </div>
                         <div class="extra-video col-sm-12 col-lg-4">

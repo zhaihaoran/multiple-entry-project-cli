@@ -1,14 +1,13 @@
-import videojs from 'video.js'
-import 'video.js/dist/video-js.css'
-import '@scss/index.scss';
-
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
-//
 import '@lib/jquery.scrollfire'
 import '@lib/animateNumber'
+
+import '@scss/index.scss';
+
+import Tm_Video from '@lib/video'
 
 class Index {
 
@@ -17,9 +16,9 @@ class Index {
     }
 
     initEvent() {
+        new Tm_Video();
         this.declareVar()
         this.pluginsInit()
-        this.videoPlay()
     }
 
     declareVar() {
@@ -27,17 +26,6 @@ class Index {
         this.$carousel = $('.carousel');
         this.$videoPlay = $('.in-mask');
         this.$header = $('nav.tum-header');
-    }
-
-    videoPlay() {
-        let me = this;
-        this.$videoPlay.on('click', e => {
-            this.$videoPlay.addClass('d-none').siblings('.index-mask').addClass('d-none');
-            $('.video-player').removeClass('d-none');
-            $('.video-player').find('#video').css('height', $('.index-video').height())
-            me.videoPlayer.play();
-        })
-        const box = 3;
     }
 
     pluginsInit() {
@@ -51,12 +39,6 @@ class Index {
         })
 
         this.$carousel.carousel()
-        this.videoPlayer = videojs('video', {
-            controls: true,
-            autoplay: false,
-            preload: 'auto'
-        });
-
     }
 }
 
