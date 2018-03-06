@@ -1,5 +1,6 @@
 @import '_variables.scss';
 @import 'base_fixed.scss';
+@import 'lib.scss';
 
 @import '../assets/icon/iconfont.css';
 
@@ -56,49 +57,49 @@
 // video card
 .vd-context {
     margin: 22px 0;
-    .card-space {
-        margin-bottom: 25px;
+}
+.card-space {
+    margin-bottom: 25px;
+}
+.vd-title {
+    margin: 15px 0;
+    font-size: 28px;
+    color: #666;
+}
+.card-content {
+    padding: 10px 5px;
+    height: 70px;
+    .card-title {
+        font-size: 18px;
+        line-height: 20px;
     }
-    .vd-title {
-        margin: 15px 0;
-        font-size: 28px;
-        color: #666;
+}
+.card-image {
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
     }
-    .card-content {
-        padding: 10px 5px;
-        height: 70px;
-        .card-title {
-            font-size: 18px;
-            line-height: 20px;
-        }
+    .vd-times {
+        background: rgba(56, 58, 60, 0.9);
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+        padding: 0.4em 0.5em;
+        border-radius: 0;
     }
-    .card-image {
-        overflow: hidden;
-        position: relative;
-        img {
-            width: 100%;
-        }
-        .vd-times {
-            background: rgba(56, 58, 60, 0.9);
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            color: white;
-            padding: 0.4em 0.5em;
-            border-radius: 0;
-        }
+}
+.vd-extra {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    span {
+        font-size: 12px;
     }
-    .vd-extra {
-        margin-top: 5px;
-        display: flex;
-        justify-content: space-between;
-        span {
-            font-size: 12px;
-        }
-        span.grey-66 {
-            font-size: 14px;
-            margin-top: -1px;
-        }
+    span.grey-66 {
+        font-size: 14px;
+        margin-top: -1px;
     }
 }
 
@@ -109,7 +110,7 @@ nav.navbar.tum-header {
     z-index: 1000;
     height: $header;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: $shadow;
     .tum-item {
         width: 150px;
         padding: 12px 0;
@@ -233,6 +234,7 @@ nav.navbar.tum-header {
     margin: 0;
     background-color: inherit !important;
     border: none !important;
+    border-radius: 0;
 }
 
 .grey-999 {
@@ -273,6 +275,8 @@ nav.navbar.tum-header {
         overflow: hidden;
     }
     .video-player {
+        width: 100%;
+        overflow: hidden;
         position: relative;
         top: 0;
         .tm_video_info {
@@ -331,7 +335,6 @@ nav.navbar.tum-header {
 
     .vd-mask {
         @include mask(absolute);
-        display: none;
         z-index: 300;
     }
 
@@ -560,6 +563,19 @@ nav.navbar.tum-header {
     top: 0;
     position: absolute;
     z-index: -100;
+}
+
+// card
+.card.tm-card {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff !important;
+    flex-direction: row;
+}
+
+// bages
+.tm-bg {
+    background-color: $primary-color;
+    color: #fff;
 }
 
 @media screen {

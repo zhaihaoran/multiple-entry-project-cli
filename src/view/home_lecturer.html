@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+        <title> 首页 - 涂梦教育 </title>
+</head>
+
+<body>
+    <%= require('html-loader!../templates/header.html') %>
+        <section class="wrapper bg-grey-light">
+            <div class="container home-navbar">
+                <div class="card tm-card tm-nv-card">
+                    <div class="card-image-left">
+                        <img src="../assets/image/logo/tsinghua.png" class="img-fluid" alt="image">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">张小杉</h2>
+                        <p class="card-text">英语老师、野外探险爱好者</p>
+                    </div>
+                    <div class="tm-invite">
+                        <div class="invite-num">
+                            <span class="num">328</span>
+                            <span class="msg">邀约数</span>
+                        </div>
+                        <div class="invite-num">
+                            <span class="num">1223</span>
+                            <span class="msg">贡献人次</span>
+                        </div>
+                        <div class="invite-btn tm-bg">邀约</div>
+                    </div>
+                </div>
+            </div>
+            <div class="container home-wrapper">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card tm-card tm-item-card">
+                            <div class="card-icon">
+                                <i class="icon iconfont icon-shengriliwu"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title grey-333">生日</h2>
+                                <p class="card-text grey-666">1988年03月31日</p>
+                            </div>
+                        </div>
+                        <div class="card tm-card tm-item-card">
+                            <div class="card-icon">
+                                <i class="icon iconfont icon-fangzi01-copy"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title grey-333">常局地点</h2>
+                                <p class="card-text grey-666">上海</p>
+                            </div>
+                        </div>
+                        <div class="card tm-card tm-item-card">
+                            <div class="card-icon">
+                                <i class="icon iconfont icon-shenfenzheng"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title grey-333">职业</h2>
+                                <p class="card-text grey-666">英语老师、副校长</p>
+                            </div>
+                        </div>
+                        <div class="card tm-card tm-item-card">
+                            <div class="card-icon">
+                                <i class="icon iconfont icon-pingjiazongjie"></i>
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title grey-333">自我介绍</h2>
+                                <p class="card-text grey-666">贫困学习，重点扶贫对象，师资力量匮乏，教学质量难以保证</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="tm-v-card">
+                            <div class="video-wrapper">
+                                <div class="video-player">
+                                    <video class="video-js responsive-video" id="tm_video">
+                                        <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                                        <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                                    </video>
+                                    <div class="tm_video_image">
+                                        <img src="assets/image/video_bg.png" alt="tm">
+                                    </div>
+                                    <div class="tm_video_info">
+                                        <p>程英旭</p>
+                                        <h2 class="text-truncate">英美籍建筑设计师程炳旭：对于建筑师而言，什么是最重要的？</h2>
+                                    </div>
+                                    <div class="tm_video_share" id="share-box">
+                                        <div class="tm_share">
+                                            <a href="#" class="tm_share_button">
+                                                        <i class="icon iconfont icon-dianhua"></i>
+                                                        <span>邀约</span>
+                                                    </a>
+                                            <a href="#" class="tm_share_button" data-target="#share_box" id="share">
+                                                        <i class="icon iconfont icon-fenxiang"></i>
+                                                        <span>分享</span>
+                                                    </a>
+                                            <div class="share_wrapper d-none" id="share_box">
+                                                <a class="jiathis_button_weixin tm_share_icon">
+                                                            <i class="icon iconfont icon-weixin"></i>
+                                                        </a>
+                                                <a class="jiathis_button_tsina tm_share_icon">
+                                                            <i class="icon iconfont icon-weibo"></i>
+                                                        </a>
+                                                <a class="jiathis_button_tqq tm_share_icon">
+                                                            <i class="icon iconfont icon-qq"></i>
+                                                        </a>
+                                            </div>
+                                        </div>
+                                        <!-- JiaThis Button BEGIN -->
+                                        <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                                        <!-- JiaThis Button END -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card tm-card vv-wrapper">
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-4 card-space">
+                                        <div class="card hoverable card-hover">
+                                            <div class="card-image waves-effect waves-block waves-light">
+                                                <img class="activator" src="assets/image/card.png">
+                                                <span class="vd-times badge">12:58</span>
+                                            </div>
+                                            <div class="card-content">
+                                                <span class="card-title grey-333">成为更好的自己</span>
+                                                <div class="vd-extra">
+                                                    <span class="grey-666">演讲者：周程程</span>
+                                                    <span class="grey-999">9999次播放</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <nav class="pg-wrapper" aria-label="navigation">
+                                        <ul class="pagination justify-content-end">
+                                            <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
+                                            <li class="active"><a href="#!">1</a></li>
+                                            <li class="page-item"><a href="#!">2</a></li>
+                                            <li class="page-item"><a href="#!">3</a></li>
+                                            <li class="page-item"><a href="#!">4</a></li>
+                                            <li class="page-item"><a href="#!">...</a></li>
+                                            <li class="page-item"><a class="valign-wrapper" href="#!">20</a></li>
+                                            <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
+                                            <li class="page-total">
+                                                共 16 页
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="card tm-card tm-photowall">
+                                <h2 class="pw-title">
+                                    <i class="icon iconfont icon-zhaopian"></i>
+                                    照片
+                                </h2>
+                                <div class="pw-wrapper">
+                                    <div class="pw-col">
+                                        <div class="pw-cube">
+                                            <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="pw-col-row">
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="pw-col-row">
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pw-col">
+                                        <div class="pw-cube">
+                                            <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                        </div>
+                                        <div class="pw-col-row">
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="pw-col-row">
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="pw-cube">
+                                                <img src="../assets/image/office.jpg" class="img-fluid" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <%= require('html-loader!../templates/signModule.html') %>
+        <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>

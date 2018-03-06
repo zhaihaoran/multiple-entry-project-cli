@@ -1,6 +1,8 @@
 import $ from 'jquery'
+
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
+import '@scss/_video.scss'
 
 
 const default_config = {

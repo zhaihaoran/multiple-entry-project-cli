@@ -116,6 +116,9 @@ table {
 }
 
 // pagination
+nav.pg-wrapper {
+    width: 100%;
+}
 .pagination {
     li {
         display: inline-block;
@@ -129,6 +132,9 @@ table {
             padding: 0 10px;
             line-height: 30px;
             font-size: 1rem;
+            &:hover {
+                text-decoration: none;
+            }
         }
         &.active {
             border-radius: 50%;
@@ -144,7 +150,7 @@ table {
             }
         }
         i {
-            font-size: 2rem;
+            font-size: 1.7rem;
         }
         .pages ul li {
             display: inline-block;
