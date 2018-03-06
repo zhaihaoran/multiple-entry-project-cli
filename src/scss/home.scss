@@ -10,7 +10,11 @@
     padding-right: 0;
     .card-image-left {
         padding: 10px;
+        display: flex;
         border: 1px solid #bebebe;
+        img {
+            margin: 0 auto;
+        }
     }
     .card-body {
         padding: 0 20px;
@@ -129,6 +133,58 @@
         .pw-cube {
             flex: 1;
             padding: 2px;
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .card.tm-card {
+        flex-direction: column;
+    }
+    .tm-nv-card {
+        padding: 0;
+    }
+    .home-navbar {
+        margin-top: 20px;
+    }
+    .tm-v-card {
+        margin: 0;
+    }
+    .tm-nv-card {
+        .card-image-left {
+            border: 0;
+        }
+        .card-body {
+            text-align: center;
+        }
+        .tm-invite {
+            margin-top: 20px;
+            .invite-num {
+                flex: 1;
+                width: auto;
+                border: 0;
+                .num {
+                    font-size: 24px;
+                }
+            }
+            .invite-btn {
+                flex: 1;
+                width: auto;
+                margin: 0;
+                writing-mode: inherit;
+            }
+        }
+    }
+    .tm-item-card {
+        text-align: center;
+        .card-body {
+            padding: 0;
+        }
+    }
+    .card.tm-card.tm-photowall .pw-wrapper {
+        display: block;
+        .pw-col-row {
+            display: block;
         }
     }
 }

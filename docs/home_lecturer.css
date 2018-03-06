@@ -7876,7 +7876,13 @@ nav.navbar.tum-header {
   padding-right: 0; }
   .tm-nv-card .card-image-left {
     padding: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     border: 1px solid #bebebe; }
+    .tm-nv-card .card-image-left img {
+      margin: 0 auto; }
   .tm-nv-card .card-body {
     padding: 0 20px; }
     .tm-nv-card .card-body .card-title {
@@ -8014,6 +8020,53 @@ nav.navbar.tum-header {
           -ms-flex: 1;
               flex: 1;
       padding: 2px; }
+
+@media (max-width: 660px) {
+  .card.tm-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .tm-nv-card {
+    padding: 0; }
+  .home-navbar {
+    margin-top: 20px; }
+  .tm-v-card {
+    margin: 0; }
+  .tm-nv-card .card-image-left {
+    border: 0; }
+  .tm-nv-card .card-body {
+    text-align: center; }
+  .tm-nv-card .tm-invite {
+    margin-top: 20px; }
+    .tm-nv-card .tm-invite .invite-num {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      width: auto;
+      border: 0; }
+      .tm-nv-card .tm-invite .invite-num .num {
+        font-size: 24px; }
+    .tm-nv-card .tm-invite .invite-btn {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+          -ms-flex: 1;
+              flex: 1;
+      width: auto;
+      margin: 0;
+      -webkit-writing-mode: inherit;
+          -ms-writing-mode: inherit;
+              writing-mode: inherit; }
+  .tm-item-card {
+    text-align: center; }
+    .tm-item-card .card-body {
+      padding: 0; }
+  .card.tm-card.tm-photowall .pw-wrapper {
+    display: block; }
+    .card.tm-card.tm-photowall .pw-wrapper .pw-col-row {
+      display: block; } }
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before, .vjs-button > .vjs-icon-placeholder:before, .video-js .vjs-modal-dialog, .vjs-modal-dialog .vjs-modal-dialog-content {
   position: absolute;
   top: 0;

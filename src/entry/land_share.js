@@ -10,7 +10,6 @@ class Main {
     }
 
     initEvent() {
-        this.render();
     }
 
 }

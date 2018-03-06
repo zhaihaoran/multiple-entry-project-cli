@@ -64,16 +64,20 @@ class Tm_Video {
             me.$video_info.addClass('d-none');
             me.$video_share.addClass('d-none');
             me.$video_image.addClass('d-none');
-            me.$mask.removeClass('d-block')
+            me.$mask.addClass('d-none');
+            me._video.play();
         })
         this._video.on('pause', function() {
             me.$video_info.removeClass('d-none');
             me.$video_share.removeClass('d-none');
-            me.$mask.addClass('d-block')
+            me.$mask.removeClass('d-none');
         })
-        me.$video_image.on('click', function() {
+        me.$video_image.parent().one('click', function() {
             me._video.trigger('play')
-            me._video.play();
+        })
+
+        this.$mask.on('click',function(){
+            me._video.trigger('play')
         })
     }
 
