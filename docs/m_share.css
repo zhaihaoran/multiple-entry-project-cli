@@ -8371,6 +8371,10 @@ nav.pg-wrapper {
   margin: 15px 0;
   font-size: 28px;
   color: #666; }
+  .vd-title .vd-more {
+    font-size: 16px;
+    float: right;
+    margin: 10px 0; }
 
 .card-content {
   padding: 10px 5px;
@@ -8449,7 +8453,9 @@ nav.navbar.tum-header {
       border-left: 1px solid #333;
       height: 100%; }
   nav.navbar.tum-header .header-btn {
-    padding: 0.375rem 1rem; }
+    padding: 0.3rem 1rem;
+    border-radius: 0;
+    background: #bb2133; }
 
 .search-item {
   position: relative; }
