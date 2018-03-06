@@ -16,6 +16,26 @@
     position: relative;
 }
 
+// aa
+.tm-btn {
+    background: $primary-color;
+    outline: 0;
+    border: 0;
+    &:hover {
+        background: $btn_hover;
+        border: $btn_hover;
+    }
+    &:active {
+        background: $btn_active;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:active:focus {
+        box-shadow: none !important;
+    }
+}
+
 .wrapper {
     overflow: hidden; // 合作伙伴
     .cooperate-module {
@@ -49,10 +69,6 @@
 
 .vd-pad-70 {
     padding: 70px 0;
-}
-
-.btn {
-    background: $primary-color;
 }
 
 // video card
@@ -147,7 +163,7 @@ nav.navbar.tum-header {
     .header-btn {
         padding: 0.3rem 1rem;
         border-radius: 0;
-        background: $primary-color;
+        height: 35px;
     }
 
     .navbar-toggler {
@@ -709,7 +725,7 @@ nav.navbar.tum-header {
                 }
             }
             .sign-module {
-                margin: 0;
+                margin: 20px auto;
                 padding: 0;
                 .row {
                     margin: 0;
@@ -755,6 +771,7 @@ nav.navbar.tum-header {
             }
             .sr-select-wrapper {
                 width: 100%;
+                margin-bottom: 10px;
                 .search-item .search-input {
                     width: 100%;
                 }
