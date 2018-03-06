@@ -38,14 +38,11 @@
     }
 }
 
-@media only screen and (max-width: 993px) {
-    .wrapper .video-wrapper .extra-video {
-        padding-left: 0.25rem;
-    }
-}
-
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: $mobile) {
     .wrapper {
+        .video-wrapper .extra-video {
+            padding-left: 0.25rem;
+        }
         .video-title {
             margin: 25px 0;
             font-size: 24px;

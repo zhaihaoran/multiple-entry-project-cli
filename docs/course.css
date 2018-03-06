@@ -88,7 +88,6 @@
 @charset "UTF-8";
 /* color */
 /* px */
-/* font-size */
 /* util */
 /** 清除内外边距 **/
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
@@ -251,6 +250,9 @@ nav.pg-wrapper {
 .btn {
   border-radius: 0; }
 
+button:focus {
+  outline: 0; }
+
 .row {
   margin: 0 -0.25rem !important; }
   .row .col,
@@ -327,7 +329,6 @@ nav.pg-wrapper {
 
 /* color */
 /* px */
-/* font-size */
 /* util */
 /* Slider */
 .slick-slider {
@@ -748,10 +749,15 @@ nav.navbar.tum-header {
     nav.navbar.tum-header .tum-border-left div {
       border-left: 1px solid #333;
       height: 100%; }
+  nav.navbar.tum-header .tm-list > .nav-item {
+    padding: 0 15px;
+    text-align: center; }
   nav.navbar.tum-header .header-btn {
     padding: 0.3rem 1rem;
     border-radius: 0;
     background: #bb2133; }
+  nav.navbar.tum-header .navbar-toggler {
+    border: 0; }
 
 .search-item {
   position: relative; }
@@ -1177,6 +1183,8 @@ nav.navbar.tum-header {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
+  nav.navbar.tum-header .tm-list > .nav-item {
+    padding: 0 5px; }
   .index-image-wrapper .res-image {
     width: 1200px;
     max-width: none;
@@ -1208,7 +1216,7 @@ nav.navbar.tum-header {
     background-size: 125%;
     background-position-y: -22px; } }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 768px) {
   .vd-pad-70 {
     padding: 0; }
   .video-wrapper #video {
@@ -1273,6 +1281,12 @@ nav.navbar.tum-header {
   nav.navbar.tum-header {
     position: static;
     height: auto; }
+    nav.navbar.tum-header .container {
+      padding: 0 15px; }
+    nav.navbar.tum-header .sr-select-wrapper {
+      width: 100%; }
+      nav.navbar.tum-header .sr-select-wrapper .search-item .search-input {
+        width: 100%; }
     nav.navbar.tum-header .header-btn {
       width: 100%; }
   .guest-wrapper {
@@ -1355,7 +1369,7 @@ nav.navbar.tum-header {
 .video-mb-20 {
   margin-bottom: 20px; }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 768px) {
   .sr-wrapper {
     display: block; }
     .sr-wrapper .sr-button {
