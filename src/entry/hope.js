@@ -1,8 +1,5 @@
 import '@scss/hope.scss';
-
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import Common from '@lib/common'
 
 import 'slick-carousel'
 import '@scss/lib.scss';
@@ -13,6 +10,7 @@ class Main {
     }
 
     initEvent() {
+        new Common();
         this.render();
         this.carouselInit();
     }

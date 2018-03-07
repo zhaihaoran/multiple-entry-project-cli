@@ -1,8 +1,5 @@
+import Common from '@lib/common'
 import '@scss/course.scss';
-
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
 
 class Course {
     constructor() {
@@ -10,7 +7,7 @@ class Course {
     }
 
     initEvent() {
-
+        new Common();
     }
 }
 

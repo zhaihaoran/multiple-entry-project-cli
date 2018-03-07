@@ -1,6 +1,4 @@
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import Common from '@lib/common'
 
 import '@scss/home.scss';
 
@@ -13,6 +11,7 @@ class Main {
 
     initEvent() {
         new Tm_Video();
+        new Common();
     }
 }
 

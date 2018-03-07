@@ -1,11 +1,10 @@
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import Common from '@lib/common'
 
 import '@scss/landing.scss';
 
 class Main {
     constructor() {
+        new Common();
         this.initEvent();
     }
 

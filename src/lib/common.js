@@ -1,5 +1,7 @@
 import $ from 'jquery'
-
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 const default_config = {
 

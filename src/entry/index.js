@@ -1,13 +1,7 @@
-// Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
-
-import '@lib/jquery.scrollfire'
-import '@lib/animateNumber'
-
-import '@scss/index.scss';
-
 import Common from '@lib/common'
+
+import '@lib/animateNumber'
+import '@scss/index.scss';
 
 import Tm_Video from '@lib/video'
 
