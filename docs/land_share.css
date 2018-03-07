@@ -6611,6 +6611,9 @@ button:focus {
   .row .col-xl-auto {
     padding: 0 0.25rem; }
 
+.form-control {
+  border-radius: 0; }
+
 /* color */
 /* px */
 /* util */
@@ -7052,7 +7055,8 @@ nav.navbar.tum-header {
   nav.navbar.tum-header .header-btn {
     padding: 0.3rem 1rem;
     border-radius: 0;
-    height: 35px; }
+    height: 35px;
+    margin-left: 10px; }
   nav.navbar.tum-header .navbar-toggler {
     border: 0; }
 
@@ -7082,6 +7086,12 @@ nav.navbar.tum-header {
     color: #bebebe; }
     .search-item span.search-icon i {
       line-height: 38px; }
+
+.msg-btn {
+  width: 100%;
+  color: #fff;
+  line-height: 100%;
+  height: 100%; }
 
 .page-footer {
   color: white;
@@ -7472,6 +7482,86 @@ nav.navbar.tum-header {
   background-color: #bb2133;
   color: #fff; }
 
+.tm-sign .dropdown-menu {
+  border: 0;
+  border-radius: 0;
+  text-align: center;
+  -webkit-box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.12), 0 7px 10px -5px rgba(0, 0, 0, 0.15);
+  min-width: auto; }
+  .tm-sign .dropdown-menu a.dropdown-item {
+    padding: 0.5rem 1.5rem; }
+    .tm-sign .dropdown-menu a.dropdown-item:hover {
+      background-color: #bb2133;
+      color: #fff; }
+
+.modal-dialog.tm-dialog {
+  max-width: 765px; }
+
+.tm-sign-modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0px 2px 20px 5px #2d2c2c;
+          box-shadow: 0px 2px 20px 5px #2d2c2c;
+  border: 0;
+  border-radius: 0; }
+  .tm-sign-modal .tm-sign-image {
+    min-width: 420px;
+    position: relative; }
+    .tm-sign-modal .tm-sign-image img {
+      height: 100%; }
+    .tm-sign-modal .tm-sign-image .sign-info {
+      position: relative;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      position: absolute !important;
+      top: 120px;
+      width: 100%;
+      color: #fff;
+      padding: 0 32px; }
+      .tm-sign-modal .tm-sign-image .sign-info h3 {
+        font-size: 32px;
+        font-weight: bold; }
+      .tm-sign-modal .tm-sign-image .sign-info p {
+        font-size: 20px;
+        margin-top: 20px; }
+  .tm-sign-modal .tm-sign-wrapper {
+    width: 100%;
+    padding: 40px;
+    background: whitesmoke; }
+    .tm-sign-modal .tm-sign-wrapper .sign-box {
+      padding: 10px 0; }
+      .tm-sign-modal .tm-sign-wrapper .sign-box label {
+        margin-bottom: 0.3rem; }
+      .tm-sign-modal .tm-sign-wrapper .sign-box .form-group {
+        margin-bottom: 10px; }
+    .tm-sign-modal .tm-sign-wrapper .right {
+      float: right; }
+    .tm-sign-modal .tm-sign-wrapper .custom-checkbox label,
+    .tm-sign-modal .tm-sign-wrapper .custom-checkbox a {
+      font-size: 14px; }
+    .tm-sign-modal .tm-sign-wrapper .close {
+      position: absolute;
+      right: 20px;
+      top: 20px; }
+    .tm-sign-modal .tm-sign-wrapper .sign-btn {
+      width: 100%;
+      color: #fff;
+      font-weight: bold;
+      padding: 10px;
+      border: 1px solid #bb2133; }
+    .tm-sign-modal .tm-sign-wrapper .sign-redirect-register {
+      margin-top: 10px;
+      text-align: center; }
+
 @media screen and (max-width: 1200px) {
   .img-background {
     width: 1200px;
@@ -7509,15 +7599,15 @@ nav.navbar.tum-header {
   .extra-video {
     margin-top: 15px; }
   .record-map {
-    background: url(assets/map_phone.6867b.png) center center no-repeat;
+    background: url(assets/map_phone.60980.png) center center no-repeat;
     background-size: 125%;
     background-position-y: -22px; } }
 
 @media screen and (max-width: 768px) {
   .vd-pad-70 {
     padding: 0; }
-  .video-wrapper #video {
-    height: 100%; }
+  .modal-dialog.tm-dialog {
+    margin: 2rem 1rem; }
   .video-wrapper .video-mask.index-mask {
     padding: 10px 40px;
     height: auto; }
@@ -7526,6 +7616,10 @@ nav.navbar.tum-header {
       margin: 0; }
     .video-wrapper .video-mask.index-mask p {
       margin: 5px 0; }
+  .video-wrapper .video-player .tm_video_info h2 {
+    font-size: 18px; }
+  .video-wrapper .video-player .tm_video_info p {
+    font-size: 12px; }
   .wrapper .cooperate-module .cooperate-item {
     margin-bottom: 0; }
     .wrapper .cooperate-module .cooperate-item .co-title {
@@ -7586,7 +7680,8 @@ nav.navbar.tum-header {
       nav.navbar.tum-header .sr-select-wrapper .search-item .search-input {
         width: 100%; }
     nav.navbar.tum-header .header-btn {
-      width: 100%; }
+      width: 100%;
+      margin: 0; }
   .guest-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

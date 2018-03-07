@@ -7,6 +7,8 @@ import '@lib/animateNumber'
 
 import '@scss/index.scss';
 
+import Common from '@lib/common'
+
 import Tm_Video from '@lib/video'
 
 class Index {
@@ -17,6 +19,7 @@ class Index {
 
     initEvent() {
         new Tm_Video();
+        new Common();
         this.declareVar()
         this.pluginsInit()
     }
