@@ -1,5 +1,5 @@
 const state = {
-    sidebar: true // 侧边栏状态
+    sidebar: false // 侧边栏状态
 }
 
 // 模块的mutations 、 actions、getter 默认注册在全局命名空间的

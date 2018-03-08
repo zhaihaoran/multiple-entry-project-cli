@@ -1,6 +1,6 @@
-@import '_variables.scss';
+@import '../variable/_variables.scss';
 @import 'base_fixed.scss';
-@import 'lib.scss';
+@import './lib.scss';
 @import '../assets/icon/iconfont.css';
 // video 响应式
 .video-js {

@@ -10,7 +10,6 @@
 
 <script>
 import { mapState, mapMutations } from 'vuex';
-console.log(mapMutations);
 export default {
     name: 'Button',
     data() {

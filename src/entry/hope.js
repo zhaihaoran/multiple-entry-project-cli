@@ -1,8 +1,6 @@
 import '@scss/hope.scss';
 import Common from '@lib/common'
-
 import 'slick-carousel'
-import '@scss/lib.scss';
 
 class Main {
     constructor() {

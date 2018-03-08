@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    &:active {
+        text-decoration: none;
+    }
+}
+
+// custom a
+a.tm-a {
+    color: $primary-color;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// 分割线
+.individar {
+    height: 1px;
+    margin: 0 -20px;
+    background: #ddd;
+}
+
+// el-radio-button
+.el-radio-button__inner:hover {
+    color: $primary-color;
+}
+.el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+// input
+
+.admin-layout {
+    flex-direction: column;
+}
+
+.admin-context {
+    min-height: calc(100vh - 70px);
+}
+
+.admin-aside {
+    position: relative;
+    z-index: 200;
+    overflow: hidden;
+    background-color: $sider_bg;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    .el-submenu__title {
+        color: $sider_font;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $sider_active;
+            color: #fff;
+        }
+    }
+    .el-menu {
+        background: $sider_bg;
+        .el-menu-item {
+            color: $sider_font;
+            transition-property: background;
+            &:focus,
+            &:hover {
+                background: $sider_item_active;
+                color: #fff;
+            }
+            &.is-active {
+                background: $sider_item_active;
+                border-left: 5px solid $primary-color;
+                color: #fff;
+                outline: 0;
+            }
+        }
+    }
+    .admin-sider-menu {
+        width: 100%;
+        background-color: $sider_bg;
+        .el-submenu.is-opened {
+            background: $sider_active;
+            .el-menu {
+                background-color: $sider_active;
+            }
+        }
+    }
+}
+
+.admin-header {
+    position: relative;
+    z-index: 300;
+    background: $primary-color;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.12),
+        0 7px 10px -5px rgba(0, 0, 0, 0.15);
+    .logo {
+        display: flex;
+        align-items: center;
+        img {
+            height: 52px;
+        }
+    }
+}
+
+.admin-wrapper {
+    background: $context_bg;
+}
+
+//
+.tm-card {
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #fff;
+}

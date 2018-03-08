@@ -2,6 +2,10 @@ node_modules
 
 build/*
 
+config
+
+
+
 *.hot-update.js
 *.hot-update.json
 

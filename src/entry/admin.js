@@ -4,6 +4,8 @@ import router from '@route/index'
 import store from '@store/index'
 import ElementUI from 'element-ui'
 
+import '@scss/school.scss';
+
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
