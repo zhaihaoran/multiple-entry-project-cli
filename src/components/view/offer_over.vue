@@ -30,6 +30,24 @@
                     prop="address"
                     label="地址">
                 </el-table-column>
+                <el-table-column
+                    label="进展">
+                    <template slot-scope="scope">
+                        <a href="#" v-popover:popover v-if="scope.row.progress === 1" class="tm-a" >待上课</a>
+                        <a href="#" v-if="scope.row.progress === 2" class="tm-a" >待开课通知</a>
+                        <a href="#" v-if="scope.row.progress === 3" class="tm-a" >待课后反馈提交</a>
+                        <a href="#" v-if="scope.row.progress === 4" class="tm-a" >完成</a>
+                        <el-popover class="offer-step" ref="popover" placement="right" trigger="click">
+                            <el-steps direction="vertical" class="admin-step" :active="2">
+                                <el-step title="待开课通知"></el-step>
+                                <el-step title="待上课"></el-step>
+                                <el-step title="待课后反馈提交"></el-step>
+                                <el-step title="待课后反馈确认"></el-step>
+                                <el-step title="完成"></el-step>
+                            </el-steps>
+                        </el-popover>
+                    </template>
+                </el-table-column>
             </el-table>
         </div>
     </div>
@@ -44,26 +62,53 @@ export default {
                 {
                     date: '2016-05-02',
                     name: '王小虎',
+                    address: '上海市普陀区金沙江路 1518 弄',
+                    progress: 4
+                },
+                {
+                    date: '2016-05-04',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1517 弄',
+                    progress: 1
+                },
+                {
+                    date: '2016-05-01',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1519 弄',
+                    progress: 2
+                },
+                {
+                    date: '2016-05-03',
+                    name: '王小虎',
+                    address: '上海市普陀区金沙江路 1516 弄',
+                    progress: 3
+                }
+            ],
+            gridData: [
+                {
+                    date: '2016-05-02',
+                    name: '王小虎',
                     address: '上海市普陀区金沙江路 1518 弄'
                 },
                 {
                     date: '2016-05-04',
                     name: '王小虎',
-                    address: '上海市普陀区金沙江路 1517 弄'
+                    address: '上海市普陀区金沙江路 1518 弄'
                 },
                 {
                     date: '2016-05-01',
                     name: '王小虎',
-                    address: '上海市普陀区金沙江路 1519 弄'
+                    address: '上海市普陀区金沙江路 1518 弄'
                 },
                 {
                     date: '2016-05-03',
                     name: '王小虎',
-                    address: '上海市普陀区金沙江路 1516 弄'
+                    address: '上海市普陀区金沙江路 1518 弄'
                 }
             ]
         };
-    }
+    },
+    methods: {}
 };
 </script>
 <style>
@@ -77,6 +122,9 @@ export default {
 }
 .el-input {
     width: 330px;
+}
+.admin-step {
+    height: 200px;
 }
 </style>
 

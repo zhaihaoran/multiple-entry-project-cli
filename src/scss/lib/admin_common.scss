@@ -18,6 +18,43 @@ a.tm-a {
     }
 }
 
+// btn
+.tm-btn {
+    background: $primary-color;
+    border: 0;
+    &:hover {
+        background: $btn_hover;
+    }
+    &:active {
+        background: $btn_active;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:active:focus {
+        box-shadow: none !important;
+    }
+}
+
+.tm-btn-border {
+    background: #fff;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    &:hover {
+        background: $btn_hover;
+        color: #fff;
+    }
+    &:active {
+        background: $btn_active;
+    }
+    &:focus {
+        box-shadow: none;
+    }
+    &:active:focus {
+        box-shadow: none !important;
+    }
+}
+
 // 分割线
 .individar {
     height: 1px;
@@ -34,6 +71,31 @@ a.tm-a {
     border-color: $primary-color;
 }
 
+// pagination
+.el-pagination {
+    .btn-prev,
+    .btn-next {
+        background: inherit;
+    }
+    button.disabled {
+        background-color: inherit;
+    }
+    .el-pager {
+        li {
+            min-width: 28px;
+            height: 28px;
+            &.active {
+                background-color: $primary-color;
+                border-radius: 50%;
+                color: #fff;
+            }
+            &:not(.active) {
+                background: inherit !important;
+            }
+        }
+    }
+}
+
 // input
 
 .admin-layout {
@@ -46,6 +108,7 @@ a.tm-a {
 
 .admin-aside {
     position: relative;
+    padding-top: 20px;
     z-index: 200;
     overflow: hidden;
     background-color: $sider_bg;
@@ -104,6 +167,28 @@ a.tm-a {
             height: 52px;
         }
     }
+
+    .header-right {
+        margin: 0;
+        display: flex;
+        list-style: none;
+        justify-content: flex-end;
+        flex: 1;
+        .nav-header-item {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+        .user-logo {
+            img {
+                height: 50px;
+            }
+        }
+    }
 }
 
 .admin-wrapper {
@@ -115,4 +200,19 @@ a.tm-a {
     padding: 20px;
     margin-bottom: 20px;
     background: #fff;
+}
+
+//
+.tm-text-color {
+    color: $primary-color;
+}
+
+// table
+.tm-table {
+    thead {
+        tr,
+        th {
+            background: #f3f3f3;
+        }
+    }
 }

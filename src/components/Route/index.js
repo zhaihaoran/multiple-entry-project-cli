@@ -6,6 +6,7 @@ import Button from '@comp/Button.vue'
 import Offer_Send from '@comp/view/offer_send.vue'
 import Offer_Over from '@comp/view/offer_over.vue'
 import Info from '@comp/view/info.vue'
+import Invite_speaker from '@comp/view/invite_speaker.vue'
 
 Vue.use(Router)
 
@@ -14,17 +15,21 @@ export default new Router({
         path: '/offer_send',
         name: 'offer_send',
         component: Offer_Send
-    },{
+    }, {
         path: '/offer_over',
         name: 'offer_over',
         component: Offer_Over
-    },{
+    }, {
         path: '/info',
         name: 'Info',
         component: Info
-    },{
+    }, {
         path: '/button',
         name: 'Button',
         component: Button
+    }, {
+        path: '/invite/send',
+        name: 'invite_speaker',
+        component: Invite_speaker
     }]
 })
