@@ -8,19 +8,19 @@
                     </el-upload>
                 </el-form-item>
                 <el-form-item label="学校名称" prop="schoolName" >
-                    <el-input v-model="form.schoolName"></el-input>
+                    河北实验中学
                 </el-form-item>
                 <el-form-item label="学校地址" prop="schoolPos" >
-                    <el-input v-model="form.schoolPos"></el-input>
+                    河北省石家庄市奕成县石家庄实验中学
                 </el-form-item>
                 <el-form-item label="简介" prop="des1" >
-                    <el-input type="textarea" v-model="form.des1"></el-input>
+                    <el-input type="textarea" class="tm-textarea" v-model="form.des1"></el-input>
                 </el-form-item>
                 <el-form-item label="教学特色" prop="des2" >
-                    <el-input type="textarea" v-model="form.des2"></el-input>
+                    <el-input type="textarea" class="tm-textarea" v-model="form.des2"></el-input>
                 </el-form-item>
                 <el-form-item label="学校状况" prop="des3" >
-                    <el-input type="textarea" v-model="form.des3"></el-input>
+                    <el-input type="textarea" class="tm-textarea" v-model="form.des3"></el-input>
                 </el-form-item>
                 <el-button type="primary" @click="onSubmit('form')">保存</el-button>
                 <el-button @click="resetForm('form')">重置</el-button>
@@ -42,13 +42,14 @@
             <el-row :gutter="10">
                 <el-col class="tm-col-5 pic-cube" :xs="12" :sm="8" :lg="6" v-for="photo in photos" :key="photo.$index" >
                     <img :src="photo" class="img-fluid" alt="">
+
                 </el-col>
             </el-row>
         </el-tab-pane>
         <el-tab-pane label="视频">
             <el-row :gutter="10">
                 <el-col class="tm-col-5" :xs="12" :sm="8" :lg="6" v-for="video in videos" :key="video.id" >
-                    <div class="hoverable card-hover" >
+                    <div class="hoverable card-hover video" >
                         <div class="card-image">
                             <img class="img-fluid" :src="video.img">
                             <span class="vd-times badge">{{video.time}}</span>
@@ -60,6 +61,10 @@
                                 <span>学校：{{video.school}}</span>
                                 <span>{{video.startTime}} <span class="text-right" >{{video.count}} 次播放</span> </span>
                             </div>
+                        </div>
+                        <div class="recommend-box">
+                            <span class="bages" ><i class="el-icon-upload2"></i>推荐</span>
+                            <span>点亮按钮可设置为推荐视频</span>
                         </div>
                     </div>
                 </el-col>
@@ -216,6 +221,35 @@ export default {
 }
 .pic-cube {
     margin: 5px 0;
+}
+
+.video {
+    position: relative;
+}
+
+.recommend-box {
+    opacity: 0;
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    width: calc(100% - 16px);
+    height: 26px;
+    line-height: 26px;
+    color: #fff;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.bages {
+    width: 60px;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.bages i {
+    margin: 0 5px;
 }
 </style>
 

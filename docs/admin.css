@@ -19536,11 +19536,14 @@ a.tm-a {
 
 .tm-btn {
   background: #bb2133;
+  color: #fff;
   border: 0; }
   .tm-btn:hover {
-    background: #e05162; }
+    background: #e05162;
+    color: #fff; }
   .tm-btn:active {
-    background: #990e1f; }
+    background: #990e1f;
+    color: #fff; }
   .tm-btn:focus {
     -webkit-box-shadow: none;
             box-shadow: none; }
@@ -19568,6 +19571,12 @@ a.tm-a {
   height: 1px;
   margin: 20px 0;
   background: #ddd; }
+
+.text-overflow {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden; }
 
 .el-radio-button__inner:hover {
   color: #bb2133; }
@@ -19703,6 +19712,7 @@ a.tm-a {
   background: #ececec; }
 
 .tm-card {
+  position: relative;
   padding: 20px;
   margin-bottom: 20px;
   background: #fff;
@@ -19770,10 +19780,10 @@ a.tm-a {
 .text-right {
   float: right !important; }
 
+.tm-textarea textarea {
+  min-height: 100px !important; }
+
 .hoverable.card-hover:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  z-index: 100;
   position: relative;
   -webkit-transition: -webkit-transform 0.3s ease-in;
   transition: -webkit-transform 0.3s ease-in;
@@ -19786,6 +19796,13 @@ a.tm-a {
     padding: 10px; }
     .hoverable.card-hover:hover .card-content span {
       color: white; }
+  .hoverable.card-hover:hover .recommend-box {
+    opacity: 1; }
 
 img {
   vertical-align: middle; }
+
+.el-tabs--border-card > .el-tabs__header .el-tabs__item {
+  padding: 0 40px !important;
+  height: 50px;
+  line-height: 50px; }

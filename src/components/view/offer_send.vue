@@ -110,7 +110,6 @@ export default {
 
 <style>
 .offer-pagination {
-    margin: 20px 0;
     display: flex;
     justify-content: flex-end;
 }

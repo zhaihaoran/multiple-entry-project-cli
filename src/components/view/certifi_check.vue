@@ -334,7 +334,7 @@ export default {
 
 .certifi-info.invite-send {
     background: rgb(249, 242, 232);
-    border: 1px solid rgb(186, 139, 119);
+    border: 1px solid #e97a50;
 }
 
 .certifi-info.invite-send .card-image {

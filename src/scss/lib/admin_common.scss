@@ -21,12 +21,15 @@ a.tm-a {
 // btn
 .tm-btn {
     background: $primary-color;
+    color: #fff;
     border: 0;
     &:hover {
         background: $btn_hover;
+        color: #fff;
     }
     &:active {
         background: $btn_active;
+        color: #fff;
     }
     &:focus {
         box-shadow: none;
@@ -60,6 +63,14 @@ a.tm-a {
     height: 1px;
     margin: 20px 0;
     background: #ddd;
+}
+
+// 多行省略
+.text-overflow {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 // el-radio-button
@@ -203,6 +214,7 @@ a.tm-a {
 
 //
 .tm-card {
+    position: relative;
     padding: 20px;
     margin-bottom: 20px;
     background: #fff;
@@ -284,9 +296,11 @@ a.tm-a {
     float: right !important;
 }
 
+.tm-textarea textarea {
+    min-height: 100px !important;
+}
+
 .hoverable.card-hover:hover {
-    transform: scale(1.05);
-    z-index: 100;
     position: relative;
     transition: transform 0.3s ease-in;
     box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
@@ -297,8 +311,17 @@ a.tm-a {
             color: white;
         }
     }
+    .recommend-box {
+        opacity: 1;
+    }
 }
 
 img {
     vertical-align: middle;
+}
+
+.el-tabs--border-card > .el-tabs__header .el-tabs__item {
+    padding: 0 40px !important;
+    height: 50px;
+    line-height: 50px;
 }

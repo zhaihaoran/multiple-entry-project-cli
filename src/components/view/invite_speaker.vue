@@ -1,22 +1,22 @@
 <template>
     <div>
         <SearchInput />
-
         <div v-for="person in persons" :key="person.id" class="tm-card invite-send">
-            <div class="card-image">
+            <a href="/home_lecturer.html" class="card-image">
                 <img :src="person.image" class="img-fluid" alt="">
-            </div>
+            </a>
             <div class="card-wrapper">
                 <p class="no-margin" ><span class="teacher-name" >{{person.name}}</span>{{person.info}}</p>
                 <p>
                     <span class="num tm-text-color" >{{person.invitenum}}</span>邀约数
                     <span class="num tm-text-color" style="margin-left:20px;" >{{person.contrinum}}</span>贡献人次
                 </p>
-                <p class="no-margin" >简介：{{person.description}}</p>
+                <p class="no-margin text-overflow" >简介：{{person.description}}</p>
             </div>
+            <el-button @click="handleInvite()" class="tm-btn invite-btn" >邀约</el-button>
         </div>
-        <div class="tm-card text-center">
-            <el-pagination
+        <el-card class="text-center" >
+             <el-pagination
                 @size-change="handleSizeChange"
                 @current-change="handleCurrentChange"
                 :current-page.sync="currentPage"
@@ -26,7 +26,7 @@
                 class="offer-pagination"
             >
             </el-pagination>
-        </div>
+        </el-card>
     </div>
 </template>
 <script>
@@ -88,6 +88,9 @@ export default {
         },
         handleCurrentChange(val) {
             console.log(`当前页: ${val}`);
+        },
+        handleInvite() {
+            console.log(this);
         }
     }
 };
@@ -108,12 +111,11 @@ export default {
     flex: 1;
     color: #6e6e6e;
     padding-left: 20px;
+    max-width: 740px;
 }
 .invite-send .card-wrapper p {
     max-height: 66px;
     line-height: 22px;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .invite-send .card-wrapper p .num {
@@ -127,5 +129,11 @@ export default {
     font-weight: bold;
     color: #000;
     margin-right: 20px;
+}
+.invite-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 12px 26px;
 }
 </style>
