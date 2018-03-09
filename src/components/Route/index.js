@@ -7,6 +7,7 @@ import Offer_Send from '@comp/view/offer_send.vue'
 import Offer_Over from '@comp/view/offer_over.vue'
 import Info from '@comp/view/info.vue'
 import Invite_speaker from '@comp/view/invite_speaker.vue'
+import Setting from '@comp/view/setting.vue'
 
 Vue.use(Router)
 
@@ -31,5 +32,9 @@ export default new Router({
         path: '/invite/send',
         name: 'invite_speaker',
         component: Invite_speaker
+    },{
+        path: '/setting',
+        name: 'Setting',
+        component: Setting
     }]
 })

@@ -58,7 +58,7 @@ a.tm-a {
 // 分割线
 .individar {
     height: 1px;
-    margin: 0 -20px;
+    margin: 20px 0;
     background: #ddd;
 }
 
@@ -66,13 +66,21 @@ a.tm-a {
 .el-radio-button__inner:hover {
     color: $primary-color;
 }
+
 .el-radio-button__orig-radio:checked + .el-radio-button__inner {
     background-color: $primary-color;
     border-color: $primary-color;
 }
+//
+@media only screen and (min-width: 1500px) {
+    .tm-col-5 {
+        width: 20%;
+    }
+}
 
 // pagination
 .el-pagination {
+    margin: 10px 0;
     .btn-prev,
     .btn-next {
         background: inherit;
@@ -97,7 +105,6 @@ a.tm-a {
 }
 
 // input
-
 .admin-layout {
     flex-direction: column;
 }
@@ -167,7 +174,6 @@ a.tm-a {
             height: 52px;
         }
     }
-
     .header-right {
         margin: 0;
         display: flex;
@@ -200,6 +206,22 @@ a.tm-a {
     padding: 20px;
     margin-bottom: 20px;
     background: #fff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    color: #303133;
+}
+
+//
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.text-center {
+    text-align: center;
 }
 
 //
@@ -215,4 +237,68 @@ a.tm-a {
             background: #f3f3f3;
         }
     }
+}
+
+// .car
+.card-image {
+    overflow: hidden;
+    position: relative;
+    img {
+        vertical-align: middle;
+        width: 100%;
+    }
+    .vd-times {
+        background: rgba(56, 58, 60, 0.9);
+        position: absolute;
+        font-size: 12px;
+        line-height: 12px;
+        bottom: 10px;
+        right: 10px;
+        color: white;
+        padding: 0.4em 0.5em;
+        border-radius: 0;
+    }
+}
+
+.card-content {
+    padding: 10px 5px;
+    .card-title {
+        font-size: 17px;
+        color: #333;
+        line-height: 20px;
+    }
+}
+
+.vd-extra {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    color: #999;
+    span {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+.text-right {
+    float: right !important;
+}
+
+.hoverable.card-hover:hover {
+    transform: scale(1.05);
+    z-index: 100;
+    position: relative;
+    transition: transform 0.3s ease-in;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);
+    .card-content {
+        background: $primary-color;
+        padding: 10px;
+        span {
+            color: white;
+        }
+    }
+}
+
+img {
+    vertical-align: middle;
 }
