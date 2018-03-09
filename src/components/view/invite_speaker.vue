@@ -39,7 +39,7 @@ export default {
                 {
                     id: 1,
                     name: '张小山',
-                    image: '../../assets/image/guests/guest1.png',
+                    image: 'assets/image/guests/guest1.png',
                     info: '英语老师，野外探险爱好者',
                     invitenum: 328,
                     contrinum: 32,
@@ -49,7 +49,7 @@ export default {
                 {
                     id: 2,
                     name: '张小山',
-                    image: '../../assets/image/guests/guest2.png',
+                    image: 'assets/image/guests/guest2.png',
                     info: '英语老师，野外探险爱好者',
                     invitenum: 328,
                     contrinum: 32,
@@ -59,7 +59,7 @@ export default {
                 {
                     id: 3,
                     name: '张小山',
-                    image: '../../assets/image/guests/guest3.png',
+                    image: 'assets/image/guests/guest3.png',
                     info: '英语老师，野外探险爱好者',
                     invitenum: 328,
                     contrinum: 32,
@@ -69,7 +69,7 @@ export default {
                 {
                     id: 4,
                     name: '张小山',
-                    image: '../../assets/image/guests/guest4.png',
+                    image: 'assets/image/guests/guest4.png',
                     info: '英语老师，野外探险爱好者',
                     invitenum: 328,
                     contrinum: 32,

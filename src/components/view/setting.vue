@@ -110,7 +110,7 @@ export default {
                 {
                     id: '1',
                     time: '12:58',
-                    img: '../../assets/image/card.png',
+                    img: 'assets/image/card.png',
                     title: '成为更好的自己',
                     author: '周程程',
                     count: 9999,
@@ -120,7 +120,7 @@ export default {
                 {
                     id: '23',
                     time: '12:58',
-                    img: '../../assets/image/card.png',
+                    img: 'assets/image/card.png',
                     title: '成为更好的自己',
                     author: '周程程',
                     count: 9999,
@@ -130,7 +130,7 @@ export default {
                 {
                     id: '2',
                     time: '12:58',
-                    img: '../../assets/image/card.png',
+                    img: 'assets/image/card.png',
                     title: '成为更好的自己',
                     author: '周程程',
                     count: 9999,
@@ -140,7 +140,7 @@ export default {
                 {
                     id: '3',
                     time: '12:58',
-                    img: '../../assets/image/card.png',
+                    img: 'assets/image/card.png',
                     title: '成为更好的自己',
                     author: '周程程',
                     count: 9999,
@@ -150,7 +150,7 @@ export default {
                 {
                     id: '10',
                     time: '12:58',
-                    img: '../../assets/image/card.png',
+                    img: 'assets/image/card.png',
                     title: '成为更好的自己',
                     author: '周程程',
                     count: 9999,
@@ -159,16 +159,16 @@ export default {
                 }
             ],
             photos: [
-                '../../assets/image/guests/guest1.png',
-                '../../assets/image/guests/guest3.png',
-                '../../assets/image/guests/guest2.png',
-                '../../assets/image/guests/guest4.png',
-                '../../assets/image/guests/guest4.png',
-                '../../assets/image/guests/guest1.png',
-                '../../assets/image/guests/guest3.png',
-                '../../assets/image/guests/guest3.png',
-                '../../assets/image/guests/guest2.png',
-                '../../assets/image/guests/guest4.png'
+                'assets/image/guests/guest1.png',
+                'assets/image/guests/guest3.png',
+                'assets/image/guests/guest2.png',
+                'assets/image/guests/guest4.png',
+                'assets/image/guests/guest4.png',
+                'assets/image/guests/guest1.png',
+                'assets/image/guests/guest3.png',
+                'assets/image/guests/guest3.png',
+                'assets/image/guests/guest2.png',
+                'assets/image/guests/guest4.png'
             ]
         };
     },

@@ -5,7 +5,9 @@ import Button from '@comp/Button.vue'
 // components
 import Offer_Send from '@comp/view/offer_send.vue'
 import Offer_Over from '@comp/view/offer_over.vue'
-import Info from '@comp/view/info.vue'
+
+import Certification_checked from '@comp/view/certifi_checked.vue'
+import Certification_check from '@comp/view/certifi_check.vue'
 import Invite_speaker from '@comp/view/invite_speaker.vue'
 import Setting from '@comp/view/setting.vue'
 
@@ -21,9 +23,13 @@ export default new Router({
         name: 'offer_over',
         component: Offer_Over
     }, {
-        path: '/info',
-        name: 'Info',
-        component: Info
+        path: '/certification/checked',
+        name: 'Certification_checked',
+        component: Certification_checked
+    },{
+        path: '/certification/check',
+        name: 'Certification_check',
+        component: Certification_check
     }, {
         path: '/button',
         name: 'Button',

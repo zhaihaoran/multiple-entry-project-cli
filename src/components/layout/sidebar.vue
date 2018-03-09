@@ -31,9 +31,14 @@
                     <i class="el-icon-setting"></i>主页设置
                 </el-menu-item>
             </router-link>
-            <router-link to="/info" >
-                <el-menu-item class="sider-menu-item" index="/info">
-                    <i class="el-icon-message"></i>学校资料
+            <router-link v-if="checkState === 1" to="/certification/checked" >
+                <el-menu-item class="sider-menu-item" index="/certification/checked">
+                    <i class="el-icon-message"></i>学校资料(已审核)
+                </el-menu-item>
+            </router-link>
+            <router-link v-if="checkState === 1" to="/certification/check" >
+                <el-menu-item class="sider-menu-item" index="/certification/check">
+                    <i class="el-icon-message"></i>学校资料(未审核)
                 </el-menu-item>
             </router-link>
         </el-menu>
@@ -48,12 +53,14 @@ import { mapState } from 'vuex';
 export default {
     data() {
         return {
+            checkState: 1,
             path: this.$route.path
         };
     },
     // 可以将模块的空间名称字符串作为第一个参数传递给函数
     computed: mapState({
         SidebarState: state => state.common.sidebar
-    })
+    }),
+    methods: {}
 };
 </script>
