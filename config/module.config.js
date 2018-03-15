@@ -25,7 +25,7 @@ module.exports = {
                 loader: 'url-loader',
                 options: {
                     limit: 4096,
-                    name: "assets/[name].[hash:5].[ext]"
+                    name: "static/image/[name].[hash:5].[ext]"
                 }
             }]
         }, {

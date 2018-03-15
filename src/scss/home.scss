@@ -120,6 +120,7 @@
         display: flex;
         flex-direction: row;
         .pw-col {
+            width: 50%;
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -133,8 +134,14 @@
         .pw-cube {
             flex: 1;
             padding: 2px;
+            overflow: hidden;
+            box-sizing: content-box;
         }
     }
+}
+
+.img-height {
+    height: 100%;
 }
 
 @media (max-width: $mobile) {
@@ -186,5 +193,11 @@
         .pw-col-row {
             display: block;
         }
+        .pw-col {
+            width: auto;
+        }
+    }
+    .img-height {
+        height: 100%;
     }
 }

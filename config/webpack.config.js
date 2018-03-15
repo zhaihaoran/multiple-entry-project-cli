@@ -10,6 +10,8 @@ const {
     dev
 } = require('./setting')
 const webpack = require('webpack');
+const manifest = require('../static/vendor/vendor-manifest.json');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
 const {
@@ -23,33 +25,16 @@ const {
 // 并行打包
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-
-// 后台webpack
-const {
-    adminWebpackPlugins,
-    adminEntrys
-} = require('./admin.config')
-
 module.exports = function(env) {
     const Webpack_Plugins = [
-        // split vendor js into its own file
-        // new webpack.optimize.CommonsChunkPlugin({
-        //     name: 'vendor',
-        //     minChunks(module) {
-        //         // any required modules inside node_modules are extracted to vendor
-        //         return (
-        //             module.resource &&
-        //             /\.js$/.test(module.resource) &&
-        //             module.resource.indexOf(
-        //                 resolvePath('node_modules')
-        //             ) === 0
-        //         )
-        //     }
-        // }),
+        // dll
+        new webpack.DllReferencePlugin({
+            manifest
+        }),
         // copy custom static assets
         new CopyWebpackPlugin([{
-            from: resolvePath('src/assets'),
-            to: resolvePath(`${outputDir}/assets`),
+            from: resolvePath('static'),
+            to: resolvePath(`${outputDir}/static`),
             ignore: ['.*']
         }]),
         // auto fouce the defined plugins
@@ -64,7 +49,7 @@ module.exports = function(env) {
         // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
         // css code-split
         new ExtractTextPlugin({
-            filename: '[name].css',
+            filename: 'css/[name].css',
             disable: false,
             allChunks: true,
         }),
@@ -75,7 +60,6 @@ module.exports = function(env) {
             openAnalyzer: true
         }),
         ...webpackPlugins,
-        ...adminWebpackPlugins
     ];
     if (!dev) {
         let proPlugins = [
@@ -88,11 +72,13 @@ module.exports = function(env) {
     }
     return {
         devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
-        entry: Object.assign(entrys, adminEntrys),
+        entry: entrys,
         output: {
             filename: 'js/[name].js',
             path: resolvePath(outputDir),
             library: '[name]',
+            // 默认路径是你文件的当前路径，所以需要配到根目录下
+            publicPath:  dev ? "../" : "/static/site/"
         },
         resolve: require('./resolve.config'),
         module: modulePlugin,

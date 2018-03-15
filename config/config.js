@@ -4,6 +4,7 @@ const {
     HtmlDirectory,
     JsDirectory,
     tplSuffix,
+    rootDir
 } = require('./setting')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackIncludeAssetsPlugin = require('html-webpack-include-assets-plugin');
@@ -26,17 +27,18 @@ function Scan(htmlDir, jsDir, tplSuffix) {
 
         // 将 vendor.dll.js 插入HTML里
         const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
-            assets: ["assets/vendor/jquery.min.js", "assets/vendor/vendor.dll.js"],
-            files: `${entry}.html`,
+            assets: ["static/vendor/jquery.min.js", "static/vendor/vendor.dll.js"],
+            files: `html/${entry}.html`,
             append: false
         });
 
         const newPlugins = new HtmlWebpackPlugin({
             chunks: [entry],
             template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
-            filename: `${entry}.html`,
-            favicon: resolvePath('src/assets/favicon.png'),
+            filename: `html/${entry}.html`,
+            favicon: resolvePath('static/favicon.png'),
             inject: "body",
+            publicPath: rootDir
             // minify: {
             //     collapseWhitespace: true, // 是否去除空格
             //     removeComments: true // 是否去掉注释

@@ -10,7 +10,7 @@
     <%= require('html-loader!../templates/header.html') %>
         <!-- index-image -->
         <div class="index-image-wrapper share-banner">
-            <img src="assets/image/banners/banner_2.png" class="img-fluid res-image" alt="banner">
+            <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/banners/banner_2.png" class="img-fluid res-image" alt="banner">
             <div class="share-box">
                 <h2>来涂梦<span>分享</span></h2>
                 <h2>来让每个孩子的梦想不因为眼界而受到局限</h2>
@@ -23,30 +23,30 @@
         <!-- 照片墙 -->
         <div class="photowall">
             <div class="p-index">
-                <img src="assets/image/guests/guest1.png" alt="" class="img-fluid">
+                <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="" class="img-fluid">
             </div>
             <div class="p-wrapper">
                 <div class="p-row">
-                    <div class="p-cube"><img src="assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest3.png" alt="" class="img-fluid"></div>
                 </div>
                 <div class="p-row">
-                    <div class="p-cube"><img src="assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest3.png" alt="" class="img-fluid"></div>
                 </div>
                 <div class="p-row">
-                    <div class="p-cube"><img src="assets/image/guests/guest3.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest2.png" alt="" class="img-fluid"></div>
-                    <div class="p-cube"><img src="assets/image/guests/guest1.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest3.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest2.png" alt="" class="img-fluid"></div>
+                    <div class="p-cube"><img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="" class="img-fluid"></div>
                 </div>
             </div>
         </div>
         <!-- 嘉宾信息 -->
         <div class="guest-wrapper">
             <div class="guest-pic order-1">
-                <img class="reponsive-img" src="assets/image/guests/guest1.png" alt="">
+                <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="">
             </div>
             <div class="guest-info bg-grey">
                 <h2>赵爱灵</h2>
@@ -59,11 +59,11 @@
             <h2 class="text-center">学生需要您的支持</h2>
             <p class="text-center">中国高中生接受职业与毕业指导的比例远低于国际水平</p>
             <p class="text-center">中国青少年研究中心联合日、美、韩发起对四国高中生的毕业去向和职业生涯教育为主题的比较研究，《中美日韩高中生毕业去向和职业生涯教育研究报告》揭示：中国高中生的职业生涯教育已经全面落后于其他三个国家，进而导致中国高中生在毕业去向及职业选择上，出现许多令人担忧的问题。</p>
-            <img src="assets/image/background/record_1.png" class="img-fluid" alt="">
+            <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/record_1.png" class="img-fluid" alt="">
         </section>
         <!-- tumeng misson -->
         <div class="tm-misson">
-            <img src="assets/image/background/bg_4.png" alt="" class="img-background">
+            <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/bg_4.png" alt="" class="img-background">
             <div class="tm-content">
                 <h2 class="text-center img-title">涂梦的使命</h2>
                 <p class="text-center img-title">涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。</p>
@@ -74,7 +74,7 @@
         <%= require('html-loader!../templates/statistics.html') %>
             <!-- become speecher -->
             <section class="wrapper speech-2">
-                <img src="assets/image/background/bg_3.png" alt="" class="img-background">
+                <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/bg_3.png" alt="" class="img-background">
                 <div class="speech-box">
                     <h2>成为演讲者您只需要</h2>
                     <p>1. 热爱工作，热衷公益，善于表达</p>

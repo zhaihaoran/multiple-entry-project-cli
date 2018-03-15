@@ -12,7 +12,7 @@ const {
 
 module.exports = {
     output: {
-        path: resolvePath('src/assets/vendor'),
+        path: resolvePath('static/vendor'),
         filename: '[name].dll.js',
         library: "[name]"
     },
@@ -20,8 +20,8 @@ module.exports = {
     resolve: require('./resolve.config'),
     plugins: [
         new webpack.DllPlugin({
-            name: "[name]",
-            path: resolvePath('src/assets/vendor/[name]-manifest.json'),
+            name: "vendor",
+            path: resolvePath('static/vendor/[name]-manifest.json'),
         }),
     ],
 };

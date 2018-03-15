@@ -9,7 +9,7 @@ module.exports = {
     resolvePath,
     // 公共模块抽取
     CommonChunks: {
-        "vendor": ['popper.js', 'bootstrap'],
+        "vendor": ['popper.js', 'bootstrap','video.js'],
     },
     // 模板后缀
     tplSuffix: 'html',
@@ -20,9 +20,9 @@ module.exports = {
     // 后台 html 入口
     adminHtml: 'src/assets/admin.html',
     // cdn or not
-    rootDir: "",
+    rootDir:  process.env.NODE_ENV === "development" ? "" : "/static/site/",
     // outputDir
-    outputDir: "docs",
+    outputDir: process.env.NODE_ENV === "development" ? "docs" : "build",
     // dev
     dev: process.env.NODE_ENV === "development"
 
