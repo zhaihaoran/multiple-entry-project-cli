@@ -3,16 +3,12 @@ import Common from '@lib/common'
 import '@lib/animateNumber'
 import '@scss/index.scss';
 
-import Tm_Video from '@lib/video'
-
 class Index {
-
     constructor() {
         this.initEvent();
     }
 
     initEvent() {
-        new Tm_Video();
         new Common();
         this.declareVar()
         this.pluginsInit()

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+    <title> 首页 - 涂梦教育 </title>
+</head>
+<body>
+    <%= require('html-loader!../templates/header.html') %>
+    <%= require('html-loader!../templates/modal/modal_login.html') %>
+    <%= require('html-loader!../templates/modal/modal_register.html') %>
+    <!-- 支持涂梦 -->
+    <section class="index-image-wrapper">
+        <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/donate-bg.png" alt="关于涂梦" class="img-background img-fluid">
+        <h2 class="dn-title dn-title-pos text-center" >support</h2>
+        <h2 class="dn-title text-center" >支持涂梦</h2>
+    </section>
+    <section class="wrapper donate-way tm-bg">
+        <h2 class="ab-title text-center" >支持方式</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 dn-box">
+                    <i class="icon iconfont icon-wallet"></i>
+                    <h3>资金支持</h3>
+                    <p>资金捐赠涂梦公益项目</p>
+                    <p>涂梦将会公布捐款方式</p>
+                </div>
+                <div class="col-md-4 dn-box">
+                    <i class="icon iconfont icon-mans"></i>
+                    <h3>非资金支持</h3>
+                    <p>涂梦希望获得专业志愿服务（Pro bono）如财务审计、法务资源、人力资源、办公空间、平面设计</p>
+                </div>
+                <div class="col-md-4 dn-box">
+                    <i class="icon iconfont icon-trophy"></i>
+                    <h3>成为涂梦分享嘉宾</h3>
+                    <p>参加涂梦组织的公益志愿者活动</p>
+                    <a href="##" class="tm-btn dn-btn" >立即加入</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <%= require('html-loader!../templates/partner.html') %>
+    <%= require('html-loader!../templates/signModule.html') %>
+    <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>

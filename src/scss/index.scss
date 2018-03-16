@@ -16,6 +16,24 @@
     }
 }
 
+.big-item {
+    display: block;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .video-mask {
+        bottom: 0;
+        padding: 15px 10px 15px 20px;
+        h2 {
+            font-size: 28px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+}
+
 .wrapper {
     .video-title {
         font-size: 36px;
@@ -50,5 +68,17 @@
     }
     .vd-ss {
         margin-top: 40px;
+    }
+
+    .big-item {
+        .video-mask {
+            h2 {
+                font-size: 18px;
+                font-weight: normal;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
     }
 }

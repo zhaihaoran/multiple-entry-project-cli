@@ -16,12 +16,25 @@ class Common {
     }
 
     render() {
-
+        this.$images = $('.img-background');
     }
 
     init() {
         this.modalFixed();
         this.validator();
+        $(window).on('load', e => {
+            this.setImageHeight();
+        })
+        $(window).on('resize', e => {
+            this.setImageHeight();
+        })
+    }
+
+    setImageHeight() {
+        this.$images.each((i, el) => {
+            const height = $(el).height()
+            $(el).parent().css('height', height);
+        })
     }
 
     /**

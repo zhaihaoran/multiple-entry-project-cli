@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%= require('html-loader!../templates/head.html') %>
+        <title> 首页 - 涂梦教育 </title>
+</head>
+
+<body>
+    <%= require('html-loader!../templates/mobile_header.html') %>
+        <div class="video-wrapper">
+            <div class="video-player">
+                <video class="video-js responsive-video" id="tm_video">
+                    <source src="https://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="https://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                </video>
+                <div class="tm_video_image">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/video_bg.png" alt="tm">
+                </div>
+                <div class="tm_video_info">
+                    <p>程英旭</p>
+                    <h2 class="text-truncate">英美籍建筑设计师程炳旭：对于建筑师而言，什么是最重要的？</h2>
+                </div>
+            </div>
+        </div>
+        <div class="share-wrapper">
+            <div class="share">
+                <div class="intro" >
+                    <span class="grey-666" >程炳旭</span><span class="times grey-999" >199次播放</span>
+                </div>
+                <div class="border-left share-btn" data-target="#share" >分享 <i class="icon iconfont icon-fenxiang"></i> </div>
+            </div>
+            <h2 class="title">英国籍建筑设计师程炳旭：对于建筑设计师而言，什么是最重要的？</h2>
+        </div>
+
+        <%= require('html-loader!../templates/signModule.html') %>
+            <!-- tabs -->
+            <ul class="nav tabs videos" role="tablist">
+                <li class="nav-item tab"><a data-toggle="tab" href="#info"><span>推荐</span> </a></li>
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#opus"><span>作品</span> </a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#detail"><span>详情</span> </a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#author"><span>作者</span> </a></li>
+                <li class="nav-item tab"><a data-toggle="tab" href="#school"><span>学校</span> </a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane" id="info">
+                    <ul class="collection">
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar active">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                        <a href="#!" class="collection-item avatar">Alvin</a>
+                    </ul>
+                </div>
+                <div class="tab-pane active" id="opus">
+                    <ul class="collection">
+                        <div class="collection-item vd-recommend">
+                            <a href="#!" class="vd-image">
+                                <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/office.jpg" alt="">
+                                <span class="vd-times badge">12:58</span>
+                            </a>
+                            <div class="vd-commend-info">
+                                <a href="#!">如何快速的掌握学习英语的小窍门的..</a>
+                                <p>演讲者：<a href="##">张小衫</a> </p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </div>
+                        <div class="collection-item vd-recommend">
+                            <a href="#!" class="vd-image">
+                                <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/office.jpg" alt="">
+                                <span class="vd-times badge">12:58</span>
+                            </a>
+                            <div class="vd-commend-info">
+                                <a href="#!">如何快速的掌握学习英语的小窍门的..</a>
+                                <p>演讲者：<a href="##">张小衫</a> </p>
+                                <span class="tip">900 次播放</span>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="detail">
+                    11
+                </div>
+                <div class="tab-pane" id="author">
+                    22
+                </div>
+                <div class="tab-pane" id="school">
+                    33
+                </div>
+            </div>
+            <ul class="nav tabs tm-intro" role="tabltxt">
+                <li class="nav-item tab"><a data-toggle="tab" class="active" href="#info"><span>涂梦（Tomoroe）</span></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane tm-area active" id="detail">
+                    <p>一个关注中学生成长与发展的非营利项目</p>
+                    <p>该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+                </div>
+            </div>
+            <div class="mobile-share" id="share" >
+                <div class="mobile-share-box">
+                    <div class="share-title">分享到 <i data-modal="close" class="icon iconfont icon-guanbi"></i> </div>
+                    <div class="share-items">
+                        <a class="jiathis_button_weixin item ">
+                            <i class="text-success icon iconfont icon-weixin"></i>
+                            微信
+                        </a>
+                        <a class="jiathis_button_tsina item">
+                            <i class="text-danger  icon iconfont icon-weibo"></i>
+                            微博
+                        </a>
+                    </div>
+                    <!-- JiaThis Button BEGIN -->
+                    <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                    <!-- JiaThis Button END -->
+                </div>
+            </div>
+            <%= require('html-loader!../templates/statistics.html') %>
+                <%= require('html-loader!../templates/footer.html') %>
+</body>
+
+</html>

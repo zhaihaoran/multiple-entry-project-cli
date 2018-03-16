@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> 首页 - 涂梦教育 </title>
+<link rel="shortcut icon" href="../favicon.png"><link href="../css/about.css" rel="stylesheet"></head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light tum-header">
+    <div class="container">
+        <a href="#" class="navbar-brand">
+            <img src="data:image/png;base64,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" class="d-inline-block align-top" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item tum-border-left d-none d-lg-block">
+                    <div></div>
+                </li>
+                <li class="nav-item tum-item d-none d-xl-block">
+                    <p>关注中学生成长与</p>
+                    <p>发展的非营利项目</p>
+                </li>
+            </ul>
+            <ul class="navbar-nav mr-auto d-block d-md-none d-lg-flex tm-list">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">精彩演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">我要演讲</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">关于涂梦</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">支持涂梦</a>
+                </li>
+            </ul>
+            <form class="form-inline">
+                <div class="sr-select-wrapper">
+                    <div class="search-item">
+                        <input placeholder="请输入..." type="text" class="search-input validate">
+                        <span class="search-icon">
+                            <i class="icon iconfont icon-search" ></i>
+                        </span>
+                    </div>
+                </div>
+            </form>
+            <div class="dropdown tm-sign">
+                <button data-toggle="dropdown" data-trigger="hover" class="btn btn-danger header-btn tm-btn my-2 my-sm-0" >登陆</button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" data-toggle="modal" data-target="#speaker_login" href="#">演讲者登陆</a>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#school_login" href="#">学校登陆</a>
+                    <!-- <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#" href="#">注册</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <!-- speaker -->
+<div class="modal fade" id="speaker_login" tabindex="-1" role="dialog" aria-labelledby="speaker_title" aria-hidden="true">
+    <div class="modal-dialog tm-dialog" role="document">
+        <div class="modal-content tm-sign-modal">
+            <div class="tm-sign-image d-none d-md-block">
+                <img src="../static/image/speaker.728fd.png" class="img-fluid">
+                <div class="sign-info">
+                    <h3>欢迎登陆涂梦演讲者账号</h3>
+                    <p>贡献思想，传播价值</p>
+                </div>
+            </div>
+            <form class="tm-sign-wrapper needs-validation" novalidate >
+                <span class="close" data-dismiss="modal">
+                    <i class="icon iconfont icon-guanbi"></i>
+                </span>
+                <div class="sign-box">
+                    <div class="form-group">
+                        <label for="phone">手机号：</label>
+                        <input type="phone" required class="form-control"  aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        <input type="password"  required class="form-control">
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="know_key">
+                        <label class="custom-control-label" for="know_key">记住密码</label>
+                        <a href="##" class="right">忘记密码</a>
+                    </div>
+                </div>
+                <button class="submit-btn tm-btn sign-btn">登陆</button>
+                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#speaker_register" >注册</a> </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- school -->
+<div class="modal fade" id="school_login" tabindex="-1" role="dialog" aria-labelledby="school_title" aria-hidden="true">
+    <div class="modal-dialog tm-dialog" role="document">
+        <div class="modal-content tm-sign-modal">
+            <div class="tm-sign-image d-none d-md-block">
+                <img src="../static/image/school.b9d50.png" class="img-fluid">
+                <div class="sign-info">
+                    <h3>欢迎登陆涂梦学校账号</h3>
+                    <p>获得来自各行各业演讲者的精彩分享</p>
+                </div>
+            </div>
+            <form class="tm-sign-wrapper needs-validation" novalidate >
+                <span class="close" data-dismiss="modal">
+                    <i class="icon iconfont icon-guanbi"></i>
+                </span>
+                <div class="sign-box">
+                    <div class="form-group">
+                        <label for="phone">手机号：</label>
+                        <input type="phone" required class="form-control"  aria-describedby="emailHelp">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        <input type="password"  required class="form-control">
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="know_password">
+                        <label class="custom-control-label" for="know_password">记住密码</label>
+                        <a href="##" class="right">忘记密码</a>
+                    </div>
+                </div>
+                <button class="submit-btn tm-btn sign-btn">登陆</button>
+                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#school_register" >注册</a> </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- speaker -->
+<div class="modal fade" id="speaker_register" tabindex="-1" role="dialog" aria-labelledby="speaker_title" aria-hidden="true">
+    <div class="modal-dialog tm-dialog" role="document">
+        <div class="modal-content tm-sign-modal">
+            <div class="tm-sign-image d-none d-md-block">
+                <img src="../static/image/speaker.728fd.png" class="img-fluid">
+                <div class="sign-info">
+                    <h3>欢迎注册涂梦演讲者账号</h3>
+                    <p>完成账号注册后，您可以提交申请成为认证演讲者贡献思想，传播价值</p>
+                </div>
+            </div>
+            <form class="tm-sign-wrapper needs-validation" novalidate >
+                <span class="close" data-dismiss="modal">
+                    <i class="icon iconfont icon-guanbi"></i>
+                </span>
+                <div class="sign-box">
+                    <div class="form-group">
+                        <label for="phone">手机号：</label>
+                        {literal}
+                        <input type="phone" pattern="^\d{11}$" required class="form-control">
+                        <div class="invalid-feedback">手机号为11位数字</div>
+                        {/literal}
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">验证码：</label>
+                        <div class="form-row">
+                            <div class="col-7">
+                                <input type="caphata" required class="form-control">
+                            </div>
+                            <div class="col-5">
+                                <button class="tm-btn msg-btn">短信验证码</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        {literal}
+                        <input type="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母">
+                        {/literal}
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码确认</label>
+                        <input type="comfirm" required class="form-control" placeholder="5~15位数字和字母">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn tm-btn sign-btn">注册</button>
+                <p class="sign-redirect-register" href="#">已有账号？<a href="##" data-toggle="modal" data-target="#speaker_login">登陆</a> </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- school -->
+<div class="modal fade" id="school_register" tabindex="-1" role="dialog" aria-labelledby="school_title" aria-hidden="true">
+    <div class="modal-dialog tm-dialog" role="document">
+        <div class="modal-content tm-sign-modal">
+            <div class="tm-sign-image d-none d-md-block">
+                <img src="../static/image/school.b9d50.png" class="img-fluid">
+                <div class="sign-info">
+                    <h3>欢迎注册涂梦学校账号</h3>
+                    <p>完成账号注册后，您可以提交申请成为认证学校贡献思想，传播价值</p>
+                </div>
+            </div>
+            <form class="tm-sign-wrapper needs-validation" novalidate >
+                <span class="close" data-dismiss="modal">
+                    <i class="icon iconfont icon-guanbi"></i>
+                </span>
+                <div class="sign-box">
+                    <div class="form-group">
+                        <label for="phone">手机号：</label>
+                        {literal}
+                        <input type="phone" pattern="^\d{11}$" required class="form-control">
+                        <div class="invalid-feedback">手机号为11位数字</div>
+                        {/literal}
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">验证码：</label>
+                        <div class="form-row">
+                            <div class="col-7">
+                                <input type="caphata" required class="form-control">
+                            </div>
+                            <div class="col-5">
+                                <button class="tm-btn msg-btn">短信验证码</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        {literal}
+                        <input type="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母">
+                        {/literal}
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码确认</label>
+                        <input type="comfirm" required class="form-control" placeholder="5~15位数字和字母">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn tm-btn sign-btn">注册</button>
+                <p class="sign-redirect-register" href="#">已有账号？<a href="##" data-toggle="modal" data-target="#speaker_login">登陆</a> </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <!-- tumeng misson -->
+    <section class="index-image-wrapper tm-misson">
+        <img src="/static/image/background/bg_4.png" alt="关于涂梦" class="img-background">
+        <div class="tm-content container">
+            <h2 class="text-center img-title">关于涂梦</h2>
+            <p class="img-title">涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。</p>
+            <p class="img-title">该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事，帮助学生拓展视野，丰富职业选项，树立生涯志向，并用榜样的力量去驱动学生，为了心中的梦想，自信、勇敢地为之努力</p>
+        </div>
+    </section>
+    <section class="wrapper ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 about-item">
+                    <i class="icon iconfont icon-fight"></i>
+                    <h3 class="ab-t">学生面临的挑战</h3>
+                    <h3 class="ab-t">Challenge</h3>
+                    <a href="##" class="btn">详情</a>
+                </div>
+                <div class="col-md-6 col-lg-3 about-item">
+                    <i class="icon iconfont icon-why"></i>
+                    <h3 class="ab-t">他们为什么需要帮助</h3>
+                    <h3 class="ab-t">Why</h3>
+                    <a href="##" class="btn">详情</a>
+                </div>
+                <div class="col-md-6 col-lg-3 about-item">
+                    <i class="icon iconfont icon-help"></i>
+                    <h3 class="ab-t">我们如何帮助他们</h3>
+                    <h3 class="ab-t">How</h3>
+                    <a href="##" class="btn">详情</a>
+                </div>
+                <div class="col-md-6 col-lg-3 about-item">
+                    <i class="icon iconfont icon-aboutus"></i>
+                    <h3 class="ab-t">我们的尝试</h3>
+                    <h3 class="ab-t">Try</h3>
+                    <a href="##" class="btn">详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper tm-bg ab-fight">
+        <div class="container">
+            <h3 class="ab-title" >学生面临的挑战</h3>
+            <h4>知识能改变命运，却不是他们！</h4>
+            <p>高失业率意味着 “贫二代” 中 本来最有希望依靠知识改变命运的这一部分人，他们的梦想还没出发，在现实面前就已折戟</p>
+            <div class="fight-figure row">
+                <div class="figure-box col-line-5 col-lg-3 col-md-6">
+                    <div class="image">
+                        <img src="/static/image/about/fg-1.png" alt="对专业不了解">
+                        <span class="fg-num" >80%</span>
+                    </div>
+                    <h3>对专业不了解</h3>
+                    <p>80%的学生在填报志愿时对所填专业不是很了解</p>
+                </div>
+                <div class="figure-box col-line-5 col-lg-3 col-md-6">
+                    <div class="image">
+                        <img src="/static/image/about/fg-1.png" alt="志愿填报非几所好">
+                        <span class="fg-num" >65%</span>
+                    </div>
+                    <h3>志愿填报非几所好</h3>
+                    <p>在高考志愿填报时，65%的学生不是根据自己的兴趣爱好填报</p>
+                </div>
+                <div class="figure-box col-line-5 col-lg-3 col-md-6">
+                    <div class="image">
+                        <img src="/static/image/about/fg-1.png" alt="对专业不感兴趣">
+                        <span class="fg-num" >33%</span>
+                    </div>
+                    <h3>对专业不感兴趣</h3>
+                    <p>有三分之一以上的学生对所学专业不感兴趣</p>
+                </div>
+                <div class="figure-box col-line-5 col-lg-3 col-md-6">
+                    <div class="image">
+                        <img src="/static/image/about/fg-4.png" alt="职业与专业不合">
+                        <span class="fg-num" >46%</span>
+                    </div>
+                    <h3>职业与专业不合</h3>
+                    <p>2014届大学毕业生工作与职位期待的吻合度仅为46%</p>
+                </div>
+                <div class="figure-box col-line-5 col-lg-3 col-md-6 d-none d-xl-block">
+                    <div class="image">
+                        <img src="/static/image/about/fg-5.png" alt="就业困难">
+                        <span class="fg-num" >30.5%</span>
+                    </div>
+                    <h3>就业困难</h3>
+                    <p>农业家庭的普通本科院校毕业生成为就业最为困难的群体，失业率高达30.5%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="wrapper data-suport">
+        <h2 class="text-center">学生需要您的支持</h2>
+        <p class="text-center">中国高中生接受职业与毕业指导的比例远低于国际水平</p>
+        <p class="text-center">中国青少年研究中心联合日、美、韩发起对四国高中生的毕业去向和职业生涯教育为主题的比较研究，《中美日韩高中生毕业去向和职业生涯教育研究报告》揭示：中国高中生的职业生涯教育已经全面落后于其他三个国家，进而导致中国高中生在毕业去向及职业选择上，出现许多令人担忧的问题。</p>
+        <img src="/static/image/background/record_1.png" class="img-fluid" alt="">
+    </section>
+    <section class="wrapper bg-grey ab-project">
+        <div class="container">
+            <h2 class="ab-title" >涂梦的项目模式</h2>
+            <img src="/static/image/about/about-2.png" class="img-fluid d-none d-md-block" alt="项目">
+            <img src="/static/image/about/about-phone.png" class="img-fluid d-block d-md-none" alt="项目">
+        </div>
+    </section>
+    <!-- 数据分布 -->
+<section class="wrapper scrollfire record-aass">
+    <div class="container record-map">
+        <div class="row record-wrapper text-center">
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="10000">10000</b>+</h2>
+                <h3>受益学生</h3>
+                <p>海量学生从涂梦的分享中获得知识</p>
+            </div>
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="100">100</b>+</h2>
+                <h3>演讲</h3>
+                <p>目前为止涂梦已举行大量的线上直播分享</p>
+            </div>
+            <div class="record-item br-right col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="13">13</b>+</h2>
+                <h3>地区</h3>
+                <p>涂梦的分享横跨中国各省，覆盖多个地区</p>
+            </div>
+            <div class="record-item col-6 col-lg-3">
+                <h2><b class="animateNumber" data-number="40">40</b>+</h2>
+                <h3>学校</h3>
+                <p>专注初中高中学生，已与大量学校连线分享</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="wrapper" >
+        <div class="container public-wrapper">
+            <h2 class="ab-title" >公示信息</h2>
+            <div>
+                <img class="img-fluid" src="/static/image/about/about-1.png" class="img-fluid" alt="公示信息">
+            </div>
+        </div>
+    </section>
+    <!-- 合作伙伴 -->
+<section class="wrapper co-ss bg-grey scrollfire hide-on-med-and-down">
+    <div class="container cooperate-module">
+        <div class="cooperate-item">
+            <h2 class="co-title text-center">合作伙伴</h2>
+            <div class="row logo-row">
+                <div class="col">
+                    <img src="../static/image/yijijing.6a902.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/hengnan.658ee.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/alibaba.6cea9.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="data:image/png;base64,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" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/zhongguomingsheng.860e7.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/eeo.9caf3.png" alt="">
+                </div>
+            </div>
+            <div class="row logo-row">
+                <div class="col">
+                    <img src="../static/image/sheraton.ffe42.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/zhongguofupin.34ad4.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/gongyishibao.ec0be.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/pengpai.a7235.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/mayun.199dd.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/npi.31d4b.png" alt="">
+                </div>
+                <div class="col">
+                    <img src="../static/image/xincheng.23df1.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 我要报名 -->
+<section class="wrapper scrollfire">
+    <div class="container sign-module">
+        <div class="row">
+            <a class="col col-xs-6" href="#">
+                <img class="responsive-img tumeng-sign" src="../static/image/coor1.6ffc8.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-1">
+                    <h2>我要演讲</h2>
+                    <p>演讲者传播知识</p>
+                </div>
+            </a>
+            <a class="col col-xs-6" href="#">
+                <img class="responsive-img tumeng-sign" src="../static/image/coor2.df042.png" alt="">
+                <div class="sign-mask"></div>
+                <div class="sign-box pos-2">
+                    <h2>学校入驻</h2>
+                    <p>获得演讲者分享</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- footer -->
+<footer class="page-footer scrollfire">
+    <div class="tum-footer">
+        <div class="container footer-wrapper">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 footer-item">
+                    <div class="ft-logo">
+                        <img class="reponsive-img" src="../static/image/logo_white.f6847.png" alt="">
+                    </div>
+                    <div class="ft-bottom">
+                        <img class="reponsive-img" src="../static/image/qrcode.c67b1.png" alt="">
+                    </div>
+                    <p class="ft-ps white-text text-lighten-6">微信扫码关注</p>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item d-none d-lg-block d-md-block">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">精彩演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">关于涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">公式信息</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item  d-none d-lg-block d-md-block">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">我要演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校入住</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">支持涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">工作机会</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 footer-item">
+                    <div class="ft-top">
+                        <h5 class="ft-title white-text text-lighten-6"> <b>联系我们</b> </h5>
+                        <ul>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container text-center">
+                © 2014 Copyright Text
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script type="text/javascript" src="../static/vendor/jquery.min.js"></script><script type="text/javascript" src="../static/vendor/vendor.dll.js"></script><script type="text/javascript" src="../js/about.js"></script></body>
+
+</html>

@@ -46,15 +46,15 @@
     }
 
     .tabs {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #eee;
     }
 }
 
 .vd-intro {
     .tabs {
-        border-bottom: 1px solid #ccc;
-        .tab a.active {
-            border-bottom: 4px solid #333;
+        border-bottom: 1px solid #eee;
+        .tab a.active span {
+            border-bottom: 3px solid #333;
         }
     }
     .vd-info {
@@ -108,8 +108,8 @@
         }
         .ivd-group {
             padding-top: 10px;
-            .btn {
-                color: #fff;
+            .tm-btn {
+                font-size: 20px;
             }
             .ivd-left {
                 margin-left: 10px;
@@ -126,7 +126,7 @@
             font-size: 14px;
         }
         > h5 {
-            font-size: 14px;
+            font-size: 16px;
             font-weight: bold;
             margin: 20px 0;
         }

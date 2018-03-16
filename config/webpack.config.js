@@ -53,12 +53,12 @@ module.exports = function(env) {
             disable: false,
             allChunks: true,
         }),
-        // webpack bundle analyzer
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: 1234,
-            openAnalyzer: true
-        }),
+        // // webpack bundle analyzer
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode: 'server',
+        //     analyzerPort: 1234,
+        //     openAnalyzer: true
+        // }),
         ...webpackPlugins,
     ];
     if (!dev) {
