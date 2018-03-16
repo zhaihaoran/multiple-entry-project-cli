@@ -708,13 +708,11 @@ nav.navbar.tum-header {
                 font-size: 14px;
             }
         }
-
         .close {
             position: absolute;
             right: 20px;
             top: 20px;
         }
-
         .sign-btn {
             width: 100%;
             color: #fff;
@@ -722,11 +720,16 @@ nav.navbar.tum-header {
             padding: 10px;
             border: 1px solid $primary-color;
         }
-
         .sign-redirect-register {
             margin-top: 10px;
             text-align: center;
         }
+    }
+}
+
+.index-image-wrapper.carousel {
+    i.iconfont {
+        font-size: 50px;
     }
 }
 

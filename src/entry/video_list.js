@@ -1,5 +1,5 @@
 import Common from '@lib/common'
-import '@scss/video-list.scss';
+import '@scss/video_list.scss';
 
 class Course {
     constructor() {
