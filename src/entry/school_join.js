@@ -1,6 +1,6 @@
 import '@scss/hope.scss';
 import Common from '@lib/common'
-import 'slick-carousel'
+import '@lib/float_carousel'
 
 class Main {
     constructor() {
@@ -14,16 +14,14 @@ class Main {
     }
 
     render() {
-        this.$slick = $('.tm-slick')
-        this.$indexImage = $('.index-image-wrapper')
+
     }
 
     carouselInit() {
-        this.$slick.slick({
-            infinite: true,
-            slidesToShow: 6,
-            slidesToScroll: 1,
-            speed: 300,
+        this.$carousel = $('#carousel')
+        this.$carousel.floatingCarousel({
+            autoScroll : true,
+            autoScrollSpeed : 20000,
         });
     }
 

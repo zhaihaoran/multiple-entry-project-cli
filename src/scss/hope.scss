@@ -1,13 +1,9 @@
 @import 'lib/common.scss';
-
 .joinus {
-    background: url('../assets/image/background/vague_1.png') center center
-        no-repeat;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 866px;
     h2 {
         font-size: 80px;
         font-weight: bold;
@@ -35,74 +31,36 @@
     }
 }
 
-.tm-slick {
-    width: 1100px;
-    margin: 0 auto;
-    height: 600px;
-    .slick-item {
-        position: relative;
-        .slick-b {
-            position: absolute;
-        }
-        .slick-cube {
-            width: 200px;
-            height: 200px;
-            background: url('../assets/image/cube.png') no-repeat center center;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            line-height: 200px;
-            text-align: center;
-            margin: 0;
-        }
-    }
-}
-
-// fixed
-.slick-slide {
-    div {
-        display: block !important;
-    }
-}
-
-.image-1 {
-    background: url('../assets/image/guests/biyiyang.png') center center
-        no-repeat;
-    height: 960px;
-    position: relative;
-    .lecture-title {
-        color: $primary-color;
-        font-size: 54px;
-        font-weight: bold;
-        margin-left: -120px;
+.share-type {
+    .st-box {
+        @include center();
         max-width: 800px;
+        top: 180px;
+        margin-left: 320px;
+        .lecture-title {
+            color: $primary-color;
+            font-size: 54px;
+            font-weight: bold;
+        }
+        .lecture-context {
+            background: $primary-color;
+            color: white;
+            padding: 60px 45px;
+            font-size: 36px;
+            line-height: 56px;
+            margin-top: 60px;
+        }
     }
-    .lecture-context {
-        background: rgb(119, 23, 34);
-        color: white;
-        padding: 60px 45px;
-        font-size: 36px;
-        line-height: 56px;
-        margin-top: 60px;
-        margin-left: -100px;
-        max-width: 720px;
-    }
-    .posi-1 {
-        position: relative;
-        top: 242px;
-        left: 50%;
-    }
+}
+
+.banner-image {
+    min-width: 1500px;
 }
 
 .banner-box {
+    position: relative;
     color: white;
     padding: 20px;
-    position: absolute !important;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    @include center();
-
     h3 {
         margin: 1% 0 1%;
         font-size: 50px;
@@ -118,7 +76,7 @@
     }
     .jo-btn {
         position: absolute;
-        top: 13%;
+        top: 16%;
         left: 30%;
         width: 150px;
         height: 50px;
@@ -133,26 +91,157 @@
     }
 }
 
-@media only screen and (max-width: $mobile) {
-    .image-1 {
-        height: 500px;
-        background-size: 300%;
-        .posi-1 {
+.area-carousel {
+    h2.title {
+        color: #333;
+        font-size: 36px;
+        font-weight: bold;
+        margin: 30px auto;
+    }
+
+    .carousel {
+        display: flex;
+        margin: 30px auto 80px;
+        ul {
+            display: flex;
+        }
+        .cr-item {
             position: relative;
-            top: 40px;
-            left: 0;
+            overflow: hidden;
+            width: 220px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            margin: 0 -25px;
+
+            .item-context {
+                padding: 20px;
+                width: 140px;
+                position: relative;
+                left: 55%;
+                transform: translateX(-50%);
+                font-size: 20px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                .area {
+                    width: 100%;
+                    position: absolute !important;
+                    @include center();
+                    font-size: 40px;
+                    font-weight: bold;
+                    margin-left: -13px;
+                    color: #fff;
+                }
+            }
+
+            &.top {
+                justify-content: flex-start;
+                .item-context {
+                    bottom: 320px;
+                    span.area {
+                        top: 196px;
+                    }
+                }
+            }
+            &.bottom {
+                justify-content: flex-end;
+                .item-context {
+                    top: 320px;
+                    span.area {
+                        bottom: 196px;
+                    }
+                }
+            }
         }
-        .lecture-context {
-            margin: 20px 10px 0;
-            padding: 20px;
-            font-size: 24px;
-            line-height: 44px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .joinus h2 {
+        margin: 80px auto 40px;
+    }
+    .share-type {
+        .st-box {
+            max-width: 600px;
+            margin-left: 210px;
+            .lecture-title {
+                font-size: 40px;
+            }
+            .lecture-context {
+                padding: 30px;
+                font-size: 30px;
+                line-height: 50px;
+                margin-top: 30px;
+            }
         }
-        .lecture-title {
+    }
+}
+
+@media (max-width: 1200px) {
+    .share-type .st-box {
+        position: static;
+        padding: 20px;
+        margin: 10px auto;
+        transform: translateX(0);
+        left: 0;
+    }
+    .banner-image {
+        min-width: 1200px;
+    }
+    .banner-box {
+        h3 {
+            font-size: 36px;
+        }
+        p {
+            font-size: 22px;
+            margin-top: 24px;
+        }
+        h2 {
+            font-size: 40px;
+        }
+        .jo-btn {
+            font-size: 20px;
+            width: 120px;
+            height: 36px;
+        }
+    }
+    .joinus {
+        h2 {
+            font-size: 46px;
+            margin: 44px auto;
+        }
+        h3 {
             font-size: 30px;
-            text-align: center;
-            padding: 0 10px;
-            margin-left: 0;
+            line-height: 55px;
+        }
+        .joinus-button {
+            width: 250px;
+            height: 60px;
+            font-size: 30px;
+            margin-top: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile) {
+    .share-type {
+        img {
+            width: 1110px;
+        }
+        .st-box {
+            .lecture-context {
+                margin: 20px 10px 0;
+                padding: 20px;
+                font-size: 24px;
+                line-height: 44px;
+            }
+            .lecture-title {
+                font-size: 30px;
+                text-align: center;
+                padding: 0 10px;
+                margin-left: 0;
+            }
         }
     }
     .joinus {
@@ -162,15 +251,36 @@
             margin: 40px auto 20px;
         }
         h3 {
-            font-size: 20px;
-            line-height: 36px;
-            padding: 0 15px;
+            font-size: 22px;
+            line-height: 38px;
+            padding: 0 20px;
         }
         .joinus-button {
-            width: 60%;
-            height: 60px;
-            font-size: 24px;
-            margin-top: 30px;
+            width: 125px;
+            height: 45px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    }
+    .banner-image {
+        left: 60%;
+    }
+    .banner-box {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        h2 {
+            font-size: 30px;
+        }
+        .jo-btn {
+            font-size: 18px;
+            width: 110px;
+            height: 36px;
+            left: 160px;
         }
     }
 }

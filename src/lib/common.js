@@ -33,7 +33,7 @@ class Common {
     setImageHeight() {
         this.$images.each((i, el) => {
             const height = $(el).height()
-            $(el).parent().css('height', height);
+            $(el).parent().css('min-height', height);
         })
     }
 

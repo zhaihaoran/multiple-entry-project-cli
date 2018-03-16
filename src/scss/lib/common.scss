@@ -39,6 +39,8 @@
 }
 
 .wrapper {
+    position: relative;
+    z-index: -1;
     overflow: hidden; // 合作伙伴
     .cooperate-module {
         display: flex;
@@ -502,6 +504,7 @@ nav.navbar.tum-header {
 
 // index
 .index-image-wrapper {
+    z-index: -5;
     position: relative;
     margin-top: 70px;
     overflow: hidden;
@@ -614,8 +617,9 @@ nav.navbar.tum-header {
 .img-background {
     width: 100%;
     top: 0;
-    position: absolute;
+    position: absolute !important;
     z-index: -100;
+    @include center();
 }
 
 // card
@@ -726,11 +730,12 @@ nav.navbar.tum-header {
     }
 }
 
+/*  media  */
+
 @media screen {
     @media (max-width: 1200px) {
         .img-background {
-            position: absolute !important;
-            @include center();
+            width: 1200px;
         }
         nav.navbar.tum-header .tm-list > .nav-item {
             padding: 0 5px;
@@ -741,26 +746,12 @@ nav.navbar.tum-header {
                 max-width: none;
                 @include center();
             }
-            .banner-box {
-                h3 {
-                    font-size: 30px;
-                }
-                p {
-                    font-size: 20px;
-                    margin-top: 16px;
-                }
-                .jo-btn {
-                    font-size: 20px;
-                    width: 120px;
-                    height: 36px;
-                }
-                h2 {
-                    font-size: 32px;
-                }
-            }
         }
     }
     @media (max-width: 993px) {
+        .img-background {
+            width: 993px;
+        }
         .border-right {
             margin: 0;
         }
@@ -778,6 +769,9 @@ nav.navbar.tum-header {
         }
     }
     @media (max-width: $mobile) {
+        .img-background {
+            width: $mobile;
+        }
         .vd-pad-70 {
             padding: 0;
         }

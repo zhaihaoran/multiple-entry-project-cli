@@ -8,149 +8,180 @@
 
 <body>
     <%= require('html-loader!../templates/header.html') %>
-        <div class="index-image-wrapper tumeng-banner">
-            <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/banners/banner_1.png" class="img-fluid res-image" alt="banner">
-            <div class="banner-box container">
-                <h3>涂梦希望</h3>
-                <p>所以中学生都能有机会一周听1个小时的</p>
-                <h2>涂梦职场人士分享</h2>
-                <button class="jo-btn">立即加入</button>
-            </div>
+    <!-- banner -->
+    <div class="index-image-wrapper tumeng-banner">
+        <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/banners/banner_1.png" class="img-background banner-image" alt="banner">
+        <div class="banner-box container">
+            <h3>涂梦希望</h3>
+            <p class="text-truncate" >所以中学生都能有机会一周听1个小时的</p>
+            <h2>涂梦职场人士分享</h2>
+            <button class="jo-btn">立即加入</button>
         </div>
-        <!-- carousel-slider -->
-        <div class="wrapper">
-            <div class="tm-slick">
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
+    </div>
+    <!-- carousel-slider -->
+    <section class="wrapper area-carousel d-none d-lg-block">
+        <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/bg_1.png" class="img-background">
+        <h2 class="title text-center">涂梦帮助众多学校完成知识分析</h2>
+        <div id="carousel" class="carousel container">
+            <ul >
+                <li class="cr-item bottom">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">河北</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-t.png" class="img-fluid" alt="1">
+                </li>
+                <li class="cr-item top">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-b.png" class="img-fluid" alt="1">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">山西</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
+                </li>
+                <li class="cr-item bottom">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">河北</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-t.png" class="img-fluid" alt="1">
+                </li>
+                <li class="cr-item top">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-b.png" class="img-fluid" alt="1">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">山西</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
+                </li>
+                <li class="cr-item bottom">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">河北</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-t.png" class="img-fluid" alt="1">
+                </li>
+                <li class="cr-item top">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-b.png" class="img-fluid" alt="1">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">山西</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
+                </li>
+                <li class="cr-item bottom">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">河北</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-t.png" class="img-fluid" alt="1">
+                </li>
+                <li class="cr-item top">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-b.png" class="img-fluid" alt="1">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">山西</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
+                </li>
+                <li class="cr-item bottom">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">河北</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-t.png" class="img-fluid" alt="1">
+                </li>
+                <li class="cr-item top">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/cr-b.png" class="img-fluid" alt="1">
+                    <div class="item-context">
+                        <span>石家庄二中</span>
+                        <span>衡水一中</span>
+                        <span>保定二中</span>
+                        <span class="area">山西</span>
                     </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-b slick-cube">河北</h3>
-                    </div>
-                </div>
-                <div>
-                    <div class="slick-item">
-                        <h3 class="slick-t slick-cube">山西</h3>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
-        <!-- guest-lecture -->
-        <div class="wrapper image-1">
-            <div class="lecture-title posi-1">涂梦分享了众多职业类型的演讲</div>
-            <div class="lecture-context posi-1">
+    </section>
+    <!-- guest-lecture -->
+    <section class="wrapper share-type">
+        <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/biyiyang.png" class="img-background" alt="biyiyang" >
+        <div class="st-box">
+            <div class="lecture-title">涂梦分享了众多职业类型的演讲</div>
+            <div class="lecture-context">
                 游戏设计师 | 教师 | 演员 | 律师 | 科学家 | 艺术家 | 游戏主播 | 医生 | 记者 | 军人 | 警察 | 飞行员 | 空乘 | 幼师 | 心理咨询师 | 作家 | 运动员 | 二次元 | ......
             </div>
         </div>
-        <h2 class="more-guest-title">
-            <span>更多分享嘉宾</span><span>更多精彩内容</span>
-        </h2>
-        <!-- 嘉宾信息 -->
-        <div class="guest-wrapper">
-            <div class="guest-pic">
-                <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="">
-            </div>
-            <div class="guest-info bg-grey">
-                <h2>赵爱灵</h2>
-                <h3>影视合伙人、制片人、天津世纪百年影业</h3>
-                <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
-            </div>
+    </section>
+    <h2 class="more-guest-title">
+        <span>更多分享嘉宾</span><span>更多精彩内容</span>
+    </h2>
+    <!-- 嘉宾信息 -->
+    <div class="guest-wrapper">
+        <div class="guest-pic">
+            <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest1.png" alt="">
         </div>
-        <div class="guest-wrapper">
-            <div class="guest-pic order-1">
-                <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest2.png" alt="">
-            </div>
-            <div class="guest-info bg-grey">
-                <h2>赵爱灵</h2>
-                <h3>影视合伙人、制片人、天津世纪百年影业</h3>
-                <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
-            </div>
+        <div class="guest-info bg-grey">
+            <h2>赵爱灵</h2>
+            <h3>影视合伙人、制片人、天津世纪百年影业</h3>
+            <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
         </div>
-        <div class="guest-wrapper">
-            <div class="guest-pic">
-                <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest3.png" alt="">
-            </div>
-            <div class="guest-info bg-grey">
-                <h2>赵爱灵</h2>
-                <h3>影视合伙人、制片人、天津世纪百年影业</h3>
-                <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
-            </div>
+    </div>
+    <div class="guest-wrapper">
+        <div class="guest-pic order-1">
+            <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest2.png" alt="">
         </div>
-        <div class="guest-wrapper">
-            <div class="guest-pic order-1">
-                <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest4.png" alt="">
-            </div>
-            <div class="guest-info bg-grey">
-                <h2>赵爱灵</h2>
-                <h3>影视合伙人、制片人、天津世纪百年影业</h3>
-                <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
-            </div>
+        <div class="guest-info bg-grey">
+            <h2>赵爱灵</h2>
+            <h3>影视合伙人、制片人、天津世纪百年影业</h3>
+            <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
         </div>
-
-        <div class="joinus">
+    </div>
+    <div class="guest-wrapper">
+        <div class="guest-pic">
+            <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest3.png" alt="">
+        </div>
+        <div class="guest-info bg-grey">
+            <h2>赵爱灵</h2>
+            <h3>影视合伙人、制片人、天津世纪百年影业</h3>
+            <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
+        </div>
+    </div>
+    <div class="guest-wrapper">
+        <div class="guest-pic order-1">
+            <img class="reponsive-img" src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/guests/guest4.png" alt="">
+        </div>
+        <div class="guest-info bg-grey">
+            <h2>赵爱灵</h2>
+            <h3>影视合伙人、制片人、天津世纪百年影业</h3>
+            <p>赵爱玲老师本科毕业于南开大学英语系、之后取得清华大学法律硕士。研究生毕业后赵老师就职于一家知名律师事务所，成为了一名优秀的律师。但经过几年职场上的探索，赵老师发现并愈发坚定了自己的电影梦，最终辞职，从事自己热爱的电影行业。赵老师现在是天津世纪百年影业的合伙人，是2017年东京电影节获奖电影《暴雪将至》的联合制片人</p>
+        </div>
+    </div>
+    <!-- 加入涂梦 -->
+    <div class="wrapper">
+        <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/background/vague_1.png" class="img-background" alt="banner">
+        <div class="joinus" >
             <h2>加入涂梦课堂的条件</h2>
             <h3>仅需要基本的网络连接，供学生观看画面的显示屏或投影设备</h3>
             <button class="joinus-button">立即加入</button>
         </div>
-        <%= require('html-loader!../templates/partner.html') %>
-            <%= require('html-loader!../templates/footer.html') %>
+    </div>
+    <%= require('html-loader!../templates/partner.html') %>
+    <%= require('html-loader!../templates/footer.html') %>
 </body>
 
 </html>
