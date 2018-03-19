@@ -3,6 +3,7 @@ const {
     entrys,
     webpackPlugins,
 } = require('./config')
+
 const {
     alias,
     rootDir,
@@ -24,6 +25,9 @@ const {
 } = require('webpack-bundle-analyzer');
 // 并行打包
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+
+// lodash 按需打包
+const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
 
 module.exports = function(env) {
     const Webpack_Plugins = [
@@ -53,18 +57,25 @@ module.exports = function(env) {
             disable: false,
             allChunks: true,
         }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerPort: 1234,
+            openAnalyzer: true
+        }),
+        // new LodashModuleReplacementPlugin,
         // // webpack bundle analyzer
-        // new BundleAnalyzerPlugin({
-        //     analyzerMode: 'server',
-        //     analyzerPort: 1234,
-        //     openAnalyzer: true
-        // }),
+
         ...webpackPlugins,
     ];
     if (!dev) {
         let proPlugins = [
             // 并行打包
             new UglifyJSPlugin({
+                uglifyOptions: {
+                    compress: {
+                        warnings: false
+                    }
+                },
                 parallel: true
             }),
         ]
@@ -78,7 +89,7 @@ module.exports = function(env) {
             path: resolvePath(outputDir),
             library: '[name]',
             // 默认路径是你文件的当前路径，所以需要配到根目录下
-            publicPath:  dev ? "../" : "/static/site/"
+            publicPath: dev ? "../" : "/static/site/"
         },
         resolve: require('./resolve.config'),
         module: modulePlugin,

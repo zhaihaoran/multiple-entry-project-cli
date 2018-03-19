@@ -19,6 +19,7 @@ module.exports = {
             use: {
                 loader: 'url-loader',
             },
+            exclude: /node_moudles/
         }, {
             test: /\.(png|jpg|gif)$/,
             use: [{
@@ -27,7 +28,8 @@ module.exports = {
                     limit: 4096,
                     name: "static/image/[name].[hash:5].[ext]"
                 }
-            }]
+            }],
+            exclude: /node_moudles/
         }, {
             test: /\.(scss|css)$/,
             use: ExtractTextPlugin.extract({
@@ -49,6 +51,7 @@ module.exports = {
                 }, ],
                 fallback: 'style-loader',
             }),
+            exclude: /node_moudles/
         }]
     },
     ExtractTextPlugin: ExtractTextPlugin
