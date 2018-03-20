@@ -9,23 +9,23 @@
                     <p>贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation" novalidate >
+            <form class="tm-sign-wrapper login-form needs-validation" novalidate >
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
                         <label for="phone">手机号：</label>
-                        <input type="phone" required class="form-control"  aria-describedby="emailHelp">
+                        <input type="text" name="phoneNumber" required class="form-control"  aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
-                        <input type="password"  required class="form-control">
+                        <input type="password" name="password"  required class="form-control">
                     </div>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="know_key">
                         <label class="custom-control-label" for="know_key">记住密码</label>
-                        <a href="##" class="right">忘记密码</a>
+                        <a href="##" data-toggle="modal" data-target="#reset_password" class="right">忘记密码</a>
                     </div>
                 </div>
                 <button class="submit-btn tm-btn sign-btn">登陆</button>
@@ -46,27 +46,85 @@
                     <p>获得来自各行各业演讲者的精彩分享</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation" novalidate >
+            <form class="tm-sign-wrapper login-form needs-validation" novalidate >
+                <span class="close" data-dismiss="modal">
+                    <i class="icon iconfont icon-guanbi"></i>
+                </span>
+                <div class="sign-box">
+                    <div class="form-group">
+                        <label for="phone">学校账号或电话号码: </label>
+                        <input type="text" name="usernameOrPhoneNumber" required class="form-control"  aria-describedby="emailHelp">
+                        <div class="invalid-feedback">
+                            学校账号或电话号码不能为空
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码：</label>
+                        <input type="password" name="password" required class="form-control">
+                        <div class="invalid-feedback">
+                            密码不能为空
+                        </div>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="know_password">
+                        <label class="custom-control-label" for="know_password">记住密码</label>
+                        <a href="##" data-toggle="modal" data-target="#reset_password" class="right">忘记密码</a>
+                    </div>
+                </div>
+                <button class="submit-btn tm-btn sign-btn">登陆</button>
+                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#school_register" >注册</a> </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- reset password -->
+<div class="modal fade" id="reset_password" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog tm-dialog" role="document">
+        <div class="modal-content tm-sign-modal">
+            <div class="tm-sign-image d-none d-md-block">
+                <img src="../../assets/image/sign/school.png" class="img-fluid">
+                <div class="sign-info">
+                    <h3>重置密码</h3>
+                    <p>请填写您注册时使用的电话号码</p>
+                    <p>如果电话已不可用，请联系客服</p>
+                </div>
+            </div>
+            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
                         <label for="phone">手机号：</label>
-                        <input type="phone" required class="form-control"  aria-describedby="emailHelp">
+                        {literal}
+                        <input type="phone" pattern="^\d{11}$" required class="form-control">
+                        <div class="invalid-feedback">手机号为11位数字</div>
+                        {/literal}
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">验证码：</label>
+                        <div class="form-row">
+                            <div class="col-7">
+                                <input type="caphata" required class="form-control">
+                            </div>
+                            <div class="col-5">
+                                <button class="tm-btn msg-btn">短信验证码</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
-                        <input type="password"  required class="form-control">
+                        {literal}
+                        <input type="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母">
+                        {/literal}
                     </div>
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="know_password">
-                        <label class="custom-control-label" for="know_password">记住密码</label>
-                        <a href="##" class="right">忘记密码</a>
+                    <div class="form-group">
+                        <label for="password">密码确认</label>
+                        <input type="password" required class="form-control confirm" placeholder="6~20位数字和字母">
                     </div>
                 </div>
-                <button class="submit-btn tm-btn sign-btn">登陆</button>
-                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#school_register" >注册</a> </p>
+                <button type="submit" class="submit-btn tm-btn sign-btn">重置</button>
             </form>
         </div>
     </div>

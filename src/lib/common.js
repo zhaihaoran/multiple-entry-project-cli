@@ -3,13 +3,27 @@ import $ from 'jquery'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
-const default_config = {
+import '../assets/icon/iconfont.css';
 
+
+import Sign from '@lib/sign'
+
+const setting = {
+    headerDom: (config) => [
+        `<img data-toggle="dropdown" data-trigger="hover" src="${config.priewUrl}" class="img-fluid" alt="avatar">`,
+        '<div class="dropdown-menu dropdown-menu-right">',
+        `<a class="dropdown-item">${config.name}</a>`,
+        `<a class="dropdown-item" href="#">管理中心</a>`,
+        `<a class="dropdown-item" href="#">个人主页</a>`,
+        `<a class="dropdown-item" id="signout" href="#">退出</a>`,
+        `</div>`
+    ].join('')
 }
 
 class Common {
     constructor(config) {
-        this.config = $.extend(default_config, config || {})
+        this.config = $.extend(setting, config || {})
+
         // variable
         this.render();
         this.init();
@@ -17,13 +31,15 @@ class Common {
 
     render() {
         this.$images = $('.img-background');
+        this.$headerAvatar = $('nav .tm-sign');
     }
 
     init() {
         this.modalFixed();
-        this.validator();
         $(window).on('load', e => {
             this.setImageHeight();
+            this.rendorHeader();
+            new Sign();
         })
         $(window).on('resize', e => {
             this.setImageHeight();
@@ -37,33 +53,24 @@ class Common {
         })
     }
 
-    /**
-     * validator 插件初始化 和定制
-     *
-     * @memberof Common
-     */
-    validator() {
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    }
-
     modalFixed() {
         const $modals = $('.modal');
         $modals.on('show.bs.modal', function(e) {
             $modals.modal('hide');
         })
+    }
+
+    rendorHeader() {
+        const {
+            isLogin
+        } = sessionStorage;
+        const data = {
+            name: "哇哈哈",
+            priewUrl: "/static/image/logo/tsinghua.png"
+        }
+        if (isLogin) {
+            this.$headerAvatar.html(this.config.headerDom(data))
+        }
     }
 }
 
