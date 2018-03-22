@@ -29,20 +29,23 @@
                 </li>
             </ul>
             <ul class="navbar-nav mr-auto d-block d-md-none d-lg-flex tm-list">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/">首页 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">精彩演讲</a>
+                    <a class="nav-link" href="/video-list">精彩演讲</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">我要演讲</a>
+                    <a class="nav-link" href="/school-join">学校入驻</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">关于涂梦</a>
+                    <a class="nav-link" href="/speaker-join">我要演讲</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">支持涂梦</a>
+                    <a class="nav-link" href="/about">关于涂梦</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/donate">支持涂梦</a>
                 </li>
             </ul>
             <div class="dropdown tm-sign">
@@ -314,297 +317,92 @@
             <!-- search-input -->
             <div class="container sr-wrapper">
                 <div class="sr-button-wrapper">
-                    <div class="sr-button truncate active"> <span>综合排序</span> </div>
-                    <div class="sr-button truncate sr-button-hover"><span>最新发布</span></div>
-                    <div class="sr-button truncate sr-button-hover"><span>最多播放</span></div>
+                    <a href="/video-list/order-by/0" class="sr-button truncate sr-button-hover active"> <span>综合排序</span> </a>
+                    <a href="/video-list/order-by/1" class="sr-button truncate sr-button-hover"><span>最新发布</span></a>
+                    <a href="/video-list/order-by/2" class="sr-button truncate sr-button-hover"><span>最多播放</span></a>
                 </div>
-                <div class="sr-search">
+                <form id="video_search" class="sr-search">
                     <div class="sr-select-wrapper d-none d-md-block">
                         <select name="type" class="sr-select browser-default">
-                            <option value="0">全部分类</option>
+                            <option value="0">视频分类</option>
                             <option value="1">aa</option>
                             <option value="2">bb</option>
                         </select>
                     </div>
                     <div class="sr-select-wrapper d-none d-md-block">
-                        <select name="type" class="sr-select browser-default">
+                        <select name="duration" class="sr-select browser-default">
                             <option value="0">全部时长</option>
-                            <option value="1">aa</option>
-                            <option value="2">bb</option>
+                            <option value="1">0-10分</option>
+                            <option value="2">10-30分</option>
+                            <option value="3">30-60分</option>
+                            <option value="4">大于60分</option>
                         </select>
                     </div>
                     <div class="sr-select-wrapper d-none d-md-block">
-                        <select name="type" class="sr-select browser-default">
+                        <select name="add-time" class="sr-select browser-default">
                             <option value="0">全部上传时间</option>
-                            <option value="1">aa</option>
-                            <option value="2">bb</option>
+                            <option value="1">1天内</option>
+                            <option value="2">1周内</option>
+                            <option value="3">1月内</option>
+                            <option value="4">1年内</option>
                         </select>
                     </div>
                     <div class="sr-select-wrapper">
                         <div class="search-item">
-                            <input placeholder="请输入..." type="text" class="search-input validate">
+                            <input name="text" placeholder="请输入..." type="text" class="search-input validate">
                             <span class="search-icon">
                                 <i class="icon iconfont icon-search" ></i>
                             </span>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="vd-context">
                 <div class="container">
                     <div class="row">
+                        {foreach $vVideoTypeList as $e }
                         <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
+                            <a href="{$e.linkUrl}" class="card hoverable card-hover">
                                 <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
+                                    <img class="responsive-img" src="{$e.previewUrl}">
+                                    <span class="vd-times badge">{$e.duration}</span>
                                 </div>
                                 <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
+                                    <span class="card-title grey-333">{$e.videoTypeName}</span>
                                     <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
+                                        <span class="grey-666">演讲者：{$e.speakerName}</span>
+                                        <span class="grey-999">{$e.playTimes} 次播放</span>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <div class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="/static/image/card.png">
-                                    <span class="vd-times badge">12:58</span>
-                                </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">成为更好的自己</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：周程程</span>
-                                        <span class="grey-999">9999次播放</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {/foreach}
                     </div>
                     <nav class="pg-wrapper d-none d-md-block" aria-label="navigation">
-                            <ul class="pagination justify-content-end">
-                                <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
-                                <li class="active"><a href="#!">1</a></li>
-                                <li class="page-item"><a href="#!">2</a></li>
-                                <li class="page-item"><a href="#!">3</a></li>
-                                <li class="page-item"><a href="#!">4</a></li>
-                                <li class="page-item"><a href="#!">...</a></li>
-                                <li class="page-item"><a class="valign-wrapper" href="#!">20</a></li>
-                                <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
-                                <li class="page-total">
-                                    共 16 页
-                                </li>
-                            </ul>
-                        </nav>
-                        <nav class="pg-wrapper d-block d-md-none" aria-label="navigation">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
-                                <li class="active"><a href="#!">1</a></li>
-                                <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
-                                <li class="page-total">
-                                    共 16 页
-                                </li>
-                            </ul>
-                        </nav>
+                        <ul class="pagination justify-content-end">
+                            <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="page-item"><a href="#!">2</a></li>
+                            <li class="page-item"><a href="#!">3</a></li>
+                            <li class="page-item"><a href="#!">4</a></li>
+                            <li class="page-item"><a href="#!">...</a></li>
+                            <li class="page-item"><a class="valign-wrapper" href="#!">20</a></li>
+                            <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
+                            <li class="page-total">
+                                共 16 页
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav class="pg-wrapper d-block d-md-none" aria-label="navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
+                            <li class="active"><a href="#!">1</a></li>
+                            <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
+                            <li class="page-total">
+                                共 16 页
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
 
@@ -613,16 +411,16 @@
 <section class="wrapper scrollfire">
     <div class="container sign-module">
         <div class="row">
-            <a class="col col-xs-6" href="#">
-                <img class="responsive-img tumeng-sign" src="../static/image/coor1.6ffc8.png" alt="">
+            <a class="col col-xs-6" href="/speaker-join">
+                <img class="responsive-img tumeng-sign" src="../static/image/coor1.6ffc8.png" alt="我要演讲">
                 <div class="sign-mask"></div>
                 <div class="sign-box pos-1">
                     <h2>我要演讲</h2>
                     <p>演讲者传播知识</p>
                 </div>
             </a>
-            <a class="col col-xs-6" href="#">
-                <img class="responsive-img tumeng-sign" src="../static/image/coor2.df042.png" alt="">
+            <a class="col col-xs-6" href="/school-join">
+                <img class="responsive-img tumeng-sign" src="../static/image/coor2.df042.png" alt="学校入驻">
                 <div class="sign-mask"></div>
                 <div class="sign-box pos-2">
                     <h2>学校入驻</h2>
@@ -651,9 +449,9 @@
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"><b>了解涂梦</b> </h5>
                         <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">精彩演讲</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">关于涂梦</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">公式信息</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/video-list">精彩演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/about">关于涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/about">公示信息</a></li>
                         </ul>
                     </div>
                 </div>
@@ -661,10 +459,10 @@
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
                         <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">我要演讲</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校入住</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">支持涂梦</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">工作机会</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/speaker-join">我要演讲</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/school-join">学校入住</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/donate">支持涂梦</a></li>
+                            <li><a class="white-text text-lighten-6 hove_undeline" href="/donate">工作机会</a></li>
                         </ul>
                     </div>
                 </div>
@@ -672,10 +470,10 @@
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"> <b>联系我们</b> </h5>
                         <ul>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">学校服务热线：18722124990</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">演讲者服务客服：18722124990</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">邮箱：Info@tomoroe.org</a></li>
-                            <li><a class="white-text text-lighten-6 hove_undeline" href="#!">微信公众号：tomoroe</a></li>
+                            <li><span class="white-text text-lighten-6" href="#!">学校服务热线：18722124990</span></li>
+                            <li><span class="white-text text-lighten-6" href="#!">演讲者服务客服：18722124990</span></li>
+                            <li><span class="white-text text-lighten-6" href="#!">邮箱：Info@tomoroe.org</span></li>
+                            <li><span class="white-text text-lighten-6" href="#!">微信公众号：tomoroe</span></li>
                         </ul>
                     </div>
                 </div>

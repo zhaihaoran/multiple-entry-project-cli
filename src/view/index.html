@@ -7,7 +7,7 @@
 </head>
 
 <body>
-        <%= require('html-loader!../templates/header.html') %>
+        <%= require('html-loader?interpolate =active!../templates/header.html') %>
         <%= require('html-loader!../templates/modal/modal_login.html') %>
         <%= require('html-loader!../templates/modal/modal_register.html') %>
         <!-- 轮播图 -->

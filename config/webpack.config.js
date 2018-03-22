@@ -57,11 +57,11 @@ module.exports = function(env) {
             disable: false,
             allChunks: true,
         }),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'server',
-            analyzerPort: 1234,
-            openAnalyzer: true
-        }),
+        // new BundleAnalyzerPlugin({
+        //     analyzerMode: 'server',
+        //     analyzerPort: 1234,
+        //     openAnalyzer: true
+        // }),
         // new LodashModuleReplacementPlugin,
         // // webpack bundle analyzer
 
