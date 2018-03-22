@@ -26,9 +26,6 @@ const {
 // 并行打包
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-// lodash 按需打包
-const LodashModuleReplacementPlugin = require('lodash-webpack-plugin');
-
 module.exports = function(env) {
     const Webpack_Plugins = [
         // dll
@@ -57,13 +54,11 @@ module.exports = function(env) {
             disable: false,
             allChunks: true,
         }),
-        // new BundleAnalyzerPlugin({
-        //     analyzerMode: 'server',
-        //     analyzerPort: 1234,
-        //     openAnalyzer: true
-        // }),
-        // new LodashModuleReplacementPlugin,
-        // // webpack bundle analyzer
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'server',
+            analyzerPort: 1234,
+            openAnalyzer: true
+        }),
 
         ...webpackPlugins,
     ];

@@ -8,107 +8,115 @@
 
 <body>
     <%= require('html-loader!../templates/course_header.html') %>
-    <%= require('html-loader!../templates/modal/modal_login.html') %>
-    <%= require('html-loader!../templates/modal/modal_register.html') %>
-        <div class="index-image-wrapper">
-            <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/banner.png" class="img-fluid res-image" alt="banner">
-        </div>
-        <section class="wrapper bg-grey-light">
-            <!-- search-input -->
-            <div class="container sr-wrapper">
-                <div class="sr-button-wrapper">
-                    <a href="/video-list/order-by/0" class="sr-button truncate sr-button-hover active"> <span>综合排序</span> </a>
-                    <a href="/video-list/order-by/1" class="sr-button truncate sr-button-hover"><span>最新发布</span></a>
-                    <a href="/video-list/order-by/2" class="sr-button truncate sr-button-hover"><span>最多播放</span></a>
+        <%= require('html-loader!../templates/modal/modal_login.html') %>
+            <%= require('html-loader!../templates/modal/modal_register.html') %>
+                <div class="index-image-wrapper">
+                    <img src="<%= htmlWebpackPlugin.options.publicPath %>/static/image/banner.png" class="img-fluid res-image" alt="banner">
                 </div>
-                <form id="video_search" class="sr-search">
-                    <div class="sr-select-wrapper d-none d-md-block">
-                        <select name="type" class="sr-select browser-default">
+                <!-- <div class="d-none" id="page_data">
+                    <span>{$vSearchParams}</span> -->
+                <!-- <span id="type">{$vSearchParams->type}</span> -->
+                <!-- <span id="order-by">{$vSearchParams["order-by"]}</span>
+                    <span id="duration">{$vSearchParams.duration}</span>
+                    <span id="add-time">{$vSearchParams.["add-time"]}</span> -->
+                <!-- <span id="text">{$vSearchParams.text}</span> -->
+                <!-- </div> -->
+                <section class="wrapper bg-grey-light">
+                    <!-- search-input -->
+                    <div class="container sr-wrapper">
+                        <div class="sr-button-wrapper">
+                            <a href="/video-list/order-by/0" class="sr-button truncate sr-button-hover active"> <span>综合排序</span> </a>
+                            <a href="/video-list/order-by/1" class="sr-button truncate sr-button-hover"><span>最新发布</span></a>
+                            <a href="/video-list/order-by/2" class="sr-button truncate sr-button-hover"><span>最多播放</span></a>
+                        </div>
+                        <div class="sr-search">
+                            <div class="sr-select-wrapper d-none d-md-block">
+                                <select name="type" class="sr-select browser-default">
                             <option value="0">视频分类</option>
                             <option value="1">aa</option>
                             <option value="2">bb</option>
                         </select>
-                    </div>
-                    <div class="sr-select-wrapper d-none d-md-block">
-                        <select name="duration" class="sr-select browser-default">
+                            </div>
+                            <div class="sr-select-wrapper d-none d-md-block">
+                                <select name="duration" class="sr-select browser-default">
                             <option value="0">全部时长</option>
                             <option value="1">0-10分</option>
                             <option value="2">10-30分</option>
                             <option value="3">30-60分</option>
                             <option value="4">大于60分</option>
                         </select>
-                    </div>
-                    <div class="sr-select-wrapper d-none d-md-block">
-                        <select name="add-time" class="sr-select browser-default">
+                            </div>
+                            <div class="sr-select-wrapper d-none d-md-block">
+                                <select name="add-time" class="sr-select browser-default">
                             <option value="0">全部上传时间</option>
                             <option value="1">1天内</option>
                             <option value="2">1周内</option>
                             <option value="3">1月内</option>
                             <option value="4">1年内</option>
                         </select>
-                    </div>
-                    <div class="sr-select-wrapper">
-                        <div class="search-item">
-                            <input name="text" placeholder="请输入..." type="text" class="search-input validate">
-                            <span class="search-icon">
+                            </div>
+                            <form id="video_search" class="sr-select-wrapper">
+                                <div class="search-item">
+                                    <input name="text" placeholder="请输入..." type="text" class="search-input validate">
+                                    <span class="search-icon">
                                 <i class="icon iconfont icon-search" ></i>
                             </span>
+                                </div>
+                            </form>
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="vd-context">
-                <div class="container">
-                    <div class="row">
-                        {foreach $vVideoTypeList as $e }
-                        <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
-                            <a href="{$e.linkUrl}" class="card hoverable card-hover">
-                                <div class="card-image waves-effect waves-block waves-light">
-                                    <img class="responsive-img" src="{$e.previewUrl}">
-                                    <span class="vd-times badge">{$e.duration}</span>
+                    <div class="vd-context">
+                        <div class="container">
+                            <div class="row">
+                                {foreach $vVideoTypeList as $e }
+                                <div class="col-12 col-md-6 col-lg-3 col-line-5 card-space">
+                                    <a href="{$e.linkUrl}" class="card hoverable card-hover">
+                                        <div class="card-image waves-effect waves-block waves-light">
+                                            <img class="responsive-img" src="{$e.previewUrl}">
+                                            <span class="vd-times badge">{$e.duration}</span>
+                                        </div>
+                                        <div class="card-content">
+                                            <span class="card-title grey-333">{$e.videoTypeName}</span>
+                                            <div class="vd-extra">
+                                                <span class="grey-666">演讲者：{$e.speakerName}</span>
+                                                <span class="grey-999">{$e.playTimes} 次播放</span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="card-content">
-                                    <span class="card-title grey-333">{$e.videoTypeName}</span>
-                                    <div class="vd-extra">
-                                        <span class="grey-666">演讲者：{$e.speakerName}</span>
-                                        <span class="grey-999">{$e.playTimes} 次播放</span>
-                                    </div>
-                                </div>
-                            </a>
+                                {/foreach}
+                            </div>
+                            <nav class="pg-wrapper d-none d-md-block" aria-label="navigation">
+                                <ul id="pagination" class="pagination justify-content-end">
+                                    <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
+                                    <li class="active"><a href="#!">1</a></li>
+                                    <li class="page-item"><a href="#!">2</a></li>
+                                    <li class="page-item"><a href="#!">3</a></li>
+                                    <li class="page-item"><a href="#!">4</a></li>
+                                    <li class="page-item"><a href="#!">...</a></li>
+                                    <li class="page-item"><a class="valign-wrapper" href="#!">20</a></li>
+                                    <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
+                                    <li class="page-total">
+                                        共 16 页
+                                    </li>
+                                </ul>
+                            </nav>
+                            <nav class="pg-wrapper d-block d-md-none" aria-label="navigation">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
+                                    <li class="active"><a href="#!">1</a></li>
+                                    <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
+                                    <li class="page-total">
+                                        共 16 页
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                        {/foreach}
                     </div>
-                    <nav class="pg-wrapper d-none d-md-block" aria-label="navigation">
-                        <ul id="pagination" class="pagination justify-content-end">
-                            <!-- <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
-                            <li class="active"><a href="#!">1</a></li>
-                            <li class="page-item"><a href="#!">2</a></li>
-                            <li class="page-item"><a href="#!">3</a></li>
-                            <li class="page-item"><a href="#!">4</a></li>
-                            <li class="page-item"><a href="#!">...</a></li>
-                            <li class="page-item"><a class="valign-wrapper" href="#!">20</a></li>
-                            <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
-                            <li class="page-total">
-                                共 16 页
-                            </li> -->
-                        </ul>
-                    </nav>
-                    <nav class="pg-wrapper d-block d-md-none" aria-label="navigation">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a href="#!"> <i class="icon iconfont icon-left"></i> </a></li>
-                            <li class="active"><a href="#!">1</a></li>
-                            <li class="page-item"><a href="#!"><i class="icon iconfont icon-right"></i></a></li>
-                            <li class="page-total">
-                                共 16 页
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
 
-        </section>
-        <%= require('html-loader!../templates/signModule.html') %>
-            <%= require('html-loader!../templates/footer.html') %>
+                </section>
+                <%= require('html-loader!../templates/signModule.html') %>
+                    <%= require('html-loader!../templates/footer.html') %>
 </body>
 
 </html>

@@ -11,7 +11,7 @@ jQuery.fn.pagination = function(maxentries, opts) {
     opts = jQuery.extend({
         items_per_page: 10,
         num_display_entries: 10,
-        current_page: 0,
+        current_page: 1,
         num_edge_entries: 0,
         link_to: "#",
         prev_text: "left",
@@ -68,7 +68,6 @@ jQuery.fn.pagination = function(maxentries, opts) {
         function drawLinks() {
             panel.empty();
             var interval = getInterval();
-            console.log(interval);
             var np = numPages();
             // 这个辅助函数返回一个处理函数调用有着正确page_id的pageSelected。
             var getClickHandler = function(page_id) {
@@ -78,7 +77,7 @@ jQuery.fn.pagination = function(maxentries, opts) {
             }
             //辅助函数用来产生一个单链接(如果不是当前页则产生span标签)
             var appendItem = function(page_id, appendopts) {
-                page_id = page_id < 1 ? 1 : (page_id < np ? page_id : np); // 规范page id值
+                page_id = page_id < 1 ? 1 : (page_id < np + 1 ? page_id : np); // 规范page id值
                 appendopts = jQuery.extend({
                     text: page_id,
                     classes: ""
@@ -91,8 +90,6 @@ jQuery.fn.pagination = function(maxentries, opts) {
 
                     lnk.addClass(appendopts.classes);
 
-                    console.log(page_id, 'page_id');
-                    console.log(current_page, 'current_page');
                     // 当前
                     if (page_id == current_page) {
                         lnk.find('a').attr('href', '#')
@@ -100,7 +97,7 @@ jQuery.fn.pagination = function(maxentries, opts) {
                 }
                 // 普通条目
                 else {
-                    var lnk = jQuery("<li class='page-item'><a href='#!'>" + (appendopts.text ) + "</a></li>")
+                    var lnk = jQuery("<li class='page-item'><a href='#!'>" + (appendopts.text) + "</a></li>")
                         .bind("click", getClickHandler(page_id)).data('id', 'page_id')
                     lnk.find('a').attr('href', opts.link_to.replace(/__id__/, page_id));
 
@@ -121,7 +118,7 @@ jQuery.fn.pagination = function(maxentries, opts) {
             // 产生起始点
             if (interval[0] > 0 && opts.num_edge_entries > 0) {
                 var end = Math.min(opts.num_edge_entries, interval[0]);
-                for (var i = 0; i < end; i++) {
+                for (var i = 1; i < end + 1; i++) {
                     appendItem(i);
                 }
                 if (opts.num_edge_entries < interval[0] && opts.ellipse_text) {
@@ -138,7 +135,7 @@ jQuery.fn.pagination = function(maxentries, opts) {
                     jQuery("<span>" + opts.ellipse_text + "</span>").appendTo(panel);
                 }
                 var begin = Math.max(np - opts.num_edge_entries, interval[1]);
-                for (var i = begin; i < np; i++) {
+                for (var i = begin + 1; i < np + 1; i++) {
                     appendItem(i);
                 }
 

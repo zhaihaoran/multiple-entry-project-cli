@@ -9,7 +9,7 @@ module.exports = {
     resolvePath,
     // 公共模块抽取
     CommonChunks: {
-        "vendor": ['bootstrap','video.js'],
+        "vendor": ['video.js'],
     },
     // 模板后缀
     tplSuffix: 'html',

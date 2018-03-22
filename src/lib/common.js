@@ -1,7 +1,7 @@
 import $ from 'jquery'
 // Bootstrap
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import '@lib/bootstrap.min'
+import '@scss/bootstrap.min.css'
 
 import '../assets/icon/iconfont.css';
 
