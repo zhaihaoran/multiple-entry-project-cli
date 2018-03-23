@@ -9,23 +9,21 @@
                     <p>完成账号注册后，您可以提交申请成为认证演讲者贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
+            <form class="tm-sign-wrapper needs-validation speaker register-form" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
-                        <label for="phone">手机号：</label>
-                        {literal}
-                        <input type="phone" name="phone" pattern="^\d{11}$" required class="form-control">
-                        {/literal}
+                        <label>手机号：</label> {literal}
+                        <input type="text" name="mobile" pattern="^\d{11}$" required class="form-control"> {/literal}
                         <div class="invalid-feedback">手机号为11位数字</div>
                     </div>
                     <div class="form-group">
                         <label for="phone">验证码：</label>
                         <div class="form-row">
                             <div class="col-7">
-                                <input type="caphata" required class="form-control">
+                                <input type="text" name="verifyCode" required class="form-control">
                             </div>
                             <div class="col-5">
                                 <button class="tm-btn msg-btn">短信验证码</button>
@@ -33,10 +31,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="password">密码：</label>
-                        {literal}
-                        <input type="password" name="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母">
-                        {/literal}
+                        <label>密码：</label> {literal}
+                        <input type="text" name="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母"> {/literal}
                         <div class="invalid-feedback">密码需6~20位数字或字母</div>
                     </div>
                     <div class="form-group confirm">
@@ -63,23 +59,21 @@
                     <p>完成账号注册后，您可以提交申请成为认证学校贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
+            <form class="tm-sign-wrapper needs-validation school register-form" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
-                        <label for="phone">手机号：</label>
-                        {literal}
-                        <input type="phone" name="phone" pattern="^\d{11}$" required class="form-control">
-                        {/literal}
+                        <label for="number">手机号：</label> {literal}
+                        <input type="text" name="mobile" pattern="^\d{11}$" required class="form-control"> {/literal}
                         <div class="invalid-feedback">手机号为11位数字</div>
                     </div>
                     <div class="form-group">
-                        <label for="phone">验证码：</label>
+                        <label>验证码：</label>
                         <div class="form-row">
                             <div class="col-7">
-                                <input type="caphata" required class="form-control">
+                                <input type="text" name="verifyCode" required class="form-control">
                             </div>
                             <div class="col-5">
                                 <button class="tm-btn msg-btn">短信验证码</button>
@@ -87,15 +81,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="password">密码：</label>
-                        {literal}
-                        <input type="password" name="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母">
-                        {/literal}
+                        <label for="password">密码：</label> {literal}
+                        <input type="text" name="password" pattern="^\w{6,20}$" required class="form-control" placeholder="6~20位数字或字母"> {/literal}
                         <div class="invalid-feedback">密码需6~20位数字或字母</div>
                     </div>
                     <div class="form-group confirm">
-                        <label for="password">密码确认</label>
-                        <input type="password" class="form-control" placeholder="6~20位数字和字母">
+                        <label>密码确认</label>
+                        <input type="number" class="form-control" placeholder="6~20位数字和字母">
                         <div class="invalid-feedback">两次密码不同</div>
                     </div>
                 </div>
@@ -111,8 +103,8 @@
     <div class="modal-dialog" role="document">
         <h2>恭喜您注册成功</h2>
         <p>请牢记学校账号</p>
-        <span class="school_id" >123456</span>
+        <span class="school_id">123456</span>
         <p>以后将用此账号进行登录</p>
-        <a href="#" class="btn tm-btn" >前往管理中心</a>
+        <a href="#" class="btn tm-btn">前往管理中心</a>
     </div>
 </div>

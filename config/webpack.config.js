@@ -62,22 +62,22 @@ module.exports = function(env) {
 
         ...webpackPlugins,
     ];
-    if (!dev) {
-        let proPlugins = [
-            // 并行打包
-            new UglifyJSPlugin({
-                uglifyOptions: {
-                    compress: {
-                        warnings: false
-                    }
-                },
-                parallel: true
-            }),
-        ]
-        Webpack_Plugins.push(...proPlugins)
-    }
+    // if (!dev) {
+    //     let proPlugins = [
+    //         // 并行打包
+    //         new UglifyJSPlugin({
+    //             uglifyOptions: {
+    //                 compress: {
+    //                     warnings: false
+    //                 }
+    //             },
+    //             parallel: true
+    //         }),
+    //     ]
+    //     Webpack_Plugins.push(...proPlugins)
+    // }
     return {
-        devtool: dev ? 'cheap-module-eval-source-map' : 'cheap-module-source-map',
+        devtool: 'cheap-module-eval-source-map',
         entry: entrys,
         output: {
             filename: 'js/[name].js',

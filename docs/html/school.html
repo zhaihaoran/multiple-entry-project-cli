@@ -3,10 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="涂梦教育,教育,公益项目,涂梦,公益平台,Tomoroe,中学生发展,偏远教育,分享心得,知识命运">
+<meta name="description" content="涂梦（Tomoroe)是一个关注中学生成长与发展的非营利项目。
+该项目向偏远地区学生分享自己的成长经历和职场奋斗的故事。致力于帮助因经济欠发达、信息闭塞而无法获悉职业讯息的学生了解最真实的职业故事">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="renderer" content="webkit">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title> 首页 - 涂梦教育 </title>
+        <title> 学校主页 - 涂梦教育 </title>
 <link rel="shortcut icon" href="../favicon.png"><link href="../css/school.css" rel="stylesheet"></head>
 
 <body>
@@ -53,37 +57,29 @@
                     <div class="search-item">
                         <input placeholder="请输入..." type="text" class="search-input validate">
                         <span class="search-icon">
-                            <i class="icon iconfont icon-search" ></i>
+                            <i class="icon iconfont icon-search"></i>
                         </span>
                     </div>
                 </div>
             </form>
 
-            <!-- not login -->
+            
             <div class="dropdown tm-sign">
-                <button data-toggle="dropdown" data-trigger="hover" class="btn btn-danger header-btn tm-btn my-2 my-sm-0" >登陆</button>
+                <button data-toggle="dropdown" data-trigger="hover" class="btn btn-danger header-btn tm-btn my-2 my-sm-0">登陆</button>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" data-toggle="modal" data-target="#speaker_login" href="#">演讲者登陆</a>
                     <a class="dropdown-item" data-toggle="modal" data-target="#school_login" href="#">学校登陆</a>
                 </div>
             </div>
 
-            <!-- login -->
+            
 
-            <!-- <div class="dropdown tm-sign">
-                <img data-toggle="dropdown" data-trigger="hover" src="../static/image/tsinghua.c6c45.png" class="img-fluid" alt="avatar">
-                <div class="dropdown-menu">
-                    <a class="dropdown-item">123456</a>
-                    <a class="dropdown-item" href="#">管理中心</a>
-                    <a class="dropdown-item" href="#">个人主页</a>
-                    <a class="dropdown-item" href="#">退出</a>
-                </div>
-            </div> -->
+            
         </div>
     </div>
 </nav>
 
-    <!-- speaker -->
+    
 <div class="modal fade" id="speaker_login" tabindex="-1" role="dialog" aria-labelledby="speaker_title" aria-hidden="true">
     <div class="modal-dialog tm-dialog" role="document">
         <div class="modal-content tm-sign-modal">
@@ -94,18 +90,18 @@
                     <p>贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper login-form needs-validation" novalidate >
+            <form class="tm-sign-wrapper login-form needs-validation" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
                         <label for="phone">手机号：</label>
-                        <input type="text" name="phoneNumber" required class="form-control"  aria-describedby="emailHelp">
+                        <input type="text" name="phoneNumber" required class="form-control" aria-describedby="emailHelp">
                     </div>
                     <div class="form-group">
                         <label for="password">密码：</label>
-                        <input type="password" name="password"  required class="form-control">
+                        <input type="password" name="password" required class="form-control">
                     </div>
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="know_key">
@@ -114,13 +110,13 @@
                     </div>
                 </div>
                 <button class="submit-btn tm-btn sign-btn">登陆</button>
-                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#speaker_register" >注册</a> </p>
+                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#speaker_register">注册</a> </p>
             </form>
         </div>
     </div>
 </div>
 
-<!-- school -->
+
 <div class="modal fade" id="school_login" tabindex="-1" role="dialog" aria-labelledby="school_title" aria-hidden="true">
     <div class="modal-dialog tm-dialog" role="document">
         <div class="modal-content tm-sign-modal">
@@ -131,14 +127,14 @@
                     <p>获得来自各行各业演讲者的精彩分享</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper login-form needs-validation" novalidate >
+            <form class="tm-sign-wrapper login-form needs-validation" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
                 <div class="sign-box">
                     <div class="form-group">
                         <label for="phone">学校账号或电话号码: </label>
-                        <input type="text" name="usernameOrPhoneNumber" required class="form-control"  aria-describedby="emailHelp">
+                        <input type="text" name="usernameOrPhoneNumber" required class="form-control" aria-describedby="emailHelp">
                         <div class="invalid-feedback">
                             学校账号或电话号码不能为空
                         </div>
@@ -157,13 +153,13 @@
                     </div>
                 </div>
                 <button class="submit-btn tm-btn sign-btn">登陆</button>
-                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#school_register" >注册</a> </p>
+                <p class="sign-redirect-register" href="#">没有账号？<a href="##" data-toggle="modal" data-target="#school_register">注册</a> </p>
             </form>
         </div>
     </div>
 </div>
 
-<!-- reset password -->
+
 <div class="modal fade" id="reset_password" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog tm-dialog" role="document">
         <div class="modal-content tm-sign-modal">
@@ -175,7 +171,7 @@
                     <p>如果电话已不可用，请联系客服</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
+            <form class="tm-sign-wrapper needs-validation register-form" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
@@ -215,7 +211,7 @@
     </div>
 </div>
 
-    <!-- speaker -->
+    
 <div class="modal fade" id="speaker_register" tabindex="-1" role="dialog" aria-labelledby="speaker_title" aria-hidden="true">
     <div class="modal-dialog tm-dialog" role="document">
         <div class="modal-content tm-sign-modal">
@@ -226,7 +222,7 @@
                     <p>完成账号注册后，您可以提交申请成为认证演讲者贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
+            <form class="tm-sign-wrapper needs-validation register-form" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
@@ -269,7 +265,7 @@
     </div>
 </div>
 
-<!-- school -->
+
 <div class="modal fade" id="school_register" tabindex="-1" role="dialog" aria-labelledby="school_title" aria-hidden="true">
     <div class="modal-dialog tm-dialog" role="document">
         <div class="modal-content tm-sign-modal">
@@ -280,7 +276,7 @@
                     <p>完成账号注册后，您可以提交申请成为认证学校贡献思想，传播价值</p>
                 </div>
             </div>
-            <form class="tm-sign-wrapper needs-validation register-form" novalidate >
+            <form class="tm-sign-wrapper needs-validation register-form" novalidate>
                 <span class="close" data-dismiss="modal">
                     <i class="icon iconfont icon-guanbi"></i>
                 </span>
@@ -323,14 +319,14 @@
     </div>
 </div>
 
-<!-- register-success -->
+
 <div class="modal fade" id="register_success" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <h2>恭喜您注册成功</h2>
         <p>请牢记学校账号</p>
-        <span class="school_id" >123456</span>
+        <span class="school_id">123456</span>
         <p>以后将用此账号进行登录</p>
-        <a href="#" class="btn tm-btn" >前往管理中心</a>
+        <a href="#" class="btn tm-btn">前往管理中心</a>
     </div>
 </div>
 
@@ -431,9 +427,9 @@
                                                         </a>
                                             </div>
                                         </div>
-                                        <!-- JiaThis Button BEGIN -->
+                                        
                                         <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
-                                        <!-- JiaThis Button END -->
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -656,7 +652,7 @@
                 </div>
             </div>
         </section>
-        <!-- 我要报名 -->
+        
 <section class="wrapper scrollfire">
     <div class="container sign-module">
         <div class="row">
@@ -680,7 +676,7 @@
     </div>
 </section>
 
-            <!-- footer -->
+            
 <footer class="page-footer scrollfire">
     <div class="tum-footer">
         <div class="container footer-wrapper">
@@ -704,7 +700,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3 footer-item  d-none d-lg-block d-md-block">
+                <div class="col-sm-12 col-md-3 footer-item d-none d-lg-block d-md-block">
                     <div class="ft-top">
                         <h5 class="ft-title white-text text-lighten-6"> <b>与涂梦同行</b> </h5>
                         <ul>

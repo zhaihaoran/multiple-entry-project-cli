@@ -23,26 +23,30 @@ function Scan(htmlDir, jsDir, tplSuffix) {
     dirs.forEach(file => {
         // 去除模板后缀
         const entry = file.replace(/\.(tpl|html|ejs)$/, '');
+
+        // 如果404 则不加vendor
+        const assets = entry.indexOf('404') > -1 ? [] : ["static/vendor/jquery.min.js", "static/vendor/vendor.dll.js"];
+        // 如果404 则不加chunks
+        const chunks = entry.indexOf('404') > -1 ? [] : [entry]
         entrys[entry] = resolvePath(`${jsDir}${entry}.js`);
 
         // 将 vendor.dll.js 插入HTML里
         const vendorPlugins = new HtmlWebpackIncludeAssetsPlugin({
-            assets: ["static/vendor/jquery.min.js", "static/vendor/vendor.dll.js"],
+            assets,
             files: `html/${entry}.html`,
             append: false
         });
 
         const newPlugins = new HtmlWebpackPlugin({
-            chunks: [entry],
+            chunks,
             template: resolvePath(`${htmlDir}${entry}.${tplSuffix}`),
             filename: `html/${entry}.html`,
             favicon: resolvePath('static/favicon.png'),
             inject: "body",
-            publicPath: rootDir
-            // minify: {
-            //     collapseWhitespace: true, // 是否去除空格
-            //     removeComments: true // 是否去掉注释
-            // },
+            publicPath: rootDir,
+            minify: {
+                removeComments: true // 是否去掉注释
+            },
         });
         webpackPlugins.push(newPlugins, vendorPlugins);
     });

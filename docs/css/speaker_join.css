@@ -7723,7 +7723,7 @@ button:focus {
   display: block; }
 
 .tm-sign {
-  margin-left: 20px; }
+  margin-left: 10px; }
   .tm-sign img {
     width: 40px; }
   .tm-sign span {
@@ -7864,15 +7864,14 @@ nav.navbar.tum-header {
       border-left: 1px solid #333;
       height: 100%; }
   nav.navbar.tum-header .tm-list > .nav-item {
-    padding: 0 15px;
+    padding: 0 10px;
     text-align: center; }
     nav.navbar.tum-header .tm-list > .nav-item.active a {
       color: #bb2133; }
   nav.navbar.tum-header .header-btn {
     padding: 0.3rem 1rem;
     border-radius: 0;
-    height: 35px;
-    margin-left: 10px; }
+    height: 35px; }
   nav.navbar.tum-header .navbar-toggler {
     border: 0; }
 
@@ -8675,7 +8674,6 @@ nav.navbar.tum-header {
       width: 260px;
       font-size: 36px;
       margin-top: 30px;
-      background: #bb2133;
       color: #fff; }
 
 .mission {

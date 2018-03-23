@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-<link rel="shortcut icon" href="../favicon.png"></head>
-<body>
+    <title> 404 — 涂梦教育 </title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
 
-<script type="text/javascript" src="../static/vendor/jquery.min.js"></script><script type="text/javascript" src="../static/vendor/vendor.dll.js"></script></body>
+        .wrapper {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+        a.redirect {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            z-index: 10;
+            cursor: pointer;
+            top: 11px;
+            left: 32%;
+            margin-left: -200px;
+        }
+    </style>
+<link rel="shortcut icon" href="../favicon.png"></head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <img src="/static/image/404.png" class="img-fluid">
+        </div>
+        <a href="/" class="redirect"></a>
+    </div>
+</body>
+
 </html>

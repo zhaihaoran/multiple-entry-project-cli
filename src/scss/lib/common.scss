@@ -36,6 +36,11 @@
     &:active:focus {
         box-shadow: none !important;
     }
+
+    &.disabled {
+        background: grey;
+        cursor: inherit;
+    }
 }
 
 // 密码确认
@@ -64,17 +69,6 @@
     }
     .invalid-feedback {
         display: block;
-    }
-}
-
-//
-.tm-sign {
-    margin-left: 20px;
-    img {
-        width: 40px;
-    }
-    span {
-        margin-left: 5px;
     }
 }
 
@@ -205,7 +199,7 @@ nav.navbar.tum-header {
         }
     }
     .tm-list > .nav-item {
-        padding: 0 15px;
+        padding: 0 10px;
         text-align: center;
         &.active {
             a {
@@ -217,7 +211,6 @@ nav.navbar.tum-header {
         padding: 0.3rem 1rem;
         border-radius: 0;
         height: 35px;
-        margin-left: 10px;
     }
     .navbar-toggler {
         border: 0;
@@ -679,6 +672,13 @@ nav.navbar.tum-header {
 
 // sign
 .tm-sign {
+    margin-left: 10px;
+    img {
+        width: 40px;
+    }
+    span {
+        margin-left: 5px;
+    }
     .dropdown-menu {
         border: 0;
         border-radius: 0;
@@ -741,9 +741,9 @@ nav.navbar.tum-header {
                 margin-bottom: 10px;
             }
         }
-        .right {
-            float: right;
-        }
+        // .right {
+        //     float: right;
+        // }
         .custom-checkbox {
             label,
             a {
